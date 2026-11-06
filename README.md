@@ -414,7 +414,6 @@ Bagian ini berisi `pom.xml` sebagai file konfigurasi Maven untuk mengatur versi 
 <h2 align="left">🧩 7. Penerapan 4 Pilar OOP dan Implementasi Lanjutan</h2>
 
 ## A. Empat Pilar OOP
-
 ### 7.1 Encapsulation (Enkapsulasi)
 
 <p align="justify">Encapsulation merupakan konsep OOP yang membatasi akses langsung terhadap atribut dalam suatu class. Pada project FORMULA, konsep ini diterapkan pada entity <code>Obat</code> dan <code>InstansiKesehatan</code> dengan menggunakan modifier <code>private</code>. Akses terhadap atribut dilakukan melalui method <em>getter</em> dan <em>setter</em> agar pengelolaan data lebih terkontrol.</p>
@@ -557,7 +556,6 @@ public abstract class MenuRole {
 ---
 
 ## B. Implementasi Lanjutan
-
 ### 7.5 Manajemen Koneksi Tingkat Lanjut (Singleton dan Connection Pooling)
 
 <p align="justify">Project FORMULA menerapkan manajemen koneksi menggunakan pola <em>singleton-like</em> dan teknologi <strong>HikariCP Connection Pooling</strong>. Class <code>app.model.Koneksi</code> memiliki konstruktor <code>private</code> dan atribut <code>static</code> untuk menyediakan satu connection pool yang digunakan bersama oleh seluruh DAO. Penggunaan connection pool membantu mengelola koneksi database agar lebih efisien.</p>
