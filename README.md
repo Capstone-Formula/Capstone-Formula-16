@@ -767,7 +767,7 @@ Menu ini mencatat bahan yang akan digunakan oleh petugas Produksi. Kolom yang di
 Menu ini digunakan untuk mendaftarkan akun dan menentukan hak akses pengguna. Form menampilkan **ID Karyawan, Nama, Password, Telepon, Jenis Kelamin, Tanggal Lahir, Alamat Domisili, Area, Shift, Peran,** dan **Status**.
 
 <p align="center">
-  ![Uploading image.png…]()
+  <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/d81edf7a-cc8c-49e1-880c-120310e75985" />
 </p>
 
 1. Buka **Kelola Karyawan**.
@@ -785,7 +785,7 @@ Menu ini digunakan untuk mendaftarkan akun dan menentukan hak akses pengguna. Fo
 Menu **Data Pesanan** pada role Administrasi digunakan **untuk melihat dan memantau**, bukan membuat atau mengubah pesanan. Tabel memuat **ID Pesanan, Tanggal, Status, Catatan, Instansi,** dan **Petugas**.
 
 <p align="center">
-  <img src="docs/preview/administrasi_data_pesanan.jpg" width="780" alt="Data Pesanan">
+  <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/7e701724-cb09-4f2b-a6da-b60f7c3c9964" />
 </p>
 
 1. Buka **Data Pesanan** dari dashboard Administrasi.
@@ -800,7 +800,7 @@ Pada mode ini tombol tambah, ubah, dan hapus tidak tersedia. Pembuatan serta per
 Menu **Data Pengiriman** juga berfungsi sebagai halaman monitoring Administrasi. Tabel menampilkan **Nomor Resi, Tanggal, Status, Keterangan, ID Pesanan,** dan **Petugas**.
 
 <p align="center">
-  <img src="docs/preview/administrasi_data_pengiriman.jpg" width="780" alt="Data Pengiriman">
+  <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/e5d9e1ba-0a5a-4418-8df8-5b05c4e1bec0" />
 </p>
 
 1. Masuk ke **Data Pengiriman**.
@@ -815,7 +815,7 @@ Administrasi tidak mengubah status pengiriman melalui menu ini; proses pengirima
 Pada role Administrasi, menu **Instansi Kesehatan** bersifat **lihat saja (read-only)**. Tabel berisi **ID Instansi, Nama Instansi, Jenis, Alamat,** dan **Kontak**.
 
 <p align="center">
-  <img src="docs/preview/administrasi_instansi_kesehatan.jpg" width="780" alt="Instansi Kesehatan">
+<img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/435eba19-2352-458d-9a8b-a5e6fb1d4987" />
 </p>
 
 1. Buka menu **Instansi Kesehatan**.
@@ -829,7 +829,7 @@ Penambahan, pengubahan, dan penghapusan instansi dilakukan melalui menu **Instan
 Menu **Stok per Batch** dipakai untuk melihat batch yang **masih memiliki stok positif, belum kedaluwarsa, dan belum dialokasikan ke detail pesanan**. Informasi yang ditampilkan meliputi **Nomor Batch, Nama Obat, Stok, Satuan,** dan **Tanggal Kedaluwarsa**.
 
 <p align="center">
-  <img src="docs/preview/administrasi_stok_per_batch.jpg" width="780" alt="Stok per Batch">
+ <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/37e99be2-e7fa-477f-b614-c3b797fecd82" />
 </p>
 
 1. Buka **Stok per Batch**.
@@ -844,7 +844,7 @@ Menu ini hanya untuk monitoring; tidak dipakai untuk menambah atau mengedit batc
 Pada Administrasi, menu **Detail Pesanan** digunakan untuk melihat hubungan antara pesanan dan batch yang dipilih oleh Fulfillment. Tabel menampilkan **ID Detail, ID Pesanan, Nomor Batch,** dan **Jumlah Obat**.
 
 <p align="center">
-  <img src="docs/preview/administrasi_detail_pesanan.jpg" width="780" alt="Detail Pesanan">
+  <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/62ffa05d-6b5b-41eb-b730-3e88009285e0" />
 </p>
 
 1. Buka **Detail Pesanan**.
