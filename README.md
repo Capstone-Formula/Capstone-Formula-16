@@ -701,15 +701,15 @@ try {
 
 <h2 align="left">💻 8. Cara Penggunaan Program</h2>
 
-Bagian ini menjelaskan penggunaan **seluruh menu FORMULA** secara berurutan berdasarkan tiga hak akses: **Administrasi → Produksi → Fulfillment**. Alurnya dimulai dari menyiapkan data master, membuat batch obat dan mencatat penggunaan bahan, sampai menerima pesanan serta mengatur pengiriman. Tiap role menggunakan dashboard dan pilihan menu yang berbeda.
+Bagian ini menjelaskan penggunaan seluruh menu FORMULA secara berurutan berdasarkan tiga hak akses: Administrasi → Produksi → Fulfillment. Alurnya dimulai dari menyiapkan data master, membuat batch obat dan mencatat penggunaan bahan, sampai menerima pesanan serta mengatur pengiriman. Tiap role menggunakan dashboard dan pilihan menu yang berbeda.
 
 ### 8.1 Persiapan dan Menjalankan Aplikasi
 
-1. Pastikan komputer memiliki **JDK 17 atau lebih baru**, **MySQL 8**, serta **Apache NetBeans/Maven**.
+1. Pastikan komputer memiliki JDK 17 atau lebih baru, MySQL 8, serta Apache NetBeans/Maven.
 2. Siapkan database MySQL. Untuk database baru yang masih kosong, jalankan `sql/FORMULA_SETUP_MYSQL8.sql`. Jangan mengimpor ulang file setup ke database operasional yang sudah berisi data tanpa backup.
 3. Sesuaikan koneksi database di `formula.properties`, terutama `db.url`, `db.user`, dan `db.password`. Jangan mengunggah password asli ke repository publik.
 4. Buka folder project Maven di NetBeans dan jalankan class `app.MainApp`. Program juga dapat dijalankan dari file `Formula.jar` atau `Jalankan.bat`, jika konfigurasi dan database sudah sesuai.
-5. Gunakan akun **karyawan aktif** dengan ID dan password yang tersimpan di database. Akun yang tidak aktif tidak dapat login.
+5. Gunakan akun karyawan aktif dengan ID dan password yang tersimpan di database. Akun yang tidak aktif tidak dapat login.
 
 ```bash
 mvn clean verify
@@ -718,7 +718,7 @@ mvn exec:java
 
 ### 8.2 Halaman Login
 
-Halaman **Login** merupakan pintu masuk FORMULA untuk seluruh pengguna. Pengguna memasukkan **ID Karyawan** dan **Password** yang sudah terdaftar, lalu sistem mengidentifikasi akun beserta role-nya. Pengguna tidak memilih role secara manual saat login.
+Halaman Login menjadi pintu masuk FORMULA untuk seluruh pengguna. Pengguna memasukkan ID Karyawan dan Password yang sudah terdaftar, lalu sistem mengidentifikasi akun beserta role-nya. Pengguna tidak memilih role secara manual saat login.
 
 <p align="center">
   <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/dda805be-7108-403c-bd5c-4bc35b4e63d5" />
@@ -727,22 +727,22 @@ Halaman **Login** merupakan pintu masuk FORMULA untuk seluruh pengguna. Pengguna
 **Langkah penggunaan:**
 
 1. Jalankan aplikasi hingga form Login ditampilkan.
-2. Masukkan **ID Karyawan** pada kolom identitas akun.
-3. Masukkan **Password** pada kolom yang disediakan.
-4. Klik tombol **Masuk** untuk melakukan autentikasi.
-5. Sistem memeriksa kecocokan kredensial, status akun **Aktif**, dan role pada data karyawan.
-6. Apabila berhasil, pengguna diarahkan ke dashboard **Administrasi**, **Produksi**, atau **Fulfillment** sesuai akun yang digunakan.
-7. Jika ID/password salah atau akun berstatus **Nonaktif**, sistem menampilkan pesan peringatan dan pengguna tetap berada pada form Login.
+2. Masukkan ID Karyawan pada kolom identitas akun.
+3. Masukkan Password pada kolom yang disediakan.
+4. Klik tombol Masuk untuk melakukan autentikasi.
+5. Sistem memeriksa kecocokan kredensial, status akun Aktif, dan role pada data karyawan.
+6. Apabila berhasil, pengguna diarahkan ke dashboard Administrasi, Produksi, atau Fulfillment sesuai akun yang digunakan.
+7. Jika ID/password salah atau akun berstatus Nonaktif, sistem menampilkan pesan peringatan dan pengguna tetap berada pada form Login.
 
-**Hasil:** hanya akun yang valid dan aktif dapat mengakses menu sesuai kewenangannya.
+Hasil: hanya akun yang valid dan aktif dapat mengakses menu sesuai kewenangannya.
 
 ### 8.3 Role Administrasi — Penyiapan dan Monitoring Data
 
-Role **Administrasi** bertugas menyiapkan data master obat dan bahan baku, mengelola akun karyawan, serta memantau proses pesanan, batch, dan pengiriman. Pada dashboard tersedia **delapan menu**.
+Role Administrasi bertugas menyiapkan data master obat dan bahan baku, mengelola akun karyawan, serta memantau proses pesanan, batch, dan pengiriman. Pada dashboard tersedia delapan menu.
 
 #### 8.3.1 Dashboard Administrasi
 
-Dashboard Administrasi ditampilkan setelah login menggunakan akun dengan role **Administrasi**. Bagian atas menampilkan identitas pengguna, sementara delapan tombol menu memberikan akses ke pengelolaan data master dan pemantauan proses operasional.
+Dashboard Administrasi ditampilkan setelah login menggunakan akun dengan role Administrasi. Bagian atas menampilkan identitas pengguna, sementara delapan tombol menu memberikan akses ke pengelolaan data master dan pemantauan proses operasional.
 
 <p align="center">
   <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/48c57da0-7da6-4a32-a884-43a350dd58e2" />
@@ -750,24 +750,24 @@ Dashboard Administrasi ditampilkan setelah login menggunakan akun dengan role **
 
 **Menu yang tersedia:** **Kelola Obat**, **Kelola Bahan Baku**, **Kelola Karyawan**, **Data Pesanan**, **Data Pengiriman**, **Instansi Kesehatan**, **Stok per Batch**, dan **Detail Pesanan**.
 
-**Cara menggunakan dashboard:** klik tombol menu untuk membuka form terkait. Setelah selesai, tekan **Kembali** untuk menuju dashboard. Tombol **Keluar** digunakan untuk logout setelah konfirmasi. Menu monitoring tidak mengizinkan perubahan data yang memang menjadi wewenang role lain.
+Cara menggunakan dashboard: klik tombol menu untuk membuka form terkait. Setelah selesai, tekan Kembali untuk menuju dashboard. Tombol Keluar digunakan untuk logout setelah konfirmasi. Menu monitoring tidak mengizinkan perubahan data yang memang menjadi wewenang role lain.
 
 #### 8.3.2 Kelola Obat
 
-Menu **Kelola Obat** digunakan untuk membuat dan memelihara katalog obat yang nantinya dipilih pada proses produksi. Form menampilkan **ID Obat, Nama Obat, Jenis Obat,** dan **Status Ketersediaan**.
+Menu Kelola Obat digunakan untuk membuat dan memelihara katalog obat yang nantinya dipilih pada proses produksi. Form menampilkan ID Obat, Nama Obat, Jenis Obat, dan Status Ketersediaan.
 
 <p align="center">
   <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/a4bab64a-0b1b-4ca1-812d-a4b827f2c520" />
 </p>
 
-1. Buka **Kelola Obat** dari dashboard Administrasi.
-2. Untuk menambah obat, isi **Nama Obat**, pilih **Jenis Obat** dari dropdown (Obat Bebas, Obat Bebas Terbatas, Obat Keras, Obat Narkotika, Fitofarmaka, Obat Herbal Terstandar, atau Jamu), kemudian pilih status **Tersedia** atau **Tidak Tersedia**.
-3. Klik **Tambah** untuk menyimpan. **ID Obat** ditangani otomatis oleh sistem; pengguna tidak perlu mengetiknya.
-4. Untuk mengubah data, klik satu baris pada tabel, sesuaikan isian yang diperlukan, kemudian tekan **Ubah Data**.
-5. Untuk menghapus, pilih baris obat dan tekan **Hapus**, lalu konfirmasi. Penghapusan dapat ditolak jika obat masih dipakai pada data produksi atau relasi lainnya.
-6. Gunakan kolom **Cari** untuk menemukan obat, **Kosongkan** untuk mereset form, dan **Cetak PDF** untuk mengekspor data yang ditampilkan.
+1. Buka Kelola Obat dari dashboard Administrasi.
+2. Untuk menambah obat, isi Nama Obat, pilih Jenis Obat dari dropdown (Obat Bebas, Obat Bebas Terbatas, Obat Keras, Obat Narkotika, Fitofarmaka, Obat Herbal Terstandar, atau Jamu), kemudian pilih status Tersedia atau Tidak Tersedia.
+3. Klik Tambah untuk menyimpan. ID Obat ditangani otomatis oleh sistem; pengguna tidak perlu mengetiknya.
+4. Untuk mengubah data, klik satu baris pada tabel, sesuaikan isian yang diperlukan, kemudian tekan Ubah Data.
+5. Untuk menghapus, pilih baris obat dan tekan Hapus, lalu konfirmasi. Penghapusan dapat ditolak jika obat masih dipakai pada data produksi atau relasi lainnya.
+6. Gunakan kolom Cari untuk menemukan obat, Kosongkan untuk mereset form, dan Cetak PDF untuk mengekspor data yang ditampilkan.
 
-**Hasil:** obat yang tersimpan menjadi pilihan pada formulir **Proses Produksi**. Status ketersediaan obat juga dapat diubah dari menu khusus milik Fulfillment.
+Hasil: obat yang tersimpan menjadi pilihan pada formulir Proses Produksi. Status ketersediaan obat juga dapat diubah dari menu khusus milik Fulfillment.
 
 #### 8.3.3 Kelola Bahan Baku
 
