@@ -411,7 +411,7 @@ Pengguna → View (Java Swing) → Controller → Model / DAO → MySQL
                     └──── hasil operasi ──┘
 ```
 
-**Model** menangani data dan akses database; **View** menampilkan form serta tabel; **Controller** mengatur logika interaksi dan menghubungkan keduanya.
+Model menangani data dan akses database; View menampilkan form serta tabel; Controller mengatur logika interaksi dan menghubungkan keduanya.
 
 ---
 
@@ -600,20 +600,20 @@ try {
 
 ### 8.1 Persiapan dan Instalasi
 
-1. Siapkan **JDK 17+**, **MySQL 8**, dan **Apache Maven** atau **Apache NetBeans** yang mendukung project Maven.
-2. Untuk database baru/kosong, jalankan file **`sql/FORMULA_SETUP_MYSQL8.sql`** melalui MySQL Workbench atau klien MySQL. **Jangan mengimpor ulang file setup ke database operasional yang sudah berisi data tanpa backup.**
-3. Buka file **`formula.properties`** dan sesuaikan `db.url`, `db.user`, serta `db.password` dengan pengaturan MySQL di komputer. Jangan mengunggah password database asli ke repository publik.
-4. Buka folder `formula_final_penggunaan` sebagai project Maven pada NetBeans dan jalankan main class **`app.MainApp`**, atau gunakan perintah:
+1. Siapkan JDK 17+, MySQL 8, dan Apache Maven atau Apache NetBeans yang mendukung project Maven.
+2. Untuk database baru/kosong, jalankan file sql/FORMULA_SETUP_MYSQL8.sql melalui MySQL Workbench atau klien MySQL. Jangan mengimpor ulang file setup ke database operasional yang sudah berisi data tanpa backup.
+3. Buka file formula.properties dan sesuaikan db.url, db.user, serta db.password dengan pengaturan MySQL di komputer. Jangan mengunggah password database asli ke repository publik.
+4. Buka folder `formula_final_penggunaan` sebagai project Maven pada NetBeans dan jalankan main class app.MainApp, atau gunakan perintah:
 
    ```bash
    mvn clean verify
    mvn exec:java
    ```
 
-5. Alternatifnya, jalankan **`java -jar Formula.jar`** dari folder project, atau gunakan **`Jalankan.bat`** pada Windows.
-6. Login menggunakan **ID karyawan aktif dan password** yang terdapat pada data database. Hak akses mengikuti penempatan karyawan dalam role masing-masing.
+5. Alternatifnya, jalankan java -jar Formula.jar dari folder project, atau gunakan Jalankan.bat pada Windows.
+6. Login menggunakan ID karyawan aktif dan password yang terdapat pada data database. Hak akses mengikuti penempatan karyawan dalam role masing-masing.
 
-> **Pengujian:** Pengujian integrasi database pada `src/test` hanya diaktifkan jika environment variable `FORMULA_INTEGRATION_TESTS=true` dan menggunakan database pengujian terpisah dengan nama berawalan `formula_test_`.
+> Pengujian: Pengujian integrasi database pada `src/test` hanya diaktifkan jika environment variable `FORMULA_INTEGRATION_TESTS=true` dan menggunakan database pengujian terpisah dengan nama berawalan `formula_test_`.
 
 ### 8.2 Login dan Dashboard
 
@@ -642,7 +642,7 @@ try {
 
 <p align="justify"><strong>Alur operasional ringkas:</strong> Kelola data master → Produksi per batch → Catat penggunaan bahan → Buat pesanan → Pilih batch dan jumlah pada detail pesanan → Buat pengiriman → Perbarui status → Cetak data jika diperlukan.</p>
 
-> **Screenshot:** Tiga gambar di atas merupakan gambar **preview GUI yang memang disertakan dalam ZIP project**. Dokumentasi belum menyertakan screenshot mandiri untuk halaman login, detail pesanan, stok per batch, atau pengiriman. Tambahkan tangkapan layar nyata dari aplikasi yang telah dijalankan apabila diperlukan untuk dokumentasi lengkap..
+> **Screenshot:** Tiga gambar di atas merupakan gambar preview GUI yang memang disertakan dalam ZIP project. Dokumentasi belum menyertakan screenshot mandiri untuk halaman login, detail pesanan, stok per batch, atau pengiriman. Tambahkan tangkapan layar nyata dari aplikasi yang telah dijalankan apabila diperlukan untuk dokumentasi lengkap..
 
 <h2 align="left">👥 9. Kontributor</h2>
 
