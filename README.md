@@ -642,7 +642,7 @@ try {
 
 <p align="justify"><strong>Alur operasional ringkas:</strong> Kelola data master → Produksi per batch → Catat penggunaan bahan → Buat pesanan → Pilih batch dan jumlah pada detail pesanan → Buat pengiriman → Perbarui status → Cetak data jika diperlukan.</p>
 
-> **Screenshot:** Tiga gambar di atas merupakan gambar **preview GUI yang memang disertakan dalam ZIP project**. Dokumentasi belum menyertakan screenshot mandiri untuk halaman login, detail pesanan, stok per batch, atau pengiriman. Tambahkan tangkapan layar nyata dari aplikasi yang telah dijalankan apabila diperlukan untuk dokumentasi lengkap.
+> **Screenshot:** Tiga gambar di atas merupakan gambar **preview GUI yang memang disertakan dalam ZIP project**. Dokumentasi belum menyertakan screenshot mandiri untuk halaman login, detail pesanan, stok per batch, atau pengiriman. Tambahkan tangkapan layar nyata dari aplikasi yang telah dijalankan apabila diperlukan untuk dokumentasi lengkap..
 
 <h2 align="left">👥 9. Kontributor</h2>
 
