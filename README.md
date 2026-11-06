@@ -706,9 +706,9 @@ Bagian ini menjelaskan penggunaan seluruh menu FORMULA secara berurutan berdasar
 ### 8.1 Persiapan dan Menjalankan Aplikasi
 
 1. Pastikan komputer memiliki JDK 17 atau lebih baru, MySQL 8, serta Apache NetBeans/Maven.
-2. Siapkan database MySQL. Untuk database baru yang masih kosong, jalankan `sql/FORMULA_SETUP_MYSQL8.sql`. Jangan mengimpor ulang file setup ke database operasional yang sudah berisi data tanpa backup.
-3. Sesuaikan koneksi database di `formula.properties`, terutama `db.url`, `db.user`, dan `db.password`. Jangan mengunggah password asli ke repository publik.
-4. Buka folder project Maven di NetBeans dan jalankan class `app.MainApp`. Program juga dapat dijalankan dari file `Formula.jar` atau `Jalankan.bat`, jika konfigurasi dan database sudah sesuai.
+2. Siapkan database MySQL. Untuk database baru yang masih kosong, jalankan sql/FORMULA_SETUP_MYSQL8.sql. Jangan mengimpor ulang file setup ke database operasional yang sudah berisi data tanpa backup.
+3. Sesuaikan koneksi database di formula.properties, terutama db.url, db.user, dan db.password. Jangan mengunggah password asli ke repository publik.
+4. Buka folder project Maven di NetBeans dan jalankan class app.MainApp. Program juga dapat dijalankan dari file Formula.jar atau Jalankan.bat, jika konfigurasi dan database sudah sesuai.
 5. Gunakan akun karyawan aktif dengan ID dan password yang tersimpan di database. Akun yang tidak aktif tidak dapat login.
 
 ```bash
@@ -748,7 +748,7 @@ Dashboard Administrasi ditampilkan setelah login menggunakan akun dengan role Ad
   <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/48c57da0-7da6-4a32-a884-43a350dd58e2" />
 </p>
 
-**Menu yang tersedia:** **Kelola Obat**, **Kelola Bahan Baku**, **Kelola Karyawan**, **Data Pesanan**, **Data Pengiriman**, **Instansi Kesehatan**, **Stok per Batch**, dan **Detail Pesanan**.
+Menu yang tersedia: Kelola Obat, Kelola Bahan Baku, Kelola Karyawan, Data Pesanan, Data Pengiriman, Instansi Kesehatan, Stok per Batch, dan Detail Pesanan.
 
 Cara menggunakan dashboard: klik tombol menu untuk membuka form terkait. Setelah selesai, tekan Kembali untuk menuju dashboard. Tombol Keluar digunakan untuk logout setelah konfirmasi. Menu monitoring tidak mengizinkan perubahan data yang memang menjadi wewenang role lain.
 
@@ -771,146 +771,146 @@ Hasil: obat yang tersimpan menjadi pilihan pada formulir Proses Produksi. Status
 
 #### 8.3.3 Kelola Bahan Baku
 
-Menu ini mencatat bahan yang akan digunakan oleh petugas Produksi. Kolom yang ditampilkan adalah **ID Bahan, Nama Bahan, Stok,** dan **Satuan**.
+Menu ini mencatat bahan yang akan digunakan oleh petugas Produksi. Kolom yang ditampilkan adalah ID Bahan, Nama Bahan, Stok, dan Satuan.
 
 <p align="center">
   <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/f44ec745-7054-4259-b391-7bd372387cda" />
 </p>
 
-1. Buka **Kelola Bahan Baku**.
-2. Isi **Nama Bahan**, **Stok** berupa angka nol atau lebih, dan pilih satuan **gram, ml, Kg,** atau **Liter**.
-3. Klik **Tambah**. ID bahan dibuat oleh sistem dan bahan baru akan masuk ke daftar.
-4. Untuk memperbarui stok atau nama, pilih data pada tabel, ubah isian, lalu klik **Ubah Data**.
-5. **Satuan bahan yang sudah tersimpan tidak dapat diganti** melalui pengubahan data. Jika diperlukan satuan master yang berbeda, buat entri bahan baru sesuai aturan aplikasi.
-6. Gunakan **Hapus** untuk menghapus bahan yang tidak lagi diperlukan, sepanjang belum terikat relasi yang melarang penghapusan. Gunakan **Cari** dan **Cetak PDF** untuk penelusuran serta pelaporan.
+1. Buka Kelola Bahan Baku.
+2. Isi Nama Bahan, Stok berupa angka nol atau lebih, dan pilih satuan gram, ml, Kg, atau Liter.
+3. Klik Tambah. ID bahan dibuat oleh sistem dan bahan baru akan masuk ke daftar.
+4. Untuk memperbarui stok atau nama, pilih data pada tabel, ubah isian, lalu klik Ubah Data.
+5. Satuan bahan yang sudah tersimpan tidak dapat diganti melalui pengubahan data. Jika diperlukan satuan master yang berbeda, buat entri bahan baru sesuai aturan aplikasi.
+6. Gunakan Hapus untuk menghapus bahan yang tidak lagi diperlukan, sepanjang belum terikat relasi yang melarang penghapusan. Gunakan Cari dan Cetak PDF untuk penelusuran serta pelaporan.
 
-**Catatan:** nama bahan tidak boleh duplikat. Stok bahan akan **berkurang saat penggunaan bahan dicatat**, bukan saat batch produksi baru dibuat.
+Catatan: nama bahan tidak boleh duplikat. Stok bahan akan berkurang saat penggunaan bahan dicatat, bukan saat batch produksi baru dibuat.
 
 #### 8.3.4 Kelola Karyawan
 
-Menu ini digunakan untuk mendaftarkan akun dan menentukan hak akses pengguna. Form menampilkan **ID Karyawan, Nama, Password, Telepon, Jenis Kelamin, Tanggal Lahir, Alamat Domisili, Area, Shift, Peran,** dan **Status**.
+Menu ini digunakan untuk mendaftarkan akun dan menentukan hak akses pengguna. Form menampilkan ID Karyawan, Nama, Password, Telepon, Jenis Kelamin, Tanggal Lahir, Alamat Domisili, Area, Shift, Peran, dan Status.
 
 <p align="center">
   <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/d81edf7a-cc8c-49e1-880c-120310e75985" />
 </p>
 
-1. Buka **Kelola Karyawan**.
-2. Isi **Nama, Password, Nomor Telepon,** serta **Alamat Domisili**. Nomor telepon memakai format `08...` atau `+628...`.
-3. Pilih **Jenis Kelamin**, **Shift** (Siang/Malam), dan **Peran** (Administrasi/Produksi/Fulfillment) melalui dropdown.
-4. Tekan tombol **Pilih** pada tanggal lahir untuk membuka kalender; tentukan tanggal yang valid, tidak melampaui hari ini.
-5. Isi **Area** sesuai penugasan jika diperlukan, lalu klik **Tambah Karyawan**. Sistem menyimpan karyawan beserta informasi role dan menghasilkan **ID Karyawan** otomatis.
-6. Untuk mengubah status, pilih baris karyawan pada tabel, pilih **Aktif** atau **Nonaktif**, lalu tekan **Update**. **Tombol Update pada versi ini khusus mengubah status**, bukan seluruh profil karyawan.
-7. Untuk menghapus, pilih karyawan dan klik **Hapus**, kemudian konfirmasi. Karyawan yang masih tercatat dalam transaksi/produksi tertentu mungkin tidak dapat dihapus.
+1. Buka Kelola Karyawan.
+2. Isi Nama, Password, Nomor Telepon, serta Alamat Domisili. Nomor telepon memakai format `08...` atau `+628...`.
+3. Pilih Jenis Kelamin, Shift (Siang/Malam), dan Peran (Administrasi/Produksi/Fulfillment) melalui dropdown.
+4. Tekan tombol Pilih pada tanggal lahir untuk membuka kalender; tentukan tanggal yang valid, tidak melampaui hari ini.
+5. Isi Area sesuai penugasan jika diperlukan, lalu klik Tambah Karyawan. Sistem menyimpan karyawan beserta informasi role dan menghasilkan ID Karyawan otomatis.
+6. Untuk mengubah status, pilih baris karyawan pada tabel, pilih Aktif atau Nonaktif, lalu tekan Update. Tombol Update pada versi ini khusus mengubah status, bukan seluruh profil karyawan.
+7. Untuk menghapus, pilih karyawan dan klik Hapus, kemudian konfirmasi. Karyawan yang masih tercatat dalam transaksi/produksi tertentu mungkin tidak dapat dihapus.
 
-**Hasil:** karyawan aktif dapat login menggunakan ID dan password sesuai role. Menonaktifkan akun mencegah akun tersebut digunakan untuk login.
+Hasil: karyawan aktif dapat login menggunakan ID dan password sesuai role. Menonaktifkan akun mencegah akun tersebut digunakan untuk login.
 
 #### 8.3.5 Data Pesanan
 
-Menu **Data Pesanan** pada role Administrasi digunakan **untuk melihat dan memantau**, bukan membuat atau mengubah pesanan. Tabel memuat **ID Pesanan, Tanggal, Status, Catatan, Instansi,** dan **Petugas**.
+Menu Data Pesanan pada role Administrasi digunakan untuk melihat dan memantau, bukan membuat atau mengubah pesanan. Tabel memuat ID Pesanan, Tanggal, Status, Catatan, Instansi, dan Petugas.
 
 <p align="center">
   <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/7e701724-cb09-4f2b-a6da-b60f7c3c9964" />
 </p>
 
-1. Buka **Data Pesanan** dari dashboard Administrasi.
+1. Buka Data Pesanan dari dashboard Administrasi.
 2. Periksa daftar pesanan yang dicatat petugas Fulfillment.
-3. Gunakan kolom **Cari** untuk menyaring data, misalnya berdasarkan ID, nama instansi, atau status.
-4. Gunakan **Cetak PDF** jika membutuhkan rekap pesanan.
+3. Gunakan kolom Cari untuk menyaring data, misalnya berdasarkan ID, nama instansi, atau status.
+4. Gunakan Cetak PDF jika membutuhkan rekap pesanan.
 
-Pada mode ini tombol tambah, ubah, dan hapus tidak tersedia. Pembuatan serta perubahan pesanan dilakukan melalui role **Fulfillment**.
+Pada mode ini tombol tambah, ubah, dan hapus tidak tersedia. Pembuatan serta perubahan pesanan dilakukan melalui role Fulfillment.
 
 #### 8.3.6 Data Pengiriman
 
-Menu **Data Pengiriman** juga berfungsi sebagai halaman monitoring Administrasi. Tabel menampilkan **Nomor Resi, Tanggal, Status, Keterangan, ID Pesanan,** dan **Petugas**.
+Menu Data Pengiriman juga berfungsi sebagai halaman monitoring Administrasi. Tabel menampilkan Nomor Resi, Tanggal, Status, Keterangan, ID Pesanan, dan Petugas.
 
 <p align="center">
   <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/e5d9e1ba-0a5a-4418-8df8-5b05c4e1bec0" />
 </p>
 
-1. Masuk ke **Data Pengiriman**.
+1. Masuk ke Data Pengiriman.
 2. Periksa nomor resi, keterkaitan dengan pesanan, serta perkembangan status pengiriman.
-3. Gunakan **Cari** untuk menelusuri pengiriman tertentu.
-4. Tekan **Cetak PDF** untuk membuat rekap daftar pengiriman.
+3. Gunakan Cari untuk menelusuri pengiriman tertentu.
+4. Tekan Cetak PDF untuk membuat rekap daftar pengiriman.
 
-Administrasi tidak mengubah status pengiriman melalui menu ini; proses pengiriman dikelola oleh **Fulfillment**.
+Administrasi tidak mengubah status pengiriman melalui menu ini; proses pengiriman dikelola oleh Fulfillment.
 
 #### 8.3.7 Instansi Kesehatan
 
-Pada role Administrasi, menu **Instansi Kesehatan** bersifat **lihat saja (read-only)**. Tabel berisi **ID Instansi, Nama Instansi, Jenis, Alamat,** dan **Kontak**.
+Pada role Administrasi, menu Instansi Kesehatan bersifat lihat saja (read-only). Tabel berisi **ID Instansi, Nama Instansi, Jenis, Alamat, dan Kontak.
 
 <p align="center">
 <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/435eba19-2352-458d-9a8b-a5e6fb1d4987" />
 </p>
 
-1. Buka menu **Instansi Kesehatan**.
+1. Buka menu Instansi Kesehatan.
 2. Lihat daftar klinik, apotek, dan rumah sakit yang telah terdaftar sebagai tujuan distribusi.
-3. Gunakan **Cari** untuk menemukan instansi tertentu.
+3. Gunakan Cari untuk menemukan instansi tertentu.
 
-Penambahan, pengubahan, dan penghapusan instansi dilakukan melalui menu **Instansi Kesehatan** pada role **Fulfillment**.
+Penambahan, pengubahan, dan penghapusan instansi dilakukan melalui menu Instansi Kesehatan pada role Fulfillment.
 
 #### 8.3.8 Stok per Batch
 
-Menu **Stok per Batch** dipakai untuk melihat batch yang **masih memiliki stok positif, belum kedaluwarsa, dan belum dialokasikan ke detail pesanan**. Informasi yang ditampilkan meliputi **Nomor Batch, Nama Obat, Stok, Satuan,** dan **Tanggal Kedaluwarsa**.
+Menu Stok per Batch dipakai untuk melihat batch yang masih memiliki stok positif, belum kedaluwarsa, dan belum dialokasikan ke detail pesanan. Informasi yang ditampilkan meliputi Nomor Batch, Nama Obat, Stok, Satuan, dan Tanggal Kedaluwarsa.
 
 <p align="center">
  <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/37e99be2-e7fa-477f-b614-c3b797fecd82" />
 </p>
 
-1. Buka **Stok per Batch**.
+1. Buka Stok per Batch.
 2. Periksa jumlah dan satuan stok dari tiap batch yang tersedia.
 3. Perhatikan tanggal kedaluwarsa sebelum batch digunakan dalam pemenuhan pesanan.
-4. Gunakan **Cari** untuk menelusuri nama obat atau nomor batch.
+4. Gunakan Cari untuk menelusuri nama obat atau nomor batch.
 
-Menu ini hanya untuk monitoring; tidak dipakai untuk menambah atau mengedit batch. **Batch yang sudah dialokasikan atau kedaluwarsa tidak muncul dalam daftar batch tersedia**, meskipun catatan produksinya masih tersimpan di menu Data Produksi.
+Menu ini hanya untuk monitoring; tidak dipakai untuk menambah atau mengedit batch. Batch yang sudah dialokasikan atau kedaluwarsa tidak muncul dalam daftar batch tersedia, meskipun catatan produksinya masih tersimpan di menu Data Produksi.
 
 #### 8.3.9 Detail Pesanan
 
-Pada Administrasi, menu **Detail Pesanan** digunakan untuk melihat hubungan antara pesanan dan batch yang dipilih oleh Fulfillment. Tabel menampilkan **ID Detail, ID Pesanan, Nomor Batch,** dan **Jumlah Obat**.
+Pada Administrasi, menu Detail Pesanan digunakan untuk melihat hubungan antara pesanan dan batch yang dipilih oleh Fulfillment. Tabel menampilkan ID Detail, ID Pesanan, Nomor Batch, dan Jumlah Obat.
 
 <p align="center">
   <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/62ffa05d-6b5b-41eb-b730-3e88009285e0" />
 </p>
 
-1. Buka **Detail Pesanan**.
+1. Buka Detail Pesanan.
 2. Lihat pesanan yang sudah memiliki alokasi batch.
-3. Gunakan **Cari** untuk memeriksa ID pesanan atau nomor batch tertentu.
-4. Gunakan **Cetak PDF** apabila diperlukan laporan detail pesanan.
+3. Gunakan Cari untuk memeriksa ID pesanan atau nomor batch tertentu.
+4. Gunakan Cetak PDF apabila diperlukan laporan detail pesanan.
 
 Role Administrasi tidak dapat menambah, mengubah, atau menghapus detail pesanan melalui halaman ini.
 
 ### 8.4 Role Produksi — Pembuatan dan Pengelolaan Batch
 
-Petugas **Produksi** melanjutkan proses setelah data obat dan bahan baku disiapkan oleh Administrasi. Role ini memiliki tiga menu untuk membuat hasil produksi, memeriksa data batch, serta mencatat pemakaian bahan baku.
+Petugas Produksi melanjutkan proses setelah data obat dan bahan baku disiapkan oleh Administrasi. Role ini memiliki tiga menu untuk membuat hasil produksi, memeriksa data batch, serta mencatat pemakaian bahan baku.
 
 #### 8.4.1 Dashboard Produksi
 
-Dashboard Produksi merupakan halaman utama bagi akun ber-role **Produksi**. Dashboard menyediakan **tiga menu**, yaitu **Proses Produksi**, **Data Produksi**, dan **Penggunaan Bahan**. Setiap menu berhubungan dengan tahapan produksi yang berbeda.
+Dashboard Produksi merupakan halaman utama bagi akun ber-role Produksi. Dashboard menyediakan tiga menu, yaitu Proses Produksi, Data Produksi, dan Penggunaan Bahan. Setiap menu berhubungan dengan tahapan produksi yang berbeda.
 
 <p align="center">
 <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/40ee55f6-ce13-4aae-b552-df1e967f6d0c" />
 </p>
 
-**Cara menggunakan dashboard:** mulai dari **Proses Produksi** untuk membuat batch, kemudian buka **Penggunaan Bahan** untuk mencatat bahan yang dipakai. Setelah itu, periksa hasil dan rincian batch pada **Data Produksi**. Gunakan **Kembali** dari masing-masing form dan **Keluar** ketika pekerjaan selesai.
+Cara menggunakan dashboard: mulai dari Proses Produksi untuk membuat batch, kemudian buka Penggunaan Bahan untuk mencatat bahan yang dipakai. Setelah itu, periksa hasil dan rincian batch pada Data Produksi. Gunakan Kembali dari masing-masing form dan Keluar ketika pekerjaan selesai.
 
-**Alur:** membuat batch **tidak otomatis mengurangi stok bahan baku**; stok bahan baru disesuaikan saat penggunaan bahan berhasil dicatat.
+Alur: membuat batch tidak otomatis mengurangi stok bahan baku; stok bahan baru disesuaikan saat penggunaan bahan berhasil dicatat.
 
 #### 8.4.2 Proses Produksi
 
-Menu **Proses Produksi** digunakan untuk membuat batch baru dari obat yang sudah tercatat pada master obat.
+Menu Proses Produksi digunakan untuk membuat batch baru dari obat yang sudah tercatat pada master obat.
 
 <p align="center">
  <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/83ba74e4-59a5-40d5-891d-9eee4e44e44c" />
 </p>
 
-1. Masuk sebagai petugas Produksi dan buka **Proses Produksi**.
-2. Pada pilihan **Obat Jadi**, pilih obat dari dropdown. Klik **Lihat Obat** jika ingin membuka tabel katalog obat sebelum memilih.
-3. Tentukan **Jumlah Stok Dihasilkan** dari pilihan **25, 50,** atau **100**.
-4. Tekan **Produksi Obat**, lalu pilih **Yes** pada dialog konfirmasi produksi.
-5. Sistem menyimpan batch baru dengan nomor batch otomatis, tanggal produksi pada hari transaksi, dan tanggal kedaluwarsa otomatis **tiga tahun setelah tanggal produksi**.
-6. Sistem menentukan satuan hasil berupa **Strip** atau **Botol** berdasarkan nama obat. Jika diperlukan, jumlah stok dan satuan batch dapat disesuaikan kemudian melalui **Data Produksi**, selama batch belum dialokasikan ke pesanan.
-7. Setelah berhasil, aplikasi menampilkan **nomor batch** beserta jumlah stok. Catat nomor ini untuk proses **Penggunaan Bahan**.
+1. Masuk sebagai petugas Produksi dan buka Proses Produksi.
+2. Pada pilihan Obat Jadi, pilih obat dari dropdown. Klik Lihat Obat jika ingin membuka tabel katalog obat sebelum memilih.
+3. Tentukan Jumlah Stok Dihasilkan dari pilihan 25, 50, atau 100.
+4. Tekan Produksi Obat, lalu pilih Yes pada dialog konfirmasi produksi.
+5. Sistem menyimpan batch baru dengan nomor batch otomatis, tanggal produksi pada hari transaksi, dan tanggal kedaluwarsa otomatis tiga tahun setelah tanggal produksi.
+6. Sistem menentukan satuan hasil berupa Strip atau Botol berdasarkan nama obat. Jika diperlukan, jumlah stok dan satuan batch dapat disesuaikan kemudian melalui Data Produksi, selama batch belum dialokasikan ke pesanan.
+7. Setelah berhasil, aplikasi menampilkan nomor batch beserta jumlah stok. Catat nomor ini untuk proses Penggunaan Bahan.
 
-**Penting:** pembuatan batch **tidak langsung mengurangi stok bahan baku**. Pengurangan baru dilakukan melalui menu **Penggunaan Bahan** setelah data pemakaian bahan disimpan.
+Catatan: pembuatan batch tidak langsung mengurangi stok bahan baku. Pengurangan baru dilakukan melalui menu Penggunaan Bahan setelah data pemakaian bahan disimpan.
 
 #### 8.4.3 Data Produksi
 
@@ -1004,85 +1004,85 @@ Menu **Detail Pesanan** menghubungkan satu pesanan dengan satu batch obat hasil 
 
 #### 8.5.4 Kelola Pengiriman
 
-Menu **Kelola Pengiriman** digunakan setelah pesanan memiliki detail batch. Form menampilkan **Nomor Resi, Tanggal, Status, Keterangan, Pesanan,** dan **Petugas**.
+Menu Kelola Pengiriman digunakan setelah pesanan memiliki detail batch. Form menampilkan Nomor Resi, Tanggal, Status, Keterangan, Pesanan, dan Petugas.
 
 <p align="center">
 <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/c2481dd4-665d-46ba-ae81-b752663d5037" />
 </p>
 
-1. Buka **Kelola Pengiriman**.
-2. Pilih **Pesanan** yang akan dikirim. Pesanan harus **Menunggu**, memiliki detail barang, dan belum mempunyai nomor resi pengiriman.
-3. Pilih **Status Pengiriman** dari **Menunggu, Diproses, Selesai,** atau **Batal**, kemudian isi **Keterangan** pengiriman.
-4. Tekan **Tambah**. Sistem menyimpan tanggal pengiriman dan petugas secara otomatis, membuat **Nomor Resi**, serta menghubungkannya dengan pesanan.
-5. Untuk memperbarui pengiriman, pilih baris dari tabel, ubah **Status** dan/atau **Keterangan**, lalu klik **Ubah Data**.
-6. Ketika status pengiriman berhasil diubah menjadi **Selesai**, sistem juga menyelesaikan **status pesanan terkait** melalui transaksi database.
-7. Pengiriman berstatus **Diproses** atau **Selesai** tidak dapat dihapus. Pengiriman yang sudah **Selesai** atau **Batal** juga tidak dapat diaktifkan kembali ke status sebelumnya.
-8. Gunakan **Cari** untuk menemukan nomor resi, **Cetak PDF** untuk rekap, dan tombol **Kembali** untuk menuju dashboard.
+1. Buka Kelola Pengiriman.
+2. Pilih Pesanan yang akan dikirim. Pesanan harus Menunggu, memiliki detail barang, dan belum mempunyai nomor resi pengiriman.
+3. Pilih Status Pengiriman dari Menunggu, Diproses, Selesai, atau Batal, kemudian isi Keterangan pengiriman.
+4. Tekan Tambah. Sistem menyimpan tanggal pengiriman dan petugas secara otomatis, membuat Nomor Resi, serta menghubungkannya dengan pesanan.
+5. Untuk memperbarui pengiriman, pilih baris dari tabel, ubah Status dan/atau Keterangan, lalu klik Ubah Data.
+6. Ketika status pengiriman berhasil diubah menjadi Selesai, sistem juga menyelesaikan status pesanan terkait melalui transaksi database.
+7. Pengiriman berstatus Diproses atau Selesai tidak dapat dihapus. Pengiriman yang sudah Selesai atau Batal juga tidak dapat diaktifkan kembali ke status sebelumnya.
+8. Gunakan Cari untuk menemukan nomor resi, Cetak PDF untuk rekap, dan tombol Kembali untuk menuju dashboard.
 
-**Urutan umum:** `Menunggu → Diproses → Selesai`. Pembatalan hanya dapat dilakukan selama masih memenuhi aturan status pada sistem.
+Urutan: `Menunggu → Diproses → Selesai`. Pembatalan hanya dapat dilakukan selama masih memenuhi aturan status pada sistem.
 
 #### 8.5.5 Instansi Kesehatan
 
-Berbeda dengan role Administrasi yang hanya melihat data, pada role **Fulfillment** menu **Instansi Kesehatan** menyediakan operasi CRUD. Field yang tersedia adalah **ID Instansi, Nama Instansi, Jenis, Alamat,** dan **Kontak**.
+Berbeda dengan role Administrasi yang hanya melihat data, pada role Fulfillment menu Instansi Kesehatan menyediakan operasi CRUD. Field yang tersedia adalah ID Instansi, Nama Instansi, Jenis, Alamat, dan Kontak.
 
 <p align="center">
 <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/75ca6a34-6d0c-4fc0-9435-5d38d721374e" />
 </p>
 
-1. Buka **Instansi Kesehatan** dari dashboard Fulfillment.
-2. Isi nama instansi, pilih jenis **Klinik**, **Apotek**, atau **Rumah Sakit**, lalu isi alamat dan kontak.
-3. Klik **Tambah**. ID instansi dibuat otomatis, dan instansi baru tersedia saat membuat pesanan.
-4. Untuk memperbarui informasi, pilih baris pada tabel, ubah data yang diperlukan, kemudian klik **Ubah Data**.
-5. Untuk menghapus, pilih baris dan tekan **Hapus**, lalu konfirmasi. Penghapusan dapat ditolak jika instansi sudah dipakai oleh pesanan.
-6. Gunakan **Cari** untuk menelusuri data instansi.
+1. Buka Instansi Kesehatan dari dashboard Fulfillment.
+2. Isi nama instansi, pilih jenis Klinik, Apotek, atau Rumah Sakit, lalu isi alamat dan kontak.
+3. Klik Tambah. ID instansi dibuat otomatis, dan instansi baru tersedia saat membuat pesanan.
+4. Untuk memperbarui informasi, pilih baris pada tabel, ubah data yang diperlukan, kemudian klik Ubah Data.
+5. Untuk menghapus, pilih baris dan tekan Hapus, lalu konfirmasi. Penghapusan dapat ditolak jika instansi sudah dipakai oleh pesanan.
+6. Gunakan Cari untuk menelusuri data instansi.
 
 #### 8.5.6 Stok per Batch
 
-Menu ini menampilkan daftar batch yang dapat dipilih pada proses pemenuhan pesanan, yaitu batch dengan **stok lebih dari nol**, **belum kedaluwarsa**, serta **belum dialokasikan**.
+Menu ini menampilkan daftar batch yang dapat dipilih pada proses pemenuhan pesanan, yaitu batch dengan stok lebih dari nol, belum kedaluwarsa, serta belum dialokasikan.
 
 <p align="center">
   <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/ac9a8596-e991-41cf-a823-b4f0a705ff59" />
 </p>
 
-1. Buka **Stok per Batch**.
-2. Perhatikan **Nomor Batch, Nama Obat, Stok, Satuan,** dan **Tanggal Kedaluwarsa**.
-3. Gunakan **Cari** untuk menemukan batch berdasarkan obat atau nomor batch.
-4. Cocokkan ketersediaan batch dengan kebutuhan pesanan sebelum membuka **Detail Pesanan**.
+1. Buka Stok per Batch.
+2. Perhatikan Nomor Batch, Nama Obat, Stok, Satuan, dan Tanggal Kedaluwarsa.
+3. Gunakan Cari untuk menemukan batch berdasarkan obat atau nomor batch.
+4. Cocokkan ketersediaan batch dengan kebutuhan pesanan sebelum membuka Detail Pesanan.
 
-Halaman ini bersifat **read-only**. Penambahan dan perubahan data produksi dilakukan oleh role Produksi.
+Halaman ini bersifat read-only. Penambahan dan perubahan data produksi dilakukan oleh role Produksi.
 
 #### 8.5.7 Ubah Status Obat
 
-Menu **Ubah Status Obat** digunakan untuk mengatur penanda ketersediaan pada katalog obat. Tabel menampilkan daftar obat beserta statusnya.
+Menu Ubah Status Obat digunakan untuk mengatur penanda ketersediaan pada katalog obat. Tabel menampilkan daftar obat beserta statusnya.
 
 <p align="center">
 <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/86212025-0fee-430b-9b37-063c1375b091" />
 </p>
 
-1. Buka **Ubah Status Obat**.
+1. Buka Ubah Status Obat.
 2. Pilih satu obat pada tabel.
-3. Tekan **Update**. Sistem mengubah status **Tersedia** menjadi **Tidak Tersedia**, atau sebaliknya.
+3. Tekan Update. Sistem mengubah status Tersedia menjadi Tidak Tersedia, atau sebaliknya.
 4. Jika berhasil, daftar dimuat ulang sehingga status terbaru langsung terlihat.
 
-Pengguna harus memilih baris terlebih dahulu. Perubahan menu ini mengatur **status katalog obat**, bukan membuat batch baru atau mengubah jumlah stok batch.
+Pengguna harus memilih baris terlebih dahulu. Perubahan menu ini mengatur status katalog obat, bukan membuat batch baru atau mengubah jumlah stok batch.
 
 ### 8.6 Alur Operasional Lengkap (Administrasi → Produksi → Fulfillment)
 
 Berikut contoh urutan penggunaan seluruh modul utama dalam satu proses kerja:
 
-1. **Administrasi — Kelola Obat:** mendaftarkan obat yang akan diproduksi.
-2. **Administrasi — Kelola Bahan Baku:** menambahkan bahan beserta jumlah stok awal dan satuan.
-3. **Administrasi — Kelola Karyawan:** membuat akun petugas dengan role Produksi dan Fulfillment.
-4. **Produksi — Proses Produksi:** memilih obat dan jumlah hasil **25/50/100**, lalu menyimpan batch baru. Sistem menghasilkan nomor batch.
-5. **Produksi — Penggunaan Bahan:** memilih bahan, memasukkan jumlah pemakaian, dan menghubungkannya ke nomor batch. Stok bahan baku berkurang setelah transaksi berhasil.
-6. **Produksi — Data Produksi:** memeriksa batch, tanggal, stok, kelayakan, dan rincian bahan melalui pop-up **Lihat Bahan Baku**.
-7. **Fulfillment — Instansi Kesehatan:** mendaftarkan atau memilih instansi penerima obat.
-8. **Fulfillment — Stok per Batch:** memastikan batch tersedia dan belum kedaluwarsa.
-9. **Fulfillment — Kelola Pesanan:** membuat pesanan baru untuk instansi; status awal **Menunggu**.
-10. **Fulfillment — Detail Pesanan:** memilih pesanan dan satu batch utuh. Sistem mencatat alokasi batch sehingga tidak dapat digunakan pada pesanan lain.
-11. **Fulfillment — Kelola Pengiriman:** membuat pengiriman dan memperoleh nomor resi, kemudian memperbarui status pengiriman sampai **Selesai**. Status pesanan mengikuti penyelesaian pengiriman.
-12. **Administrasi — Data Pesanan, Data Pengiriman, Stok per Batch, dan Detail Pesanan:** memantau hasil proses serta mencetak laporan PDF pada menu yang menyediakannya.
-13. Jika diperlukan, **Fulfillment — Ubah Status Obat** digunakan untuk memperbarui status katalog obat.
+1. Administrasi — Kelola Obat: mendaftarkan obat yang akan diproduksi.
+2. Administrasi — Kelola Bahan Baku: menambahkan bahan beserta jumlah stok awal dan satuan.
+3. Administrasi — Kelola Karyawan: membuat akun petugas dengan role Produksi dan Fulfillment.
+4. Produksi — Proses Produksi: memilih obat dan jumlah hasil 25/50/100, lalu menyimpan batch baru. Sistem menghasilkan nomor batch.
+5. Produksi — Penggunaan Bahan: memilih bahan, memasukkan jumlah pemakaian, dan menghubungkannya ke nomor batch. Stok bahan baku berkurang setelah transaksi berhasil.
+6. Produksi — Data Produksi: memeriksa batch, tanggal, stok, kelayakan, dan rincian bahan melalui pop-up Lihat Bahan Baku.
+7. Fulfillment — Instansi Kesehatan: mendaftarkan atau memilih instansi penerima obat.
+8. Fulfillment — Stok per Batch: memastikan batch tersedia dan belum kedaluwarsa.
+9. Fulfillment — Kelola Pesanan: membuat pesanan baru untuk instansi; status awal Menunggu.
+10. Fulfillment — Detail Pesanan: memilih pesanan dan satu batch utuh. Sistem mencatat alokasi batch sehingga tidak dapat digunakan pada pesanan lain.
+11. Fulfillment — Kelola Pengiriman: membuat pengiriman dan memperoleh nomor resi, kemudian memperbarui status pengiriman sampai Selesai. Status pesanan mengikuti penyelesaian pengiriman.
+12. Administrasi — Data Pesanan, Data Pengiriman, Stok per Batch, dan Detail Pesanan: memantau hasil proses serta mencetak laporan PDF pada menu yang menyediakannya.
+13. Jika diperlukan, Fulfillment — Ubah Status Obat digunakan untuk memperbarui status katalog obat.
 
 ```text
 ADMINISTRASI                 PRODUKSI                         FULFILLMENT
