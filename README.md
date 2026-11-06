@@ -299,6 +299,9 @@ Petugas Operasional Divisi Administrasi dapat mengelola data obat, bahan baku, k
 <details>
   <summary>ERD Logical Formula </summary>
    <img width="1134" height="620" alt="PA_FORMULA ERD LOGICAL" src="https://github.com/user-attachments/assets/48deac5a-1ee6-4d9f-a79c-bb969dcff7c2" />
+  ERD tersebut menggambarkan bagaimana hubungan antar entitas dalam Sistem Informasi Manajemen Produksi, Persediaan, dan Distribusi Obat. ERD ini terdiri dari entitas Karyawan yang dikelompokkan menjadi Petugas Operasional dan Petugas Fulfillment, Obat, Bahan Baku, Produksi, Detail Penggunaan Bahan, Detail Pesanan, Pesanan, Pengiriman, dan Instansi Kesehatan. 
+
+  Sistem dimulai dari pengelolaan data obat dan bahan baku oleh karyawan bagian operasional. Selanjutnya, proses produksi dilakukan dengan menggunakan bahan baku yang dicatat melalui Detail Penggunaan Bahan. Obat yang telah diproduksi kemudian dicatat dalam Detail Pesanan untuk memenuhi pesanan dari instansi kesehatan, seperti apotek, klinik, dan rumah sakit. Pesanan tersebut dikelola oleh petugas terkait dan dilanjutkan ke proses pengiriman yang ditangani oleh Petugas Fulfillment.
 </details>
 
 <details>
