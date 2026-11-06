@@ -914,93 +914,93 @@ Catatan: pembuatan batch tidak langsung mengurangi stok bahan baku. Pengurangan 
 
 #### 8.4.3 Data Produksi
 
-Menu **Data Produksi** menampilkan hasil produksi yang telah disimpan. Tabel berisi **Nomor Batch, Nama Obat, Stok, Satuan, Tanggal Produksi, Tanggal Kedaluwarsa, Bahan Baku Digunakan, Petugas,** dan **Kelayakan** (Layak Edar/Kedaluwarsa).
+Menu Data Produksi menampilkan hasil produksi yang telah disimpan. Tabel berisi Nomor Batch, Nama Obat, Stok, Satuan, Tanggal Produksi, Tanggal Kedaluwarsa, Bahan Baku Digunakan, Petugas, dan Kelayakan (Layak Edar/Kedaluwarsa).
 
 <p align="center">
 <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/e502fa20-2077-4b7f-82fe-e15f8c5ba0f1" />
 </p>
 
-1. Buka **Data Produksi**, lalu pilih satu baris batch pada tabel.
-2. Untuk melihat bahan yang telah digunakan, tekan **Lihat Bahan Baku**. Aplikasi membuka pop-up daftar **Nama Bahan, Jumlah,** dan **Satuan** untuk batch terpilih. Jika belum ada catatan, sistem akan memberi informasi bahwa bahan belum tercatat.
-3. Untuk memperbarui batch, ubah hanya **Stok** dan **Satuan Stok**, lalu klik **Ubah Data**. Stok hanya boleh **25, 50, atau 100**, sedangkan satuannya **Strip** atau **Botol**.
-4. **Nomor batch, nama obat, tanggal produksi, kedaluwarsa, dan petugas** tidak diedit lewat form ini.
-5. Perubahan stok/satuan **ditolak apabila batch sudah dialokasikan ke detail pesanan**.
-6. Untuk menghapus batch, pilih baris dan klik **Hapus**, kemudian konfirmasi. Penghapusan dapat ditolak jika batch sudah terhubung dengan pesanan atau relasi yang masih digunakan.
-7. Gunakan **Cari** untuk pencarian dan **Cetak PDF** untuk mengekspor tabel produksi.
+1. Buka Data Produksi, lalu pilih satu baris batch pada tabel.
+2. Untuk melihat bahan yang telah digunakan, tekan Lihat Bahan Baku. Aplikasi membuka pop-up daftar Nama Bahan, Jumlah, dan Satuan untuk batch terpilih. Jika belum ada catatan, sistem akan memberi informasi bahwa bahan belum tercatat.
+3. Untuk memperbarui batch, ubah hanya Stok dan Satuan Stok, lalu klik Ubah Data. Stok hanya boleh 25, 50, atau 100, sedangkan satuannya Strip atau Botol.
+4. Nomor batch, nama obat, tanggal produksi, kedaluwarsa, dan petugas tidak diedit lewat form ini.
+5. Perubahan stok/satuan ditolak apabila batch sudah dialokasikan ke detail pesanan.
+6. Untuk menghapus batch, pilih baris dan klik Hapus, kemudian konfirmasi. Penghapusan dapat ditolak jika batch sudah terhubung dengan pesanan atau relasi yang masih digunakan.
+7. Gunakan Cari untuk pencarian dan Cetak PDF untuk mengekspor tabel produksi.
 
-Penambahan batch baru tidak dilakukan pada menu ini; gunakan **Proses Produksi**.
+Penambahan batch baru tidak dilakukan pada menu ini; gunakan Proses Produksi.
 
 #### 8.4.4 Penggunaan Bahan
 
-Menu ini mencatat bahan baku yang dipakai untuk suatu nomor batch. Data meliputi **ID Detail, Nama Bahan, Jumlah Bahan, Satuan,** dan **Nomor Batch**.
+Menu ini mencatat bahan baku yang dipakai untuk suatu nomor batch. Data meliputi ID Detail, Nama Bahan, Jumlah Bahan, Satuan, dan Nomor Batch.
 
 <p align="center">
 <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/ba2c4478-6a46-4283-aa94-64951e382f82" />
 </p>
 
-1. Buka **Penggunaan Bahan** setelah batch produksi berhasil dibuat.
-2. Pilih bahan baku dari dropdown **Nama Bahan**.
-3. Masukkan **Jumlah Bahan** yang dipakai, pilih satuan **gram, ml, Kg,** atau **Liter**, lalu pilih **Nomor Batch** yang sesuai.
-4. Klik **Tambah**. Sistem memeriksa kecocokan jenis satuan, melakukan konversi yang didukung, dan memastikan stok bahan mencukupi.
-5. Jika lolos validasi, catatan penggunaan tersimpan dan **stok bahan baku berkurang** sesuai jumlah pemakaian.
-6. Untuk memperbaiki jumlah atau satuan penggunaan, pilih catatan pada tabel, ubah nilainya, lalu klik **Ubah Data**. Sistem menyesuaikan kembali perhitungan stok.
-7. **Bahan dan nomor batch pada catatan yang sudah ada tidak dapat diganti langsung**. Jika salah memilih, hapus catatan tersebut lalu buat catatan baru.
-8. Untuk menghapus, pilih data penggunaan, klik **Hapus**, dan konfirmasi. Sistem menghapus catatan serta **mengembalikan stok bahan baku** yang sebelumnya terpotong.
+1. Buka Penggunaan Bahan setelah batch produksi berhasil dibuat.
+2. Pilih bahan baku dari dropdown Nama Bahan.
+3. Masukkan Jumlah Bahan yang dipakai, pilih satuan gram, ml, Kg, atau Liter, lalu pilih Nomor Batch yang sesuai.
+4. Klik Tambah. Sistem memeriksa kecocokan jenis satuan, melakukan konversi yang didukung, dan memastikan stok bahan mencukupi.
+5. Jika lolos validasi, catatan penggunaan tersimpan dan stok bahan baku berkurang sesuai jumlah pemakaian.
+6. Untuk memperbaiki jumlah atau satuan penggunaan, pilih catatan pada tabel, ubah nilainya, lalu klik Ubah Data. Sistem menyesuaikan kembali perhitungan stok.
+7. Bahan dan nomor batch pada catatan yang sudah ada tidak dapat diganti langsung**. Jika salah memilih, hapus catatan tersebut lalu buat catatan baru.
+8. Untuk menghapus, pilih data penggunaan, klik Hapus, dan konfirmasi. Sistem menghapus catatan serta **mengembalikan stok bahan baku yang sebelumnya terpotong.
 
-**Validasi:** bahan yang sama tidak boleh dicatat dua kali untuk batch yang sama; ubah catatan yang sudah ada agar stok tidak dipotong ganda. Penggunaan bahan yang sudah tersimpan dapat dilihat juga dari tombol **Lihat Bahan Baku** pada menu Data Produksi.
+Validasi: bahan yang sama tidak boleh dicatat dua kali untuk batch yang sama; ubah catatan yang sudah ada agar stok tidak dipotong ganda. Penggunaan bahan yang sudah tersimpan dapat dilihat juga dari tombol Lihat Bahan Baku pada menu Data Produksi.
 
 ### 8.5 Role Fulfillment — Pemesanan hingga Distribusi
 
-Role **Fulfillment** menangani pendataan instansi kesehatan, pembuatan pesanan, alokasi batch obat, pengiriman, dan perubahan status katalog obat. Dashboard menampilkan **enam menu** yang mendukung proses tersebut.
+Role Fulfillment menangani pendataan instansi kesehatan, pembuatan pesanan, alokasi batch obat, pengiriman, dan perubahan status katalog obat. Dashboard menampilkan enam menu yang mendukung proses tersebut.
 
 #### 8.5.1 Dashboard Fulfillment
 
-Dashboard Fulfillment ditampilkan setelah pengguna masuk menggunakan akun ber-role **Fulfillment**. Enam tombol yang tersedia adalah **Kelola Pesanan**, **Detail Pesanan**, **Kelola Pengiriman**, **Instansi Kesehatan**, **Stok per Batch**, dan **Ubah Status Obat**.
+Dashboard Fulfillment ditampilkan setelah pengguna masuk menggunakan akun ber-role Fulfillment. Enam tombol yang tersedia adalah Kelola Pesanan, Detail Pesanan, Kelola Pengiriman, Instansi Kesehatan, Stok per Batch, dan Ubah Status Obat.
 
 <p align="center">
   <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/347a8ff2-38a1-4bb3-8c8c-a3a609e2bfbd" />
 </p>
 
-**Cara menggunakan dashboard:** pastikan instansi tujuan sudah terdaftar, buat pesanan, periksa **Stok per Batch**, pilih batch melalui **Detail Pesanan**, dan lanjutkan dengan **Kelola Pengiriman**. Gunakan **Ubah Status Obat** apabila status katalog perlu disesuaikan. Tombol **Kembali** dan **Keluar** tersedia untuk navigasi.
+Cara menggunakan dashboard: pastikan instansi tujuan sudah terdaftar, buat pesanan, periksa Stok per Batch, pilih batch melalui Detail Pesanan, dan lanjutkan dengan Kelola Pengiriman. Gunakan Ubah Status Obat apabila status katalog perlu disesuaikan. Tombol Kembali dan Keluar tersedia untuk navigasi.
 
-**Alur:** Fulfillment mengalokasikan batch produksi yang memenuhi ketentuan ketersediaan dan kedaluwarsa, kemudian mencatat status pengiriman hingga selesai.
+Alur: Fulfillment mengalokasikan batch produksi yang memenuhi ketentuan ketersediaan dan kedaluwarsa, kemudian mencatat status pengiriman hingga selesai.
 
 #### 8.5.2 Kelola Pesanan
 
-Menu **Kelola Pesanan** digunakan untuk mencatat permintaan obat dari instansi kesehatan. Form menampilkan **ID Pesanan, Tanggal, Status, Catatan, Instansi,** dan **Petugas**.
+Menu Kelola Pesanan digunakan untuk mencatat permintaan obat dari instansi kesehatan. Form menampilkan ID Pesanan, Tanggal, Status, Catatan, Instansi, dan Petugas.
 
 <p align="center">
  <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/2c3e5521-c1d1-4bac-9b9d-c383b550739f" />
 </p>
 
-1. Pastikan instansi tujuan sudah terdaftar pada **Instansi Kesehatan**.
-2. Buka **Kelola Pesanan**, pilih instansi tujuan pada dropdown **Instansi**, lalu isi **Catatan** jika diperlukan.
-3. **Tanggal pesanan**, **ID Pesanan**, dan **Petugas** diisi otomatis oleh sistem berdasarkan transaksi dan akun yang login. Pesanan baru dibuat dengan status awal **Menunggu**.
-4. Tekan **Tambah** untuk menyimpan, kemudian catat ID pesanan yang tampil pada notifikasi.
-5. Untuk mengubah pesanan, pilih baris data, sesuaikan **Status Pesanan**, **Catatan**, atau **Instansi** sesuai kebutuhan, lalu klik **Ubah Data**.
-6. Pilihan status pesanan adalah **Menunggu, Selesai,** dan **Batal**. Pesanan tidak dapat dinyatakan **Selesai** sebelum memiliki detail barang dan pengiriman berstatus **Selesai**.
-7. Gunakan **Hapus** untuk menghapus pesanan yang diizinkan sistem, yaitu sebelum pesanan selesai atau memiliki nomor resi. Gunakan **Cari** dan **Cetak PDF** untuk penelusuran dan pelaporan.
+1. Pastikan instansi tujuan sudah terdaftar pada Instansi Kesehatan.
+2. Buka Kelola Pesanan, pilih instansi tujuan pada dropdown Instansi, lalu isi Catatan jika diperlukan.
+3. Tanggal pesanan, ID Pesanan, dan Petugas diisi otomatis oleh sistem berdasarkan transaksi dan akun yang login. Pesanan baru dibuat dengan status awal Menunggu.
+4. Tekan Tambah untuk menyimpan, kemudian catat ID pesanan yang tampil pada notifikasi.
+5. Untuk mengubah pesanan, pilih baris data, sesuaikan Status Pesanan, Catatan, atau Instansi sesuai kebutuhan, lalu klik Ubah Data.
+6. Pilihan status pesanan adalah Menunggu, Selesai, dan Batal. Pesanan tidak dapat dinyatakan Selesai sebelum memiliki detail barang dan pengiriman berstatus Selesai.
+7. Gunakan Hapus untuk menghapus pesanan yang diizinkan sistem, yaitu sebelum pesanan selesai atau memiliki nomor resi. Gunakan Cari dan Cetak PDF untuk penelusuran dan pelaporan.
 
-**Alur selanjutnya:** setelah pesanan berhasil dibuat, buka **Detail Pesanan** untuk menentukan batch obat yang akan memenuhi pesanan tersebut.
+Alur selanjutnya: setelah pesanan berhasil dibuat, buka Detail Pesanan untuk menentukan batch obat yang akan memenuhi pesanan tersebut.
 
 #### 8.5.3 Detail Pesanan
 
-Menu **Detail Pesanan** menghubungkan satu pesanan dengan satu batch obat hasil produksi. Tabel menampilkan **ID Detail, ID Pesanan, Nomor Batch,** dan **Jumlah Obat**.
+Menu Detail Pesanan menghubungkan satu pesanan dengan satu batch obat hasil produksi. Tabel menampilkan ID Detail, ID Pesanan, Nomor Batch, dan Jumlah Obat.
 
 <p align="center">
 <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/f4edf28d-56a3-48d5-a33c-77aba71b193d" />
 </p>
 
-1. Buka **Detail Pesanan**.
-2. Pilih **ID Pesanan** yang masih berstatus **Menunggu** dan belum dialokasikan.
-3. Pilih **Nomor Batch** dari dropdown. Daftar pilihan menampilkan batch yang masih tersedia, belum kedaluwarsa, dan belum dialokasikan ke pesanan lain.
-4. Kolom **Jumlah Obat** akan menampilkan otomatis stok total pada batch yang dipilih; kolom ini **bukan input manual**.
-5. Klik **Tambah** untuk menyimpan alokasi batch ke pesanan.
-6. FORMULA menerapkan aturan **satu pesanan menggunakan satu batch utuh**, dan satu batch hanya dapat dialokasikan ke satu pesanan. Jumlahnya tidak dapat dibagi sebagian atau diubah melalui tombol Ubah Data.
-7. Jika salah memilih batch, pilih detail pada tabel lalu klik **Hapus** dan konfirmasi, **selama pesanan masih Menunggu dan belum dikirim**. Setelah itu, buat detail baru dengan batch yang benar.
-8. Gunakan **Cari** atau **Cetak PDF** untuk menelusuri dan menyimpan laporan detail pesanan.
+1. Buka Detail Pesanan.
+2. Pilih ID Pesanan yang masih berstatus Menunggu dan belum dialokasikan.
+3. Pilih Nomor Batch dari dropdown. Daftar pilihan menampilkan batch yang masih tersedia, belum kedaluwarsa, dan belum dialokasikan ke pesanan lain.
+4. Kolom Jumlah Obat akan menampilkan otomatis stok total pada batch yang dipilih; kolom ini bukan input manual.
+5. Klik Tambah untuk menyimpan alokasi batch ke pesanan.
+6. FORMULA menerapkan aturan satu pesanan menggunakan satu batch utuh, dan satu batch hanya dapat dialokasikan ke satu pesanan. Jumlahnya tidak dapat dibagi sebagian atau diubah melalui tombol Ubah Data.
+7. Jika salah memilih batch, pilih detail pada tabel lalu klik Hapus dan konfirmasi, selama pesanan masih Menunggu dan belum dikirim. Setelah itu, buat detail baru dengan batch yang benar.
+8. Gunakan Cari atau Cetak PDF untuk menelusuri dan menyimpan laporan detail pesanan.
 
-**Catatan stok:** angka stok pada tabel produksi menunjukkan **isi batch**, bukan saldo yang otomatis menjadi nol saat dipesan. Batch yang sudah dialokasikan dikeluarkan dari daftar batch tersedia supaya tidak digunakan ulang.
+Catatan stok: angka stok pada tabel produksi menunjukkan isi batch, bukan saldo yang otomatis menjadi nol saat dipesan. Batch yang sudah dialokasikan dikeluarkan dari daftar batch tersedia supaya tidak digunakan ulang.
 
 #### 8.5.4 Kelola Pengiriman
 
