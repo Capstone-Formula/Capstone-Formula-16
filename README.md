@@ -1,8 +1,3 @@
-<p align="center">
-  <img width="320" height="312" alt="Desain tanpa judul (1)" src="https://github.com/user-attachments/assets/8e483583-0720-4aed-83ce-6f28deea2580" />
-</p>
-
-
 <div align="center">
 
 # FORMULA
