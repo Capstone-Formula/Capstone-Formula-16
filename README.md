@@ -596,7 +596,7 @@ try {
 
 <p align="justify">Dalam implementasi sebenarnya, <code>OrmMasterDAO</code> membungkus operasi ORM melalui helper transaksi yang memanggil <code>begin()</code>, <code>commit()</code>, dan <code>rollback()</code> apabila terjadi kesalahan. Method <code>persist()</code> digunakan untuk menambah entitas, <code>find()</code> untuk mencari data, <code>remove()</code> untuk menghapus, sedangkan query JPQL digunakan untuk membaca data. ORM digunakan pada data master terkait, sementara proses lain masih memanfaatkan JDBC/DAO sesuai kebutuhan aplikasi.</p>
 
-<h2 align="left">💻 8. Cara Penggunaan Program dan Screenshot GUI</h2>
+<h2 align="left">💻 8. Cara Penggunaan Program</h2>
 
 ### 8.1 Persiapan dan Instalasi
 
