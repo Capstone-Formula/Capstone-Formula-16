@@ -307,6 +307,8 @@ Petugas Operasional Divisi Administrasi dapat mengelola data obat, bahan baku, k
 <details>
   <summary>ERD Relational Formula</summary>
    <img width="1141" height="508" alt="FIXXX BGT" src="https://github.com/user-attachments/assets/278898a0-66ae-4460-90a7-f1d0f641365f" />
+
+  ERD tersebut merupakan gambaran rancangan basis data secara fisik yang menunjukkan struktur tabel disertai dengan Primary Key dan Foreign Key nya. Setiap tabel memiliki atribut dan tipe data sesuai kebutuhan penyimpanan informasi. Relasi antartabel dibentuk menggunakan Primary Key sebagai identitas setiap data dan Foreign Key sebagai penghubung antarentitas.
 </details>
 
 <h2 align="left">🗂️ 6. Struktur Folder/Package</h2>
