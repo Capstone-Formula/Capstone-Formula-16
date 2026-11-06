@@ -230,7 +230,7 @@
 
 <h2 align="left">🗂️ 6. Struktur Folder/Package</h2>
 
-Project FORMULA ditampilkan dalam tampilan **Projects** pada Apache NetBeans. Setiap kelompok di bawah ini memiliki fungsi berbeda; isi package Java berada di dalam **Source Packages**.
+Project FORMULA ditampilkan dalam tampilan Projects pada Apache NetBeans. Setiap kelompok di bawah ini memiliki fungsi berbeda; isi package Java berada di dalam Source Packages.
 
 ### 6.1 Tampilan Struktur
 
