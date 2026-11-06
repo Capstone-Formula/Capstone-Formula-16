@@ -223,10 +223,84 @@
 <h2 align="left">🧭 5. Perancangan Sistem</h2>
 
 ### 5.1 Flowchart Alur Utama
+<details>
+  <summary>Menu Login</summary>
+  <img width="1304" height="1371" alt="Flowchart CAPSTONE-Menu Login drawio" src="https://github.com/user-attachments/assets/147af2e3-2fca-4266-b5b3-4489ea27f6bf" />
+</details>
+
+<details>
+  <summary>Menu Operasional Administrasi</summary>
+  <img width="2265" height="1337" alt="Flowchart CAPSTONE-Menu Operasional Administrasi drawio" src="https://github.com/user-attachments/assets/ec979379-ef4b-4e2d-958b-e5b06669dd6c" />
+</details>
+
+<details>
+  <summary>Administrasi - Menu Karyawan</summary>
+  <img width="1643" height="1605" alt="Flowchart CAPSTONE-Administrasi - Menu Karyawan drawio" src="https://github.com/user-attachments/assets/25318de7-95aa-46f7-acf4-c26d4d50cc47" />
+</details>
+
+<details>
+  <summary>Administrasi - Menu Bahan Baku</summary>
+  <img width="1741" height="1694" alt="Flowchart CAPSTONE-Administrasi  - Menu Bahan Baku drawio" src="https://github.com/user-attachments/assets/eaa87c17-74a6-438c-81db-6a507ed16c8e" />
+</details>
+
+<details>
+  <summary>Administrasi - Menu Obat</summary>
+  <img width="1683" height="1640" alt="Flowchart CAPSTONE-Administrasi - Menu Obat drawio" src="https://github.com/user-attachments/assets/92eb156e-43c5-46c3-b18a-4686e429e5d0" />
+</details>
+
+<details>
+  <summary>Menu Operasional Produksi</summary>
+  <img width="857" height="736" alt="Flowchart CAPSTONE-Menu Operasional Produksi · drawio" src="https://github.com/user-attachments/assets/62a6d1b9-7378-4750-bf25-9946997518b3" />
+</details>
+
+<details>
+  <summary>Produksi - Data Produksi</summary>
+  <img width="1785" height="2415" alt="Flowchart CAPSTONE-Produksi - Data Produksi drawio" src="https://github.com/user-attachments/assets/f2e2a395-68b7-4546-a49e-11144701c520" />
+</details>
+
+<details>
+  <summary>Produksi - Detail Penggunaan Bahan</summary>
+  <img width="1759" height="2122" alt="Flowchart CAPSTONE-Produksi - Detail Penggunaan Bahan drawio" src="https://github.com/user-attachments/assets/3b1d3b43-1081-480f-8573-542c1edcf36f" />
+</details>
+
+<details>
+  <summary>Menu Petugas Fulfillment</summary>
+  <img width="1154" height="726" alt="Flowchart CAPSTONE-Menu Petugas Fulfilment drawio" src="https://github.com/user-attachments/assets/3610cac4-fab6-4e52-b8ca-bb451cbdd903" />
+</details>
+
+<details>
+  <summary>Petugas Fulfillment - Pesanan</summary>
+  <img width="1706" height="2036" alt="Flowchart CAPSTONE-Petugas Fulfilment - Pesanan drawio" src="https://github.com/user-attachments/assets/c38ae4a3-ec36-446c-b70d-927d97bb28b0" />
+</details>
+
+<details>
+  <summary>Petugas Fulfillment - Pengiriman</summary>
+  <img width="1290" height="1637" alt="Flowchart CAPSTONE-Petugas Fulfilment - Pengiriman drawio" src="https://github.com/user-attachments/assets/a72056aa-44eb-4a2c-85bf-4d51b7b566f6" />
+</details>
+
+<details>
+  <summary>Petugas Fulfillment - Instansi Kesehatan</summary>
+  <img width="1687" height="1636" alt="Flowchart CAPSTONE-Petugas Fulfilment - Instansi Kesehatan drawio" src="https://github.com/user-attachments/assets/3bd205ab-1dbf-4ed0-9b8d-90d8803ccb3d" />
+</details>
 
 ### 5.2 Use Case Diagram
+<details>
+  <summary>Use Case Formula </summary>
+  <img width="2488" height="1968" alt="Salinan Use Fixx drawio (2)" src="https://github.com/user-attachments/assets/54786729-3a0c-4b00-98b2-31570d8934f5" />
+</details>
+
 
 ### 5.3 Entity Relationship Diagram (ERD)
+
+<details>
+  <summary>ERD Logical Formula </summary>
+   <img width="1134" height="620" alt="PA_FORMULA ERD LOGICAL" src="https://github.com/user-attachments/assets/48deac5a-1ee6-4d9f-a79c-bb969dcff7c2" />
+</details>
+
+<details>
+  <summary>ERD Relational Formula</summary>
+   <img width="1141" height="508" alt="FIXXX BGT" src="https://github.com/user-attachments/assets/278898a0-66ae-4460-90a7-f1d0f641365f" />
+</details>
 
 <h2 align="left">🗂️ 6. Struktur Folder/Package</h2>
 
