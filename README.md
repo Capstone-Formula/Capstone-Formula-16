@@ -553,8 +553,6 @@ public abstract class MenuRole {
 
 </details>
 
----
-
 ## B. Implementasi Lanjutan
 ### 7.5 Manajemen Koneksi Tingkat Lanjut (Singleton dan Connection Pooling)
 
