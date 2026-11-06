@@ -2,7 +2,7 @@
 
 # FORMULA
 
-### SISTEM INFORMASI MANAJEMEN PRODUKSI, PERSEDIAAN, DAN DISTRIBUSI OBAT PADA PERUSAHAAN FARMASI
+## SISTEM INFORMASI MANAJEMEN PRODUKSI, PERSEDIAAN, DAN DISTRIBUSI OBAT PADA PERUSAHAAN FARMASI
 
 **Administrasi** &nbsp;│&nbsp; **Produksi** &nbsp;│&nbsp; **Fulfillment**
 
@@ -26,15 +26,15 @@
 
 <h2 align="left">🧾 1. Nama Program</h2>
 
-<p align="center"><strong>FORMULA — SISTEM INFORMASI MANAJEMEN PRODUKSI, PERSEDIAAN, DAN DISTRIBUSI OBAT PADA PERUSAHAAN FARMASI</strong></p>
-
-<p align="justify">FORMULA merupakan aplikasi desktop berbasis Java yang dikembangkan untuk membantu proses administrasi dan operasional farmasi, mulai dari pengelolaan data master hingga pencatatan proses produksi dan distribusi obat.</p>
+### <p align="center"><strong> PROGRAM SISTEM INFORMASI MANAJEMEN PRODUKSI, PERSEDIAAN, DAN DISTRIBUSI OBAT PADA PERUSAHAAN FARMASI</strong></p>
 
 <h2 align="left">📋 2. Deskripsi Singkat</h2>
 
-<p align="justify">FORMULA memusatkan pengelolaan <strong>obat, bahan baku, data karyawan, produksi, penggunaan bahan, instansi kesehatan, pesanan, detail pesanan, dan pengiriman</strong> pada database MySQL. Aplikasi menyediakan autentikasi menggunakan ID karyawan dan password, kemudian menampilkan menu berdasarkan peran pengguna, yaitu <strong>Administrasi, Produksi, atau Fulfillment</strong>. Proses operasional menggunakan sistem pencatatan batch dan validasi ketersediaan stok agar pemakaian bahan serta pemenuhan pesanan lebih terkontrol.</p>
+<p align="justify">Sistem ini dirancang untuk mengintegrasikan proses produksi, persediaan, dan distribusi obat pada Perusahaan Farmasi Formula. Melalui sistem ini, pengelolaan data dan pencatatan operasional menjadi lebih terstruktur, pemantauan stok obat per batch dan tanggal kedaluwarsa lebih mudah dilakukan, serta proses pesanan dan pengiriman dapat dikelola dengan lebih baik. Pengembangan sistem ini juga mendukung beberapa tujuan Sustainable Development Goals (SDGs), yaitu: 
 
-<p align="justify">Program dibangun menggunakan antarmuka <strong>Java Swing</strong>, pendekatan arsitektur <strong>Model–View–Controller (MVC)</strong>, dan pola <strong>Data Access Object (DAO)</strong>. Operasi database menggunakan JDBC, sementara sebagian pengelolaan data master memanfaatkan Hibernate/JPA.</p>
+- **SDG 3 – Kehidupan Sehat dan Sejahtera:** Mendukung pemantauan ketersediaan dan distribusi obat.
+- **SDG 9 – Industri, Inovasi, dan Infrastruktur:** Mengintegrasikan proses operasional melalui teknologi informasi.
+- **SDG 12 – Konsumsi dan Produksi yang Bertanggung Jawab:** Mendukung pencatatan penggunaan bahan baku serta pemantauan stok dan kedaluwarsa obat.
 
 <h2 align="left">⚙️ 3. Fitur Utama Program</h2>
 
@@ -218,122 +218,120 @@
 
 <h2 align="left">🧭 5. Perancangan Sistem</h2>
 
+
 ### 5.1 Flowchart Alur Utama
+
 <details>
   <summary>Menu Login</summary>
   <img width="1304" height="1371" alt="Flowchart CAPSTONE-Menu Login drawio" src="https://github.com/user-attachments/assets/147af2e3-2fca-4266-b5b3-4489ea27f6bf" />
-</details>
 
-Alur kerja sistem ini dimulai dari proses login untuk memastikan hanya karyawan yang terdaftar yang bisa mengakses aplikasi. Pengguna harus memasukkan ID dan kata sandi yang akan diperiksa melalui database. Jika data tidak sesuai, pengguna diminta mencoba login kembali. Setelah berhasil login, sistem akan mengarahkan pengguna ke menu sesuai dengan perannya, yaitu Menu Petugas Fulfillment untuk mengelola pengiriman, Menu Operasional Administrasi untuk pendataan, dan Menu Operasional Produksi untuk mengelola proses pembuatan obat
+  <p align="justify">Menu Login berfungsi untuk memverifikasi identitas pengguna melalui ID dan kata sandi yang tersimpan di database. Jika login berhasil, pengguna diarahkan ke menu sesuai perannya, yaitu Operasional Administrasi, Operasional Produksi, atau Petugas Fulfillment.</p>
+</details>
 
 <details>
   <summary>Menu Operasional Administrasi</summary>
   <img width="2265" height="1337" alt="Flowchart CAPSTONE-Menu Operasional Administrasi drawio" src="https://github.com/user-attachments/assets/ec979379-ef4b-4e2d-958b-e5b06669dd6c" />
-</details>
 
-Alur Kerja Menu Operasional Administrasi dimulai dengan menampilkan beberapa pilihan menu yang dapat digunakan pengguna, seperti Menu Karyawan, Menu Bahan Baku, dan Menu Obat untuk mengelola data masing-masing. Pengguna juga dapat melihat daftar pesanan beserta opsi untuk mencetak dokumen pesanan, serta melihat data pengiriman dan mencetak dokumen pengirimannya. Selain itu, tersedia menu untuk melihat daftar instansi kesehatan yang telah terdaftar. Setelah selesai melakukan suatu aksi, sistem akan mengarahkan pengguna kembali ke menu utama. Jika pengguna memilih untuk keluar, sistem akan kembali ke halaman login
+  <p align="justify">Menu Operasional Administrasi berfungsi untuk mengelola data karyawan, bahan baku, dan obat. Pengguna juga dapat melihat data pesanan, pengiriman, serta instansi kesehatan, termasuk mencetak dokumen pesanan dan pengiriman.</p>
+</details>
 
 <details>
   <summary>Administrasi - Menu Karyawan</summary>
   <img width="1643" height="1605" alt="Flowchart CAPSTONE-Administrasi - Menu Karyawan drawio" src="https://github.com/user-attachments/assets/25318de7-95aa-46f7-acf4-c26d4d50cc47" />
-</details>
 
-Alur Kerja Menu Karyawan dimulai dengan menampilkan pilihan pengelolaan data, yaitu melihat daftar karyawan, menambah, meng-update status, dan menghapus data karyawan. Saat menambahkan data, pengguna mengisi formulir yang tersedia, kemudian sistem akan membuat ID karyawan serta mengisi tanggal masuk dan status aktif secara otomatis sebelum menyimpan data ke database. Untuk proses update dan hapus, sistem akan memeriksa terlebih dahulu apakah ID karyawan yang dimasukkan tersedia di database. Jika ID tidak ditemukan, sistem akan menampilkan pesan kesalahan dan meminta pengguna memasukkan ID kembali. Setelah setiap proses selesai, pengguna akan diarahkan kembali ke menu utama. Jika tidak memilih aksi apa pun, sistem akan kembali ke Menu Operasional Administrasi
+  <p align="justify">Menu Karyawan berfungsi untuk melihat, menambah, memperbarui status, dan menghapus data karyawan. Saat penambahan, sistem membuat ID karyawan serta mengisi tanggal masuk dan status aktif secara otomatis. Untuk pembaruan dan penghapusan, sistem memeriksa ID karyawan terlebih dahulu agar data yang diproses sesuai.</p>
+</details>
 
 <details>
   <summary>Administrasi - Menu Bahan Baku</summary>
   <img width="1741" height="1694" alt="Flowchart CAPSTONE-Administrasi  - Menu Bahan Baku drawio" src="https://github.com/user-attachments/assets/eaa87c17-74a6-438c-81db-6a507ed16c8e" />
-</details>
 
-Alur Kerja Menu Bahan Baku dimulai dengan menampilkan pilihan pengelolaan data, yaitu melihat stok, menambah, meng-update, dan menghapus data bahan baku. Saat menambahkan data, sistem akan memeriksa terlebih dahulu apakah data sudah terdaftar agar tidak terjadi duplikasi. Jika data belum ada, sistem akan membuat ID secara otomatis dan menyimpan data ke database. Pada proses update dan hapus, sistem akan memeriksa ID bahan baku terlebih dahulu sebelum melanjutkan proses. Jika ID tidak ditemukan atau data yang dimasukkan tidak sesuai, sistem akan menampilkan pesan kesalahan dan meminta pengguna menginputkan kembali data. Setelah proses selesai, pengguna akan diarahkan kembali ke menu utama. Jika tidak ada aksi yang dipilih, sistem akan kembali ke Menu Operasional Administrasi
+  <p align="justify">Menu Bahan Baku berfungsi untuk melihat stok serta mengelola data bahan baku melalui proses tambah, ubah, dan hapus. Sistem memeriksa duplikasi saat penambahan dan memvalidasi ID sebelum data diperbarui atau dihapus.</p>
+</details>
 
 <details>
   <summary>Administrasi - Menu Obat</summary>
   <img width="1683" height="1640" alt="Flowchart CAPSTONE-Administrasi - Menu Obat drawio" src="https://github.com/user-attachments/assets/92eb156e-43c5-46c3-b18a-4686e429e5d0" />
-</details>
 
-Alur Kerja Menu Obat dimulai dengan menampilkan pilihan pengelolaan data, yaitu melihat daftar obat, menambah, meng-update, dan menghapus data obat. Saat menambahkan obat, pengguna mengisi nama, jenis, dan status ketersediaan obat. Sistem akan memeriksa terlebih dahulu apakah nama obat sudah terdaftar. Jika belum, data akan disimpan ke database. Untuk proses update dan hapus, sistem akan memeriksa ID obat terlebih dahulu sebelum melanjutkan proses. Jika nama obat sudah terdaftar atau ID tidak ditemukan, sistem akan menampilkan pesan kesalahan dan meminta pengguna menginputkan kembali data. Setelah proses berhasil, pengguna akan diarahkan kembali ke halaman menu utama. Jika tidak ada aksi yang dipilih, sistem akan kembali ke Menu Operasional Administrasi
+  <p align="justify">Menu Obat berfungsi untuk melihat dan mengelola data obat, meliputi penambahan, pembaruan, dan penghapusan. Pengguna mengisi nama, jenis, serta status ketersediaan obat. Sistem memeriksa nama untuk mencegah duplikasi dan memvalidasi ID sebelum pembaruan atau penghapusan.</p>
+</details>
 
 <details>
   <summary>Menu Operasional Produksi</summary>
-  <img width="857" height="736" alt="Flowchart CAPSTONE-Menu Operasional Produksi · drawio" src="https://github.com/user-attachments/assets/62a6d1b9-7378-4750-bf25-9946997518b3" />
-</details>
+  <img width="857" height="736" alt="Flowchart CAPSTONE-Menu Operasional Produksi drawio" src="https://github.com/user-attachments/assets/62a6d1b9-7378-4750-bf25-9946997518b3" />
 
-Alur kerja Menu Operasional Produksi dimulai dengan menampilkan tiga pilihan menu, yaitu Menu Data Produksi, Menu Detail Penggunaan Bahan, dan Keluar. Jika pengguna memilih Menu Data Produksi, sistem akan mengarahkan ke halaman pengelolaan data produksi. Jika memilih Menu Detail Penggunaan Bahan, sistem akan masuk ke halaman pengelolaan detail penggunaan bahan. Sementara itu, jika pengguna memilih Keluar, sistem akan mengarahkan kembali ke Halaman Login
+  <p align="justify">Menu Operasional Produksi berfungsi sebagai akses menuju pengelolaan Data Produksi dan Detail Penggunaan Bahan. Pengguna dapat memilih menu sesuai aktivitas produksi yang akan dilakukan atau keluar untuk kembali ke halaman login.</p>
+</details>
 
 <details>
   <summary>Produksi - Data Produksi</summary>
   <img width="1785" height="2415" alt="Flowchart CAPSTONE-Produksi - Data Produksi drawio" src="https://github.com/user-attachments/assets/f2e2a395-68b7-4546-a49e-11144701c520" />
-</details>
 
-Alur kerja Menu Data Produksi dimulai dengan menampilkan pilihan untuk melihat, menambah, meng-update, dan menghapus data produksi obat. Jika pengguna memilih melihat data, sistem akan menampilkan daftar produksi beserta nomor batch dan jumlah stoknya. Untuk menambah data produksi, pengguna memasukkan ID obat dan jumlah obat yang ingin diproduksi. Sistem akan memeriksa ketersediaan obat dan resep, kemudian membuat nomor batch secara otomatis, menghitung kebutuhan bahan baku, serta mengecek kecukupan stok di gudang. Jika stok mencukupi, sistem akan memperbarui stok bahan baku dan menyimpan data produksi ke database. Sementara itu, pada proses update dan hapus, pengguna harus memasukkan nomor batch yang akan diperiksa terlebih dahulu oleh sistem sebelum data diperbarui atau dihapus. Setelah setiap proses selesai, pengguna akan diarahkan kembali ke halaman menu utama. Jika tidak ada aksi yang dipilih, sistem akan kembali ke Menu Operasional Produksi
+  <p align="justify">Menu Data Produksi berfungsi untuk melihat, menambah, memperbarui, dan menghapus data produksi obat. Saat menambahkan produksi, pengguna memasukkan ID obat dan jumlah produksi. Sistem memeriksa ketersediaan obat dan resep, membuat nomor batch, menghitung kebutuhan bahan baku, serta memeriksa kecukupan stok. Jika stok mencukupi, data produksi disimpan dan stok bahan baku diperbarui. Pembaruan dan penghapusan dilakukan setelah nomor batch divalidasi.</p>
+</details>
 
 <details>
   <summary>Produksi - Detail Penggunaan Bahan</summary>
   <img width="1759" height="2122" alt="Flowchart CAPSTONE-Produksi - Detail Penggunaan Bahan drawio" src="https://github.com/user-attachments/assets/3b1d3b43-1081-480f-8573-542c1edcf36f" />
-</details>
 
-Alur kerja Menu Detail Penggunaan Bahan dimulai dengan menampilkan pilihan untuk melihat, menambah, meng-update, dan menghapus data detail penggunaan bahan. Jika pengguna memilih tambah, pengguna perlu memasukkan ID obat dan jumlah bahan yang digunakan per batch. Sistem akan memeriksa ID obat serta memastikan stok bahan baku mencukupi. Jika persyaratan terpenuhi, sistem akan membuat ID detail secara otomatis, mengisi satuan bahan, dan menyimpan data ke database. Pada proses update dan hapus, pengguna harus memasukkan ID detail terlebih dahulu untuk diperiksa keberadaannya di database. Saat melakukan update, sistem juga akan mengecek kecukupan stok bahan baku sebelum menyimpan perubahan. Sementara itu, proses hapus akan menghilangkan data detail penggunaan bahan dari database. Setelah setiap proses selesai, pengguna akan diarahkan kembali ke halaman menu utama atau Menu Operasional Produksi
+  <p align="justify">Menu Detail Penggunaan Bahan berfungsi untuk mencatat dan mengelola bahan baku yang digunakan dalam produksi. Pengguna memasukkan ID obat dan jumlah bahan per batch. Sistem memeriksa data obat dan ketersediaan stok, kemudian membuat ID detail serta mengisi satuan bahan secara otomatis. Pembaruan juga memerlukan pemeriksaan stok, sedangkan penghapusan dilakukan berdasarkan ID detail yang telah divalidasi.</p>
+</details>
 
 <details>
   <summary>Menu Petugas Fulfillment</summary>
   <img width="1154" height="726" alt="Flowchart CAPSTONE-Menu Petugas Fulfilment drawio" src="https://github.com/user-attachments/assets/3610cac4-fab6-4e52-b8ca-bb451cbdd903" />
-</details>
 
-Alur kerja Menu Petugas Fulfillment dimulai dengan menampilkan beberapa pilihan menu, yaitu Menu Pesanan, Menu Detail Pesanan, Menu Pengiriman, Menu Instansi Kesehatan, Lihat Stok Obat per Batch, dan Keluar. Jika pengguna memilih Menu Pesanan, sistem akan mengarahkan ke halaman pengelolaan pesanan. Jika memilih Menu Detail Pesanan atau Menu Pengiriman, sistem akan masuk ke halaman pengelolaan pengiriman. Selanjutnya, pengguna juga dapat memilih Menu Instansi Kesehatan untuk melihat data instansi yang terdaftar atau Lihat Stok Obat per Batch untuk memeriksa stok obat berdasarkan nomor batch. Jika pengguna memilih Keluar, sistem akan mengarahkan kembali ke Halaman Login
+  <p align="justify">Menu Petugas Fulfillment berfungsi untuk mengelola pesanan, detail pesanan, dan pengiriman. Pengguna juga dapat melihat data instansi kesehatan serta memeriksa stok obat berdasarkan nomor batch.</p>
+</details>
 
 <details>
   <summary>Petugas Fulfillment - Pesanan</summary>
   <img width="1706" height="2036" alt="Flowchart CAPSTONE-Petugas Fulfilment - Pesanan drawio" src="https://github.com/user-attachments/assets/c38ae4a3-ec36-446c-b70d-927d97bb28b0" />
-</details>
 
-Alur kerja Menu Pesanan dimulai dengan menampilkan pilihan untuk melihat, menambah, meng-update, dan menghapus data pesanan. Saat menambahkan pesanan, pengguna diminta memilih instansi kesehatan dan nomor batch obat yang akan dipesan. Sistem akan memeriksa ketersediaan obat terlebih dahulu. Jika tersedia, sistem akan membuat ID pesanan, mengisi tanggal dan status awal "Menunggu", kemudian menyimpan data ke database. Untuk proses update dan hapus, pengguna perlu memasukkan ID pesanan yang akan diperiksa oleh sistem. Jika ID ditemukan, pengguna dapat mengubah status pesanan menjadi Menunggu, Selesai, atau Batal, maupun menghapus data pesanan dari database. Setelah setiap proses selesai, pengguna akan diarahkan kembali ke halaman menu utama atau Menu Petugas Fulfillment
+  <p align="justify">Menu Pesanan berfungsi untuk melihat, menambah, memperbarui, dan menghapus data pesanan. Penambahan dilakukan dengan memilih instansi kesehatan dan nomor batch obat. Sistem memeriksa ketersediaan obat, kemudian membuat ID pesanan serta mengisi tanggal dan status awal Menunggu secara otomatis. Pengguna dapat memperbarui status menjadi Menunggu, Selesai, atau Batal setelah ID pesanan divalidasi.</p>
+</details>
 
 <details>
   <summary>Petugas Fulfillment - Pengiriman</summary>
   <img width="1290" height="1637" alt="Flowchart CAPSTONE-Petugas Fulfilment - Pengiriman drawio" src="https://github.com/user-attachments/assets/a72056aa-44eb-4a2c-85bf-4d51b7b566f6" />
-</details>
 
-Alur kerja Menu Pengiriman dimulai saat sistem menampilkan opsi menu utama untuk melihat, memperbarui, atau menghapus data pengiriman. Jika pengguna memilih opsi lihat data, sistem akan menampilkan daftar pengiriman lengkap dengan nomor resi, pesanan, tanggal, status, dan keterangannya. Sementara itu, untuk proses pembaruan atau penghapusan data, pengguna diminta memasukkan nomor resi untuk divalidasi ke dalam database, di mana proses pembaruan akan mengubah status pengiriman (seperti Diproses, Selesai, atau Batal) beserta keterangannya, sedangkan proses penghapusan akan menghapus data pengiriman secara permanen. Seluruh rangkaian aktivitas tersebut, baik peninjauan daftar, pembaruan, maupun penghapusan data, pada akhirnya akan mengarahkan pengguna kembali ke halaman menu utama atau Menu Petugas Fulfillment
+  <p align="justify">Menu Pengiriman berfungsi untuk melihat, memperbarui, dan menghapus data pengiriman. Informasi yang ditampilkan meliputi nomor resi, pesanan, tanggal, status, dan keterangan. Pembaruan status menjadi Diproses, Selesai, atau Batal serta penghapusan data dilakukan setelah nomor resi divalidasi.</p>
+</details>
 
 <details>
   <summary>Petugas Fulfillment - Instansi Kesehatan</summary>
   <img width="1687" height="1636" alt="Flowchart CAPSTONE-Petugas Fulfilment - Instansi Kesehatan drawio" src="https://github.com/user-attachments/assets/3bd205ab-1dbf-4ed0-9b8d-90d8803ccb3d" />
-</details>
 
-Alur kerja Menu Instansi Kesehatan dimulai dengan menampilkan pilihan untuk melihat, menambah, meng-update, dan menghapus data instansi kesehatan. Saat menambahkan data, pengguna mengisi nama instansi, jenis instansi seperti Apotek atau Rumah Sakit, alamat, dan kontak. Setelah itu, sistem akan membuat ID instansi secara otomatis dan menyimpan data ke database. Untuk proses update dan hapus, pengguna perlu memasukkan ID instansi terlebih dahulu agar sistem dapat memeriksa keberadaannya. Jika ID ditemukan, pengguna dapat memperbarui detail instansi. Sementara itu, sebelum menghapus data, sistem akan memeriksa apakah instansi tersebut masih digunakan pada data lain. Jika masih digunakan, sistem akan menolak penghapusan dan menampilkan pesan pemberitahuan. Setelah setiap proses selesai, pengguna akan diarahkan kembali ke halaman menu utama atau Menu Petugas Fulfillment
+  <p align="justify">Menu Instansi Kesehatan berfungsi untuk melihat, menambah, memperbarui, dan menghapus data instansi. Penambahan mencakup nama, jenis instansi, alamat, dan kontak, dengan ID yang dibuat secara otomatis. Sebelum pembaruan atau penghapusan, sistem memvalidasi ID instansi. Penghapusan ditolak jika data instansi masih digunakan pada data lain.</p>
+</details>
 
 ### 5.2 Use Case Diagram
+
 <details>
-  <summary>Use Case Formula </summary>
+  <summary>Use Case Formula</summary>
   <img width="2488" height="1968" alt="Salinan Use Fixx drawio (2)" src="https://github.com/user-attachments/assets/54786729-3a0c-4b00-98b2-31570d8934f5" />
 
-Use case diagram tersebut menggambarkan interaksi antara pengguna dan Sistem Informasi Manajemen Produksi, Persediaan, dan Distribusi Obat pada Perusahaan Farmasi. Diagram ini menunjukkan tiga aktor utama, yaitu Petugas Operasional Divisi Administrasi, Petugas Operasional Divisi Produksi, dan Petugas Fulfillment, yang memiliki hak akses sesuai dengan tugas masing-masing.
-Petugas Operasional Divisi Administrasi dapat mengelola data obat, bahan baku, karyawan, pesanan, pengiriman, serta melihat data instansi kesehatan. Petugas Divisi Produksi bertanggung jawab mengelola data produksi dan detail penggunaan bahan baku. Sementara itu, Petugas Fulfillment berfokus pada pengelolaan pesanan, data pengiriman, serta melihat data instansi kesehatan. Setiap aktor perlu melakukan login sebelum menggunakan sistem dan dapat keluar dari program setelah selesai. Dengan pembagian hak akses tersebut, sistem diharapkan dapat membantu proses pengelolaan data produksi, persediaan, dan distribusi obat agar lebih terstruktur dan efisien.
-
+  <p align="justify">Use case diagram menggambarkan interaksi tiga aktor dengan sistem, yaitu Petugas Operasional Divisi Administrasi, Petugas Operasional Divisi Produksi, dan Petugas Fulfillment. Divisi Administrasi mengelola data obat, bahan baku, karyawan, pesanan, dan pengiriman serta melihat data instansi kesehatan. Divisi Produksi mengelola data produksi dan detail penggunaan bahan baku. Sementara itu, Petugas Fulfillment mengelola pesanan dan pengiriman serta melihat data instansi kesehatan. Seluruh aktor harus login sebelum menggunakan sistem dan dapat keluar setelah selesai.</p>
 </details>
-
 
 ### 5.3 Entity Relationship Diagram (ERD)
 
 <details>
-  <summary>ERD Logical Formula </summary>
-   <img width="1134" height="620" alt="PA_FORMULA ERD LOGICAL" src="https://github.com/user-attachments/assets/48deac5a-1ee6-4d9f-a79c-bb969dcff7c2" />
-  ERD tersebut menggambarkan bagaimana hubungan antar entitas dalam Sistem Informasi Manajemen Produksi, Persediaan, dan Distribusi Obat. ERD ini terdiri dari entitas Karyawan yang dikelompokkan menjadi Petugas Operasional dan Petugas Fulfillment, Obat, Bahan Baku, Produksi, Detail Penggunaan Bahan, Detail Pesanan, Pesanan, Pengiriman, dan Instansi Kesehatan. 
+  <summary>ERD Logical Formula</summary>
+  <img width="1134" height="620" alt="PA_FORMULA ERD LOGICAL" src="https://github.com/user-attachments/assets/48deac5a-1ee6-4d9f-a79c-bb969dcff7c2" />
 
-  Sistem dimulai dari pengelolaan data obat dan bahan baku oleh karyawan bagian operasional. Selanjutnya, proses produksi dilakukan dengan menggunakan bahan baku yang dicatat melalui Detail Penggunaan Bahan. Obat yang telah diproduksi kemudian dicatat dalam Detail Pesanan untuk memenuhi pesanan dari instansi kesehatan, seperti apotek, klinik, dan rumah sakit. Pesanan tersebut dikelola oleh petugas terkait dan dilanjutkan ke proses pengiriman yang ditangani oleh Petugas Fulfillment.
+  <p align="justify">ERD Logical menggambarkan entitas dan hubungan antarentitas dalam sistem, meliputi Karyawan, Petugas Operasional, Petugas Fulfillment, Obat, Bahan Baku, Produksi, Detail Penggunaan Bahan, Pesanan, Detail Pesanan, Pengiriman, dan Instansi Kesehatan. Rancangan ini menunjukkan keterkaitan data dari pengelolaan bahan baku dan produksi hingga pemesanan serta pengiriman obat ke instansi kesehatan.</p>
 </details>
 
 <details>
   <summary>ERD Relational Formula</summary>
-   <img width="1141" height="508" alt="FIXXX BGT" src="https://github.com/user-attachments/assets/278898a0-66ae-4460-90a7-f1d0f641365f" />
+  <img width="1141" height="508" alt="FIXXX BGT" src="https://github.com/user-attachments/assets/278898a0-66ae-4460-90a7-f1d0f641365f" />
 
-  ERD tersebut merupakan gambaran rancangan basis data secara fisik yang menunjukkan struktur tabel disertai dengan Primary Key dan Foreign Key nya. Setiap tabel memiliki atribut dan tipe data sesuai kebutuhan penyimpanan informasi. Relasi antartabel dibentuk menggunakan Primary Key sebagai identitas setiap data dan Foreign Key sebagai penghubung antarentitas.
+  <p align="justify">ERD Relational merupakan gambaran struktur basis data yang menunjukkan tabel, atribut, tipe data, serta Primary Key (PK) dan Foreign Key (FK). Kunci tersebut digunakan untuk mengidentifikasi data dan menghubungkan tabel yang saling berkaitan.</p>
 </details>
 
-<h2 align="left">🗂️ 6. Struktur Folder/Package</h2>
 
-Project FORMULA ditampilkan dalam tampilan Projects pada Apache NetBeans. Setiap kelompok di bawah ini memiliki fungsi berbeda; isi package Java berada di dalam Source Packages.
+<h2 align="left">🗂️ 6. Struktur Folder/Package</h2>
 
 ### 6.1 Tampilan Struktur
 
@@ -361,174 +359,75 @@ formula [master 11]
     └── pom.xml
 ```
 
-### 6.2 Penjelasan Komponen Utama
+### 6.2 Penjelasan Struktur Project
 
-<div align="center">
-<table>
-<tr><th align="center">Bagian</th><th align="center">Kegunaan</th></tr>
-<tr><td align="center"><b>Source Packages</b></td><td align="center">Seluruh kode utama, mulai dari entry point, MVC, DAO, entity, hingga pembagian role.</td></tr>
-<tr><td align="center"><b>Test Packages</b></td><td align="center">Class pengujian workflow database, tampilan jumlah obat, dan GUI Swing.</td></tr>
-<tr><td align="center"><b>Dependencies</b></td><td align="center">Dependency Maven yang diperlukan untuk mengompilasi dan mengembangkan aplikasi.</td></tr>
-<tr><td align="center"><b>Runtime Dependencies</b></td><td align="center">Library yang tersedia untuk menjalankan aplikasi, termasuk dependency transitif yang diperlukan.</td></tr>
-<tr><td align="center"><b>Test Dependencies</b></td><td align="center">Library untuk menjalankan test, seperti JUnit Jupiter.</td></tr>
-<tr><td align="center"><b>Java Dependencies</b></td><td align="center">Modul dan komponen Java/JDK yang tersedia untuk project.</td></tr>
-<tr><td align="center"><b>Project Files</b></td><td align="center">Konfigurasi Maven seperti <code>pom.xml</code>, versi Java, dependency, dan plugin build.</td></tr>
-</table>
+<div align="justify">
+
+Project FORMULA menggunakan struktur Maven dengan pendekatan MVC (Model-View-Controller) untuk memisahkan pengelolaan data, alur program, tampilan aplikasi, dan pengujian.
+
+#### 1. Source Packages
+
+Bagian ini berisi kode utama aplikasi yang dibagi berdasarkan fungsi masing-masing package:
+
+- **app**  
+  Berisi `MainApp.java` sebagai titik awal aplikasi dan `GuiVerificationRunner.java` untuk verifikasi GUI.
+
+- **app.controller**  
+  Berisi 7 class Controller yang mengatur alur aplikasi, mulai dari login, dashboard, pengelolaan data, produksi, hingga pengiriman.
+
+- **app.model**  
+  Berisi 8 class yang menangani koneksi database, autentikasi, akses data, serta pengelolaan database menggunakan JDBC dan Hibernate/JPA.
+
+- **app.model.entity**  
+  Berisi 2 entity, yaitu `Obat.java` dan `InstansiKesehatan.java`, sebagai representasi tabel database melalui JPA.
+
+- **app.model.role**  
+  Berisi 4 class yang mengatur tampilan menu berdasarkan hak akses pengguna, yaitu Administrasi, Produksi, dan Fulfillment.
+
+- **app.view**  
+  Berisi 9 class yang mengelola antarmuka Java Swing, seperti form login, dashboard, produksi, dan komponen pendukung GUI.
+
+#### 2. Test Packages
+
+Bagian ini berisi 3 class pengujian, yaitu `DatabaseWorkflowTest.java`, `JumlahObatDisplayTest.java`, dan `SwingWorkflowTest.java`, untuk menguji proses database, tampilan jumlah obat, serta alur kerja GUI.
+
+#### 3. Dependencies
+
+Bagian ini berisi library dan komponen pendukung aplikasi, antara lain:
+
+- **MySQL Connector/J** untuk koneksi aplikasi dengan database MySQL.
+- **HikariCP** untuk mengelola koneksi database.
+- **Hibernate ORM / Jakarta Persistence** untuk pemetaan objek Java ke tabel database.
+- **SLF4J** untuk pencatatan log aplikasi.
+- **JUnit Jupiter** untuk pengujian otomatis.
+- **Java Swing, JDBC, dan java.time** untuk antarmuka, koneksi database, dan pengelolaan tanggal.
+
+Pada NetBeans, dependency dikelompokkan menjadi Dependencies, Runtime Dependencies, Test Dependencies, dan Java Dependencies.
+
+#### 4. Project Files
+
+Bagian ini berisi `pom.xml` sebagai file konfigurasi Maven untuk mengatur versi Java, library, dan plugin yang dibutuhkan dalam proses build aplikasi.
+
 </div>
 
-### 6.3 Isi Source Packages
 
-Klik nama package untuk melihat class dan tanggung jawabnya. Bagian ini sengaja dibuat **expandable** agar README tetap ringkas ketika pertama dibuka.
+<h2 align="left">🧩 7. Penerapan 4 Pilar OOP dan Implementasi Lanjutan</h2>
 
-<details>
-<summary><b>📁 app</b> — 2 class</summary>
-
-<div align="center">
-<table>
-<tr><th align="center">Class</th><th align="center">Fungsi</th></tr>
-<tr><td align="center"><code>MainApp.java</code></td><td align="center">Titik masuk aplikasi; menjalankan antarmuka awal.</td></tr>
-<tr><td align="center"><code>GuiVerificationRunner.java</code></td><td align="center">Utilitas verifikasi tampilan GUI.</td></tr>
-</table>
-</div>
-
-</details>
-
-<details>
-<summary><b>📁 app.controller</b> — 7 class</summary>
-
-<div align="center">
-<table>
-<tr><th align="center">Class</th><th align="center">Fungsi</th></tr>
-<tr><td align="center"><code>LoginController.java</code></td><td align="center">Mengatur login dan autentikasi.</td></tr>
-<tr><td align="center"><code>DashboardController.java</code></td><td align="center">Mengatur navigasi dashboard dan pemilihan menu berdasarkan role.</td></tr>
-<tr><td align="center"><code>MasterController.java</code></td><td align="center">Mengendalikan pengelolaan data master.</td></tr>
-<tr><td align="center"><code>KaryawanController.java</code></td><td align="center">Mengendalikan operasi data karyawan.</td></tr>
-<tr><td align="center"><code>ProduksiController.java</code></td><td align="center">Mengendalikan produksi obat dan penggunaan bahan.</td></tr>
-<tr><td align="center"><code>AlurController.java</code></td><td align="center">Mengendalikan proses pesanan, detail pesanan, dan pengiriman.</td></tr>
-<tr><td align="center"><code>UpdateStatusController.java</code></td><td align="center">Mengendalikan pembaruan status.</td></tr>
-</table>
-</div>
-
-</details>
-
-<details>
-<summary><b>📁 app.model</b> — 8 class</summary>
-
-<div align="center">
-<table>
-<tr><th align="center">Class</th><th align="center">Fungsi</th></tr>
-<tr><td align="center"><code>Koneksi.java</code></td><td align="center">Menyediakan koneksi database melalui HikariCP.</td></tr>
-<tr><td align="center"><code>AuthDAO.java</code></td><td align="center">Akses data autentikasi.</td></tr>
-<tr><td align="center"><code>MasterDAO.java</code></td><td align="center">Akses data master melalui DAO.</td></tr>
-<tr><td align="center"><code>KaryawanDAO.java</code></td><td align="center">Operasi database data karyawan.</td></tr>
-<tr><td align="center"><code>AlurDAO.java</code></td><td align="center">Operasi database terkait alur operasional.</td></tr>
-<tr><td align="center"><code>OrmMasterDAO.java</code></td><td align="center">Pengelolaan sebagian data master melalui Hibernate/JPA.</td></tr>
-<tr><td align="center"><code>JpaManager.java</code></td><td align="center">Menyiapkan EntityManagerFactory dan EntityManager.</td></tr>
-<tr><td align="center"><code>DatabaseCheck.java</code></td><td align="center">Memeriksa kesiapan/kesesuaian database.</td></tr>
-</table>
-</div>
-
-</details>
-
-<details>
-<summary><b>📁 app.model.entity</b> — 2 class</summary>
-
-<div align="center">
-<table>
-<tr><th align="center">Class</th><th align="center">Fungsi</th></tr>
-<tr><td align="center"><code>Obat.java</code></td><td align="center">Entity JPA untuk tabel obat.</td></tr>
-<tr><td align="center"><code>InstansiKesehatan.java</code></td><td align="center">Entity JPA untuk tabel instansi kesehatan.</td></tr>
-</table>
-</div>
-
-</details>
-
-<details>
-<summary><b>📁 app.model.role</b> — 4 class</summary>
-
-<div align="center">
-<table>
-<tr><th align="center">Class</th><th align="center">Fungsi</th></tr>
-<tr><td align="center"><code>MenuRole.java</code></td><td align="center">Abstract class sebagai dasar menu peran.</td></tr>
-<tr><td align="center"><code>AdministrasiRole.java</code></td><td align="center">Daftar menu role Administrasi.</td></tr>
-<tr><td align="center"><code>ProduksiRole.java</code></td><td align="center">Daftar menu role Produksi.</td></tr>
-<tr><td align="center"><code>FulfillmentRole.java</code></td><td align="center">Daftar menu role Fulfillment.</td></tr>
-</table>
-</div>
-
-</details>
-
-<details>
-<summary><b>📁 app.view</b> — 9 class</summary>
-
-<div align="center">
-<table>
-<tr><th align="center">Class</th><th align="center">Fungsi</th></tr>
-<tr><td align="center"><code>FormLogin.java</code></td><td align="center">Antarmuka login.</td></tr>
-<tr><td align="center"><code>FormDashboard.java</code></td><td align="center">Antarmuka dashboard.</td></tr>
-<tr><td align="center"><code>FormMaster.java</code></td><td align="center">Antarmuka pengelolaan data master.</td></tr>
-<tr><td align="center"><code>FormKaryawan.java</code></td><td align="center">Antarmuka pengelolaan karyawan.</td></tr>
-<tr><td align="center"><code>FormProduksi.java</code></td><td align="center">Antarmuka produksi.</td></tr>
-<tr><td align="center"><code>FormUpdateStatus.java</code></td><td align="center">Antarmuka perubahan status.</td></tr>
-<tr><td align="center"><code>DatePickerDialog.java</code></td><td align="center">Dialog pemilihan tanggal.</td></tr>
-<tr><td align="center"><code>PdfExporter.java</code></td><td align="center">Utilitas ekspor tabel ke PDF.</td></tr>
-<tr><td align="center"><code>AppTheme.java</code></td><td align="center">Pengaturan tema antarmuka.</td></tr>
-</table>
-</div>
-
-</details>
-
-### 6.4 Isi Test Packages
-
-<div align="center">
-<table>
-<tr><th align="center">Class</th><th align="center">Fungsi</th></tr>
-<tr><td align="center"><code>DatabaseWorkflowTest.java</code></td><td align="center">Pengujian workflow database.</td></tr>
-<tr><td align="center"><code>JumlahObatDisplayTest.java</code></td><td align="center">Pengujian tampilan jumlah obat.</td></tr>
-<tr><td align="center"><code>SwingWorkflowTest.java</code></td><td align="center">Pengujian workflow antarmuka Java Swing.</td></tr>
-</table>
-</div>
-
-### 6.5 Library dan Konfigurasi Project
-
-<details>
-<summary><b>📦 Lihat library utama dan perannya</b></summary>
-
-| Library / Komponen | Peran di FORMULA |
-|:--:|:--:|
-| MySQL Connector/J | Driver JDBC menuju MySQL |
-| HikariCP | Connection pooling |
-| Hibernate ORM / Jakarta Persistence | ORM dan entity mapping |
-| SLF4J | Fasilitas logging |
-| JUnit Jupiter | Pengujian otomatis |
-| Java Swing, JDBC, java.time | API bawaan JDK untuk GUI, database, dan tanggal |
-| `pom.xml` | Pengaturan Maven dan dependency |
-
-</details>
-
-### 6.6 Hubungan Komponen MVC
-
-```text
-Pengguna → View (Java Swing) → Controller → Model / DAO → MySQL
-                    ↑                     │
-                    └──── hasil operasi ──┘
-```
-
-Model menangani data dan akses database; View menampilkan form serta tabel; Controller mengatur logika interaksi dan menghubungkan keduanya.
-
----
-
-<h2 align="left">🧩 7. Penerapan 4 Pilar OOP</h2>
+## A. Empat Pilar OOP
 
 ### 7.1 Encapsulation (Enkapsulasi)
 
-<p align="justify">Enkapsulasi dilakukan dengan membatasi akses langsung ke atribut suatu objek. Pada class <code>app.model.entity.Obat</code> dan <code>InstansiKesehatan</code>, data seperti <code>nama</code>, <code>jenis</code>, dan <code>status</code> disimpan sebagai atribut <code>private</code>, lalu diakses melalui method <code>getter</code> dan <code>setter</code>. Dengan demikian, akses atribut mengikuti antarmuka class yang telah ditentukan.</p>
+<p align="justify">Encapsulation merupakan konsep OOP yang membatasi akses langsung terhadap atribut dalam suatu class. Pada project FORMULA, konsep ini diterapkan pada entity <code>Obat</code> dan <code>InstansiKesehatan</code> dengan menggunakan modifier <code>private</code>. Akses terhadap atribut dilakukan melalui method <em>getter</em> dan <em>setter</em> agar pengelolaan data lebih terkontrol.</p>
 
 <details>
-<summary><b>💡 Lihat contoh implementasi Java</b></summary>
+<summary><b>💻 Lihat kode dan penjelasan</b></summary>
+<br>
+
+**Contoh kode:**
 
 ```java
-// Cuplikan dari app.model.entity.Obat
+// app.model.entity.Obat
+@Column(name = "nama_obat", nullable = false, length = 50)
 private String nama;
 
 public String getNama() {
@@ -540,56 +439,85 @@ public void setNama(String nama) {
 }
 ```
 
+**Penjelasan kode:**
+
+<p align="justify">Atribut <code>nama</code> menggunakan modifier <code>private</code> sehingga tidak dapat diakses secara langsung dari luar class <code>Obat</code>. Method <code>getNama()</code> digunakan untuk membaca nilai atribut, sedangkan <code>setNama()</code> digunakan untuk mengubahnya. Anotasi <code>@Column</code> menghubungkan atribut tersebut dengan kolom <code>nama_obat</code> pada database. Selain itu, atribut <code>id</code> dan <code>idKaryawan</code> hanya menyediakan getter sehingga nilainya tidak dapat diubah melalui setter.</p>
+
 </details>
 
 ### 7.2 Inheritance (Pewarisan)
 
-<p align="justify">Inheritance diterapkan pada hierarki <code>MenuRole</code>. Class <code>AdministrasiRole</code>, <code>ProduksiRole</code>, dan <code>FulfillmentRole</code> mewarisi atribut dan method umum dari abstract class <code>MenuRole</code>. Setiap subclass dapat menentukan daftar menu tanpa menduplikasi struktur dasar role.</p>
+<p align="justify">Inheritance merupakan konsep pewarisan yang memungkinkan suatu class memperoleh atribut dan method dari class lain. Pada project FORMULA, <code>AdministrasiRole</code>, <code>ProduksiRole</code>, dan <code>FulfillmentRole</code> mewarisi struktur umum dari abstract class <code>MenuRole</code>. Setiap class turunan kemudian menentukan daftar menu sesuai dengan hak akses masing-masing role.</p>
 
 <details>
-<summary><b>💡 Lihat contoh implementasi Java</b></summary>
+<summary><b>💻 Lihat kode dan penjelasan</b></summary>
+<br>
+
+**Contoh kode:**
 
 ```java
-// Cuplikan dari app.model.role.ProduksiRole
+// app.model.role.ProduksiRole
 public final class ProduksiRole extends MenuRole {
+
     public ProduksiRole() {
         super("Produksi");
     }
 
     @Override
     public String[] getMenu() {
-        return new String[]{"Proses Produksi", "Data Produksi", "Penggunaan Bahan"};
+        return new String[]{
+            "Proses Produksi",
+            "Data Produksi",
+            "Penggunaan Bahan"
+        };
     }
 }
 ```
+
+**Penjelasan kode:**
+
+<p align="justify">Keyword <code>extends MenuRole</code> menunjukkan bahwa <code>ProduksiRole</code> mewarisi atribut dan method dari class induk. Konstruktor <code>super("Produksi")</code> digunakan untuk mengirimkan nama role kepada konstruktor induk. Method <code>getMenu()</code> diimplementasikan kembali untuk menentukan daftar menu khusus petugas Produksi. Sementara itu, keyword <code>final</code> mencegah class tersebut diturunkan kembali.</p>
 
 </details>
 
 ### 7.3 Polymorphism (Polimorfisme)
 
-<p align="justify">Polymorphism muncul ketika <code>getMenu()</code> dipanggil melalui tipe dasar <code>MenuRole</code>, tetapi implementasi method yang berjalan menyesuaikan objek role yang digunakan. Misalnya, role Administrasi memiliki menu berbeda dari role Produksi. Ini merupakan contoh <em>method overriding</em>.</p>
+<p align="justify">Polymorphism merupakan konsep OOP yang memungkinkan satu method memiliki perilaku berbeda sesuai dengan objek yang menggunakannya. Pada project FORMULA, konsep ini diterapkan melalui method <code>getMenu()</code> yang dimiliki oleh <code>MenuRole</code> dan diimplementasikan oleh setiap class turunannya. Dengan demikian, daftar menu yang ditampilkan dapat menyesuaikan role pengguna.</p>
 
 <details>
-<summary><b>💡 Lihat contoh implementasi Java</b></summary>
+<summary><b>💻 Lihat kode dan penjelasan</b></summary>
+<br>
+
+**Contoh kode:**
 
 ```java
 MenuRole role = MenuRole.untuk("Produksi");
-String[] menu = role.getMenu();  // Menggunakan implementasi ProduksiRole
+String[] menu = role.getMenu();
 ```
+
+```java
+// app.view.FormDashboard
+String[] labels = app.model.role.MenuRole.untuk(role).getMenu();
+```
+
+**Penjelasan kode:**
+
+<p align="justify">Variabel <code>role</code> menggunakan tipe <code>MenuRole</code>, tetapi objek yang dihasilkan merupakan <code>ProduksiRole</code>. Ketika method <code>getMenu()</code> dipanggil, Java menjalankan implementasi sesuai dengan objek sebenarnya. Oleh karena itu, setiap role dapat menghasilkan daftar menu yang berbeda. Pada <code>FormDashboard</code>, mekanisme ini digunakan untuk membangun menu secara dinamis berdasarkan hak akses pengguna.</p>
 
 </details>
 
-<p align="justify">Pada program, <code>FormDashboard</code> menggunakan pemanggilan <code>MenuRole.untuk(role).getMenu()</code> untuk membangun menu secara dinamis.</p>
-
 ### 7.4 Abstraction (Abstraksi)
 
-<p align="justify">Abstraksi diterapkan melalui <code>abstract class MenuRole</code> yang mendefinisikan atribut umum role sekaligus kontrak <code>getMenu()</code> tanpa menentukan isi menu setiap peran. Detail implementasi diserahkan kepada class turunannya sehingga komponen dashboard cukup berinteraksi dengan antarmuka umum role.</p>
+<p align="justify">Abstraction merupakan konsep OOP yang menyederhanakan penggunaan objek dengan menampilkan bagian penting dan menyembunyikan detail implementasinya. Pada project FORMULA, konsep ini diterapkan melalui abstract class <code>MenuRole</code> yang menyediakan struktur umum serta method <code>getMenu()</code>. Implementasi method tersebut diserahkan kepada masing-masing class turunan.</p>
 
 <details>
-<summary><b>💡 Lihat contoh implementasi Java</b></summary>
+<summary><b>💻 Lihat kode dan penjelasan</b></summary>
+<br>
+
+**Contoh kode:**
 
 ```java
-// Cuplikan dari app.model.role.MenuRole
+// app.model.role.MenuRole
 public abstract class MenuRole {
     private final String nama;
 
@@ -602,102 +530,213 @@ public abstract class MenuRole {
     }
 
     public abstract String[] getMenu();
+
+    public static MenuRole untuk(String role) {
+        if ("Administrasi".equals(role))
+            return new AdministrasiRole();
+
+        if ("Produksi".equals(role))
+            return new ProduksiRole();
+
+        if ("Fulfillment".equals(role))
+            return new FulfillmentRole();
+
+        throw new IllegalArgumentException(
+            "Role tidak dikenal: " + role
+        );
+    }
 }
 ```
 
+**Penjelasan kode:**
+
+<p align="justify">Class <code>MenuRole</code> menggunakan keyword <code>abstract</code> sehingga tidak dapat dibuat menjadi objek secara langsung dan berfungsi sebagai kerangka bagi class turunannya. Method <code>getMenu()</code> menjadi kontrak yang wajib diimplementasikan oleh setiap subclass, sedangkan <code>getNama()</code> digunakan untuk membaca nama role. Method <code>untuk()</code> berfungsi memilih objek role berdasarkan nama yang diberikan, yaitu Administrasi, Produksi, atau Fulfillment. Dengan demikian, setiap role memiliki struktur dasar yang sama, tetapi tetap dapat menentukan implementasinya masing-masing.</p>
+
 </details>
+
+---
+
+## B. Implementasi Lanjutan
 
 ### 7.5 Manajemen Koneksi Tingkat Lanjut (Singleton dan Connection Pooling)
 
-<p align="justify">Program FORMULA mengelola koneksi database melalui class <code>app.model.Koneksi</code>. Class ini memiliki konstruktor <code>private</code> dan menyimpan satu objek <code>HikariDataSource</code> dalam atribut <code>static</code>. Pendekatan tersebut menggunakan pola <strong>singleton-like</strong> untuk pengelolaan satu connection pool bersama, bukan membuat koneksi fisik baru setiap kali pengguna melakukan operasi.</p>
+<p align="justify">Project FORMULA menerapkan manajemen koneksi menggunakan pola <em>singleton-like</em> dan teknologi <strong>HikariCP Connection Pooling</strong>. Class <code>app.model.Koneksi</code> memiliki konstruktor <code>private</code> dan atribut <code>static</code> untuk menyediakan satu connection pool yang digunakan bersama oleh seluruh DAO. Penggunaan connection pool membantu mengelola koneksi database agar lebih efisien.</p>
 
 <details>
-<summary><b>💡 Lihat contoh implementasi Java</b></summary>
+<summary><b>💻 Lihat kode dan penjelasan</b></summary>
+<br>
+
+**Contoh kode:**
 
 ```java
-// Cuplikan dari app.model.Koneksi
+// app.model.Koneksi
 private static HikariDataSource pool;
+
 private Koneksi() {}
 
 public static synchronized DataSource getDataSource() {
     if (pool == null || pool.isClosed()) {
         HikariConfig cfg = new HikariConfig();
+
         cfg.setPoolName("Formula-MySQL-Pool");
-        // URL, username, dan password dibaca dari konfigurasi aplikasi.
+        // URL, username, dan password dibaca dari environment variable / formula.properties
         cfg.setMaximumPoolSize(10);
         cfg.setMinimumIdle(1);
         cfg.setConnectionTimeout(10000);
         cfg.setValidationTimeout(3000);
         cfg.setInitializationFailTimeout(-1);
-        pool = new HikariDataSource(cfg);
+
+        HikariDataSource candidate = new HikariDataSource(cfg);
+
+        try (Connection c = candidate.getConnection()) {
+            pool = candidate;
+        } catch (Exception ex) {
+            candidate.close();
+            throw new IllegalStateException(
+                "Koneksi atau skema database gagal. ...", ex
+            );
+        }
     }
+
     return pool;
 }
 
 public static Connection getConnection() throws SQLException {
     return getDataSource().getConnection();
 }
+
+public static synchronized void close() {
+    if (pool != null && !pool.isClosed()) {
+        pool.close();
+    }
+
+    pool = null;
+}
 ```
+
+**Penjelasan kode:**
+
+<p align="justify">Konstruktor <code>private</code> dan atribut <code>static</code> membuat connection pool dikelola secara terpusat. Method <code>getDataSource()</code> membuat pool saat pertama kali dibutuhkan atau ketika pool sebelumnya sudah tertutup, sedangkan <code>synchronized</code> mencegah pembuatan pool secara bersamaan oleh beberapa thread. HikariCP dikonfigurasi dengan kapasitas maksimal 10 koneksi dan minimal 1 koneksi idle, kemudian koneksi diuji sebelum digunakan. Method <code>getConnection()</code> menyediakan koneksi bagi DAO, sedangkan <code>close()</code> digunakan untuk menutup pool ketika aplikasi berhenti.</p>
 
 </details>
 
-<p align="justify">Penerapan <strong>HikariCP</strong> memungkinkan aplikasi menggunakan kembali koneksi yang telah tersedia. Konfigurasi pool membatasi maksimum 10 koneksi, mempertahankan minimal 1 koneksi idle, serta mengatur batas waktu pengambilan koneksi. Dalam implementasi aslinya, koneksi juga diuji ketika pool dibuat dan pool ditutup melalui method <code>Koneksi.close()</code>. Class DAO cukup memanggil <code>Koneksi.getConnection()</code> untuk mendapatkan koneksi dari pool.</p>
-
 ### 7.6 Implementasi Framework ORM (Hibernate/JPA)
 
-<p align="justify">FORMULA menggunakan <strong>Hibernate ORM dengan Jakarta Persistence API (JPA)</strong> untuk pengelolaan data master tertentu, khususnya <code>Obat</code> dan <code>InstansiKesehatan</code>. Kedua class tersebut berada dalam package <code>app.model.entity</code> dan dipetakan ke tabel database melalui anotasi JPA. Dengan ORM, operasi data dapat dilakukan melalui objek Java tanpa harus menulis SQL manual untuk setiap operasi.</p>
+<p align="justify">Project FORMULA menggunakan <strong>Hibernate ORM dengan Jakarta Persistence API (JPA)</strong> untuk mengelola data master <code>Obat</code> dan <code>InstansiKesehatan</code> yang berada pada package <code>app.model.entity</code>. Kedua class tersebut dipetakan ke tabel database menggunakan anotasi JPA, sehingga pengelolaan data dapat dilakukan melalui objek Java tanpa harus menuliskan seluruh perintah SQL secara manual.</p>
+
+**a. Konfigurasi ORM (`JpaManager`)**
 
 <details>
-<summary><b>💡 Lihat contoh implementasi Java</b></summary>
+<summary><b>💻 Lihat kode dan penjelasan</b></summary>
+<br>
+
+**Contoh kode:**
 
 ```java
-// Cuplikan dari app.model.JpaManager
+// app.model.JpaManager
 public static synchronized EntityManager open() {
     if (factory == null || !factory.isOpen()) {
         org.hibernate.cfg.Configuration cfg =
                 new org.hibernate.cfg.Configuration();
+
         cfg.addAnnotatedClass(InstansiKesehatan.class);
         cfg.addAnnotatedClass(Obat.class);
+
         cfg.setProperty("hibernate.hbm2ddl.auto", "none");
+        cfg.setProperty("hibernate.show_sql", "false");
+        cfg.setProperty("hibernate.jdbc.time_zone", "Asia/Makassar");
+
         cfg.getProperties().put(
-                "hibernate.connection.datasource",
-                Koneksi.getDataSource()
+            "hibernate.connection.datasource",
+            Koneksi.getDataSource()
         );
+
         factory = cfg.buildSessionFactory();
     }
+
     return factory.createEntityManager();
 }
 ```
 
+**Penjelasan kode:**
+
+<p align="justify">Method <code>open()</code> mengelola pembuatan <code>EntityManagerFactory</code> yang digunakan bersama dan menyediakan <code>EntityManager</code> baru untuk setiap operasi. Method <code>addAnnotatedClass()</code> mendaftarkan entity <code>Obat</code> dan <code>InstansiKesehatan</code> agar dapat dikelola oleh Hibernate. Pengaturan <code>hbm2ddl.auto=none</code> memastikan Hibernate tidak mengubah struktur tabel database. Selain itu, Hibernate menggunakan <code>DataSource</code> dari class <code>Koneksi</code> sehingga tetap memanfaatkan HikariCP.</p>
+
 </details>
 
-<p align="justify">Class <code>JpaManager</code> menginisialisasi satu <code>EntityManagerFactory</code> yang digunakan bersama, kemudian menyediakan <code>EntityManager</code> untuk setiap operasi. Konfigurasi <code>hibernate.hbm2ddl.auto=none</code> berarti Hibernate tidak diminta membuat atau mengubah struktur tabel secara otomatis; struktur database tetap mengikuti file SQL project.</p>
+**b. Operasi Data (`OrmMasterDAO`)**
 
 <details>
-<summary><b>💡 Lihat contoh implementasi Java</b></summary>
+<summary><b>💻 Lihat kode dan penjelasan</b></summary>
+<br>
+
+**Contoh kode pengelolaan transaksi:**
 
 ```java
-// Contoh operasi tambah instansi dari app.model.OrmMasterDAO
-InstansiKesehatan item = new InstansiKesehatan(
-        nama, jenis, alamat, kontak
-);
-EntityManager em = JpaManager.open();
-EntityTransaction tx = em.getTransaction();
-try {
-    tx.begin();
-    em.persist(item);
-    tx.commit();
-} catch (RuntimeException ex) {
-    if (tx.isActive()) tx.rollback();
-    throw ex;
-} finally {
-    em.close();
+// app.model.OrmMasterDAO: helper transaksi
+private <T> T transaksi(Function<EntityManager, T> operation) {
+    try (EntityManager em = JpaManager.open()) {
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+
+        try {
+            T result = operation.apply(em);
+            tx.commit();
+            return result;
+        } catch (RuntimeException ex) {
+            if (tx.isActive()) {
+                tx.rollback();
+            }
+
+            throw ex;
+        }
+    }
 }
 ```
 
+**Contoh kode penambahan instansi:**
+
+```java
+// app.model.OrmMasterDAO: tambah instansi
+public boolean tambahInstansi(String n, String j, String a, String k) {
+    InstansiKesehatan item = new InstansiKesehatan(
+        wajib(n, "Nama instansi", 50),
+        wajib(j, "Jenis instansi", 30),
+        wajib(a, "Alamat", 255),
+        wajib(k, "Kontak", 20)
+    );
+
+    return transaksi(em -> {
+        Long sama = em.createQuery(
+            "select count(i) from InstansiKesehatan i "
+            + "where lower(trim(i.nama))=lower(trim(:nama))",
+            Long.class
+        )
+        .setParameter("nama", item.getNama())
+        .getSingleResult();
+
+        if (sama > 0) {
+            throw new IllegalArgumentException(
+                "Nama instansi sudah terdaftar. ..."
+            );
+        }
+
+        em.persist(item);
+        return true;
+    });
+}
+```
+
+**Penjelasan kode:**
+
+<p align="justify">Method <code>transaksi()</code> mengatur proses transaksi database dengan menjalankan <code>begin()</code> sebelum operasi dan <code>commit()</code> setelah operasi berhasil. Jika terjadi kesalahan, transaksi dibatalkan menggunakan <code>rollback()</code>, kemudian <code>EntityManager</code> ditutup secara otomatis. Pada method <code>tambahInstansi()</code>, data divalidasi terlebih dahulu menggunakan <code>wajib()</code>, kemudian nama instansi diperiksa agar tidak terjadi duplikasi melalui query JPQL. Jika data valid dan belum terdaftar, method <code>persist()</code> digunakan untuk menyimpannya ke database.</p>
+
+<p align="justify">Penggunaan ORM pada FORMULA difokuskan pada entity <code>Obat</code> dan <code>InstansiKesehatan</code>. Sementara itu, proses pengelolaan data lainnya masih menggunakan JDBC melalui DAO, termasuk pemeriksaan karyawan aktif pada method <code>getValidKaryawanId()</code>.</p>
+
 </details>
 
-<p align="justify">Dalam implementasi sebenarnya, <code>OrmMasterDAO</code> membungkus operasi ORM melalui helper transaksi yang memanggil <code>begin()</code>, <code>commit()</code>, dan <code>rollback()</code> apabila terjadi kesalahan. Method <code>persist()</code> digunakan untuk menambah entitas, <code>find()</code> untuk mencari data, <code>remove()</code> untuk menghapus, sedangkan query JPQL digunakan untuk membaca data. ORM digunakan pada data master terkait, sementara proses lain masih memanfaatkan JDBC/DAO sesuai kebutuhan aplikasi.</p>
+---
+
 
 <h2 align="left">💻 8. Cara Penggunaan Program</h2>
 
@@ -1066,44 +1105,6 @@ Menu Ubah Status Obat digunakan untuk mengatur penanda ketersediaan pada katalog
 
 Pengguna harus memilih baris terlebih dahulu. Perubahan menu ini mengatur status katalog obat, bukan membuat batch baru atau mengubah jumlah stok batch.
 
-### 8.6 Alur Operasional Lengkap (Administrasi → Produksi → Fulfillment)
-
-Berikut contoh urutan penggunaan seluruh modul utama dalam satu proses kerja:
-
-1. Administrasi — Kelola Obat: mendaftarkan obat yang akan diproduksi.
-2. Administrasi — Kelola Bahan Baku: menambahkan bahan beserta jumlah stok awal dan satuan.
-3. Administrasi — Kelola Karyawan: membuat akun petugas dengan role Produksi dan Fulfillment.
-4. Produksi — Proses Produksi: memilih obat dan jumlah hasil 25/50/100, lalu menyimpan batch baru. Sistem menghasilkan nomor batch.
-5. Produksi — Penggunaan Bahan: memilih bahan, memasukkan jumlah pemakaian, dan menghubungkannya ke nomor batch. Stok bahan baku berkurang setelah transaksi berhasil.
-6. Produksi — Data Produksi: memeriksa batch, tanggal, stok, kelayakan, dan rincian bahan melalui pop-up Lihat Bahan Baku.
-7. Fulfillment — Instansi Kesehatan: mendaftarkan atau memilih instansi penerima obat.
-8. Fulfillment — Stok per Batch: memastikan batch tersedia dan belum kedaluwarsa.
-9. Fulfillment — Kelola Pesanan: membuat pesanan baru untuk instansi; status awal Menunggu.
-10. Fulfillment — Detail Pesanan: memilih pesanan dan satu batch utuh. Sistem mencatat alokasi batch sehingga tidak dapat digunakan pada pesanan lain.
-11. Fulfillment — Kelola Pengiriman: membuat pengiriman dan memperoleh nomor resi, kemudian memperbarui status pengiriman sampai Selesai. Status pesanan mengikuti penyelesaian pengiriman.
-12. Administrasi — Data Pesanan, Data Pengiriman, Stok per Batch, dan Detail Pesanan: memantau hasil proses serta mencetak laporan PDF pada menu yang menyediakannya.
-13. Jika diperlukan, Fulfillment — Ubah Status Obat digunakan untuk memperbarui status katalog obat.
-
-```text
-ADMINISTRASI                 PRODUKSI                         FULFILLMENT
-Kelola Obat ───────┐
-Kelola Bahan Baku ─┼───────> Proses Produksi ────┐
-Kelola Karyawan ───┘              │              │
-                          Penggunaan Bahan       │
-                                 │              │
-                           Data Produksi ────────┼──> Cek Stok per Batch
-                                                │          │
-                                                └──> Buat Pesanan
-                                                           │
-                                                     Detail Pesanan
-                                                           │
-                                                     Kelola Pengiriman
-                                                           │
-                                                     Status Selesai
-                                                           │
-ADMINISTRASI <──────────────────────────── Monitoring Pesanan/Pengiriman
-```
-
 ### 8.7 Fungsi Tombol Umum dan Pencarian
 
 <div align="center">
@@ -1120,39 +1121,6 @@ ADMINISTRASI <──────────────────────
 <tr><td align="center"><strong>Keluar</strong></td><td align="center">Menampilkan konfirmasi logout dan kembali ke halaman login.</td></tr>
 </tbody></table>
 </div>
-
-### 8.8 Mengganti Placeholder Screenshot
-
-Setiap halaman di bagian ini memiliki **satu area JPG kosong tepat setelah penjelasan fungsi menu**. Ganti berkas JPG di `docs/preview/` dengan screenshot GUI yang sesuai dan **pertahankan nama berkasnya** supaya README otomatis menampilkan gambar baru. Tidak ada caption di bawah gambar.
-
-<details>
-<summary><strong>Lihat daftar 21 nama berkas screenshot</strong></summary>
-
-- `login.jpg`
-- `dashboard_administrasi.jpg`
-- `dashboard_produksi.jpg`
-- `dashboard_fulfillment.jpg`
-- `administrasi_kelola_obat.jpg`
-- `administrasi_kelola_bahan_baku.jpg`
-- `administrasi_kelola_karyawan.jpg`
-- `administrasi_data_pesanan.jpg`
-- `administrasi_data_pengiriman.jpg`
-- `administrasi_instansi_kesehatan.jpg`
-- `administrasi_stok_per_batch.jpg`
-- `administrasi_detail_pesanan.jpg`
-- `produksi_proses_produksi.jpg`
-- `produksi_data_produksi.jpg`
-- `produksi_penggunaan_bahan.jpg`
-- `fulfillment_kelola_pesanan.jpg`
-- `fulfillment_detail_pesanan.jpg`
-- `fulfillment_kelola_pengiriman.jpg`
-- `fulfillment_instansi_kesehatan.jpg`
-- `fulfillment_stok_per_batch.jpg`
-- `fulfillment_ubah_status_obat.jpg`
-
-</details>
-
-
 
 <h2 align="left">👥 9. Kontributor</h2>
 
