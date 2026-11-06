@@ -414,13 +414,13 @@ Bagian ini berisi `pom.xml` sebagai file konfigurasi Maven untuk mengatur versi 
 <h2 align="left">🧩 7. Penerapan 4 Pilar OOP dan Implementasi Lanjutan</h2>
 
 ## A. Empat Pilar OOP
+
 ### 7.1 Encapsulation (Enkapsulasi)
 
 <p align="justify">Encapsulation merupakan konsep OOP yang membatasi akses langsung terhadap atribut dalam suatu class. Pada project FORMULA, konsep ini diterapkan pada entity <code>Obat</code> dan <code>InstansiKesehatan</code> dengan menggunakan modifier <code>private</code>. Akses terhadap atribut dilakukan melalui method <em>getter</em> dan <em>setter</em> agar pengelolaan data lebih terkontrol.</p>
 
 <details>
-<summary><b>💻 Lihat kode dan penjelasan</b></summary>
-<br>
+<summary><b>💡 Lihat kode dan penjelasan</b></summary>
 
 **Contoh kode:**
 
@@ -449,8 +449,7 @@ public void setNama(String nama) {
 <p align="justify">Inheritance merupakan konsep pewarisan yang memungkinkan suatu class memperoleh atribut dan method dari class lain. Pada project FORMULA, <code>AdministrasiRole</code>, <code>ProduksiRole</code>, dan <code>FulfillmentRole</code> mewarisi struktur umum dari abstract class <code>MenuRole</code>. Setiap class turunan kemudian menentukan daftar menu sesuai dengan hak akses masing-masing role.</p>
 
 <details>
-<summary><b>💻 Lihat kode dan penjelasan</b></summary>
-<br>
+<summary><b>💡 Lihat kode dan penjelasan</b></summary>
 
 **Contoh kode:**
 
@@ -484,8 +483,7 @@ public final class ProduksiRole extends MenuRole {
 <p align="justify">Polymorphism merupakan konsep OOP yang memungkinkan satu method memiliki perilaku berbeda sesuai dengan objek yang menggunakannya. Pada project FORMULA, konsep ini diterapkan melalui method <code>getMenu()</code> yang dimiliki oleh <code>MenuRole</code> dan diimplementasikan oleh setiap class turunannya. Dengan demikian, daftar menu yang ditampilkan dapat menyesuaikan role pengguna.</p>
 
 <details>
-<summary><b>💻 Lihat kode dan penjelasan</b></summary>
-<br>
+<summary><b>💡 Lihat kode dan penjelasan</b></summary>
 
 **Contoh kode:**
 
@@ -510,8 +508,7 @@ String[] labels = app.model.role.MenuRole.untuk(role).getMenu();
 <p align="justify">Abstraction merupakan konsep OOP yang menyederhanakan penggunaan objek dengan menampilkan bagian penting dan menyembunyikan detail implementasinya. Pada project FORMULA, konsep ini diterapkan melalui abstract class <code>MenuRole</code> yang menyediakan struktur umum serta method <code>getMenu()</code>. Implementasi method tersebut diserahkan kepada masing-masing class turunan.</p>
 
 <details>
-<summary><b>💻 Lihat kode dan penjelasan</b></summary>
-<br>
+<summary><b>💡 Lihat kode dan penjelasan</b></summary>
 
 **Contoh kode:**
 
@@ -554,13 +551,13 @@ public abstract class MenuRole {
 </details>
 
 ## B. Implementasi Lanjutan
+
 ### 7.5 Manajemen Koneksi Tingkat Lanjut (Singleton dan Connection Pooling)
 
 <p align="justify">Project FORMULA menerapkan manajemen koneksi menggunakan pola <em>singleton-like</em> dan teknologi <strong>HikariCP Connection Pooling</strong>. Class <code>app.model.Koneksi</code> memiliki konstruktor <code>private</code> dan atribut <code>static</code> untuk menyediakan satu connection pool yang digunakan bersama oleh seluruh DAO. Penggunaan connection pool membantu mengelola koneksi database agar lebih efisien.</p>
 
 <details>
-<summary><b>💻 Lihat kode dan penjelasan</b></summary>
-<br>
+<summary><b>💡 Lihat kode dan penjelasan</b></summary>
 
 **Contoh kode:**
 
@@ -623,8 +620,7 @@ public static synchronized void close() {
 **a. Konfigurasi ORM (`JpaManager`)**
 
 <details>
-<summary><b>💻 Lihat kode dan penjelasan</b></summary>
-<br>
+<summary><b>💡 Lihat kode dan penjelasan</b></summary>
 
 **Contoh kode:**
 
@@ -663,8 +659,7 @@ public static synchronized EntityManager open() {
 **b. Operasi Data (`OrmMasterDAO`)**
 
 <details>
-<summary><b>💻 Lihat kode dan penjelasan</b></summary>
-<br>
+<summary><b>💡 Lihat kode dan penjelasan</b></summary>
 
 **Contoh kode pengelolaan transaksi:**
 
@@ -730,8 +725,6 @@ public boolean tambahInstansi(String n, String j, String a, String k) {
 <p align="justify">Penggunaan ORM pada FORMULA difokuskan pada entity <code>Obat</code> dan <code>InstansiKesehatan</code>. Sementara itu, proses pengelolaan data lainnya masih menggunakan JDBC melalui DAO, termasuk pemeriksaan karyawan aktif pada method <code>getValidKaryawanId()</code>.</p>
 
 </details>
-
----
 
 
 <h2 align="left">💻 8. Cara Penggunaan Program</h2>
