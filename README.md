@@ -863,7 +863,7 @@ Petugas **Produksi** melanjutkan proses setelah data obat dan bahan baku disiapk
 Dashboard Produksi merupakan halaman utama bagi akun ber-role **Produksi**. Dashboard menyediakan **tiga menu**, yaitu **Proses Produksi**, **Data Produksi**, dan **Penggunaan Bahan**. Setiap menu berhubungan dengan tahapan produksi yang berbeda.
 
 <p align="center">
-  <img src="docs/preview/dashboard_produksi.jpg" width="780" alt="Tampilan Dashboard Produksi">
+<img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/40ee55f6-ce13-4aae-b552-df1e967f6d0c" />
 </p>
 
 **Cara menggunakan dashboard:** mulai dari **Proses Produksi** untuk membuat batch, kemudian buka **Penggunaan Bahan** untuk mencatat bahan yang dipakai. Setelah itu, periksa hasil dan rincian batch pada **Data Produksi**. Gunakan **Kembali** dari masing-masing form dan **Keluar** ketika pekerjaan selesai.
@@ -875,7 +875,7 @@ Dashboard Produksi merupakan halaman utama bagi akun ber-role **Produksi**. Dash
 Menu **Proses Produksi** digunakan untuk membuat batch baru dari obat yang sudah tercatat pada master obat.
 
 <p align="center">
-  <img src="docs/preview/produksi_proses_produksi.jpg" width="780" alt="Proses Produksi">
+ <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/83ba74e4-59a5-40d5-891d-9eee4e44e44c" />
 </p>
 
 1. Masuk sebagai petugas Produksi dan buka **Proses Produksi**.
@@ -893,7 +893,7 @@ Menu **Proses Produksi** digunakan untuk membuat batch baru dari obat yang sudah
 Menu **Data Produksi** menampilkan hasil produksi yang telah disimpan. Tabel berisi **Nomor Batch, Nama Obat, Stok, Satuan, Tanggal Produksi, Tanggal Kedaluwarsa, Bahan Baku Digunakan, Petugas,** dan **Kelayakan** (Layak Edar/Kedaluwarsa).
 
 <p align="center">
-  <img src="docs/preview/produksi_data_produksi.jpg" width="780" alt="Data Produksi">
+<img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/e502fa20-2077-4b7f-82fe-e15f8c5ba0f1" />
 </p>
 
 1. Buka **Data Produksi**, lalu pilih satu baris batch pada tabel.
@@ -911,7 +911,7 @@ Penambahan batch baru tidak dilakukan pada menu ini; gunakan **Proses Produksi**
 Menu ini mencatat bahan baku yang dipakai untuk suatu nomor batch. Data meliputi **ID Detail, Nama Bahan, Jumlah Bahan, Satuan,** dan **Nomor Batch**.
 
 <p align="center">
-  <img src="docs/preview/produksi_penggunaan_bahan.jpg" width="780" alt="Penggunaan Bahan">
+<img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/ba2c4478-6a46-4283-aa94-64951e382f82" />
 </p>
 
 1. Buka **Penggunaan Bahan** setelah batch produksi berhasil dibuat.
@@ -934,7 +934,7 @@ Role **Fulfillment** menangani pendataan instansi kesehatan, pembuatan pesanan, 
 Dashboard Fulfillment ditampilkan setelah pengguna masuk menggunakan akun ber-role **Fulfillment**. Enam tombol yang tersedia adalah **Kelola Pesanan**, **Detail Pesanan**, **Kelola Pengiriman**, **Instansi Kesehatan**, **Stok per Batch**, dan **Ubah Status Obat**.
 
 <p align="center">
-  <img src="docs/preview/dashboard_fulfillment.jpg" width="780" alt="Tampilan Dashboard Fulfillment">
+  <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/347a8ff2-38a1-4bb3-8c8c-a3a609e2bfbd" />
 </p>
 
 **Cara menggunakan dashboard:** pastikan instansi tujuan sudah terdaftar, buat pesanan, periksa **Stok per Batch**, pilih batch melalui **Detail Pesanan**, dan lanjutkan dengan **Kelola Pengiriman**. Gunakan **Ubah Status Obat** apabila status katalog perlu disesuaikan. Tombol **Kembali** dan **Keluar** tersedia untuk navigasi.
@@ -946,7 +946,7 @@ Dashboard Fulfillment ditampilkan setelah pengguna masuk menggunakan akun ber-ro
 Menu **Kelola Pesanan** digunakan untuk mencatat permintaan obat dari instansi kesehatan. Form menampilkan **ID Pesanan, Tanggal, Status, Catatan, Instansi,** dan **Petugas**.
 
 <p align="center">
-  <img src="docs/preview/fulfillment_kelola_pesanan.jpg" width="780" alt="Kelola Pesanan">
+ <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/2c3e5521-c1d1-4bac-9b9d-c383b550739f" />
 </p>
 
 1. Pastikan instansi tujuan sudah terdaftar pada **Instansi Kesehatan**.
@@ -964,7 +964,7 @@ Menu **Kelola Pesanan** digunakan untuk mencatat permintaan obat dari instansi k
 Menu **Detail Pesanan** menghubungkan satu pesanan dengan satu batch obat hasil produksi. Tabel menampilkan **ID Detail, ID Pesanan, Nomor Batch,** dan **Jumlah Obat**.
 
 <p align="center">
-  <img src="docs/preview/fulfillment_detail_pesanan.jpg" width="780" alt="Detail Pesanan">
+<img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/f4edf28d-56a3-48d5-a33c-77aba71b193d" />
 </p>
 
 1. Buka **Detail Pesanan**.
@@ -983,7 +983,7 @@ Menu **Detail Pesanan** menghubungkan satu pesanan dengan satu batch obat hasil 
 Menu **Kelola Pengiriman** digunakan setelah pesanan memiliki detail batch. Form menampilkan **Nomor Resi, Tanggal, Status, Keterangan, Pesanan,** dan **Petugas**.
 
 <p align="center">
-  <img src="docs/preview/fulfillment_kelola_pengiriman.jpg" width="780" alt="Kelola Pengiriman">
+<img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/c2481dd4-665d-46ba-ae81-b752663d5037" />
 </p>
 
 1. Buka **Kelola Pengiriman**.
@@ -1002,7 +1002,7 @@ Menu **Kelola Pengiriman** digunakan setelah pesanan memiliki detail batch. Form
 Berbeda dengan role Administrasi yang hanya melihat data, pada role **Fulfillment** menu **Instansi Kesehatan** menyediakan operasi CRUD. Field yang tersedia adalah **ID Instansi, Nama Instansi, Jenis, Alamat,** dan **Kontak**.
 
 <p align="center">
-  <img src="docs/preview/fulfillment_instansi_kesehatan.jpg" width="780" alt="Instansi Kesehatan">
+<img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/75ca6a34-6d0c-4fc0-9435-5d38d721374e" />
 </p>
 
 1. Buka **Instansi Kesehatan** dari dashboard Fulfillment.
@@ -1017,7 +1017,7 @@ Berbeda dengan role Administrasi yang hanya melihat data, pada role **Fulfillmen
 Menu ini menampilkan daftar batch yang dapat dipilih pada proses pemenuhan pesanan, yaitu batch dengan **stok lebih dari nol**, **belum kedaluwarsa**, serta **belum dialokasikan**.
 
 <p align="center">
-  <img src="docs/preview/fulfillment_stok_per_batch.jpg" width="780" alt="Stok per Batch">
+  <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/ac9a8596-e991-41cf-a823-b4f0a705ff59" />
 </p>
 
 1. Buka **Stok per Batch**.
@@ -1032,7 +1032,7 @@ Halaman ini bersifat **read-only**. Penambahan dan perubahan data produksi dilak
 Menu **Ubah Status Obat** digunakan untuk mengatur penanda ketersediaan pada katalog obat. Tabel menampilkan daftar obat beserta statusnya.
 
 <p align="center">
-  <img src="docs/preview/fulfillment_ubah_status_obat.jpg" width="780" alt="Ubah Status Obat">
+<img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/86212025-0fee-430b-9b37-063c1375b091" />
 </p>
 
 1. Buka **Ubah Status Obat**.
