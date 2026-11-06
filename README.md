@@ -224,60 +224,84 @@
   <img width="1304" height="1371" alt="Flowchart CAPSTONE-Menu Login drawio" src="https://github.com/user-attachments/assets/147af2e3-2fca-4266-b5b3-4489ea27f6bf" />
 </details>
 
+Alur kerja sistem ini dimulai dari proses login untuk memastikan hanya karyawan yang terdaftar yang bisa mengakses aplikasi. Pengguna harus memasukkan ID dan kata sandi yang akan diperiksa melalui database. Jika data tidak sesuai, pengguna diminta mencoba login kembali. Setelah berhasil login, sistem akan mengarahkan pengguna ke menu sesuai dengan perannya, yaitu Menu Petugas Fulfillment untuk mengelola pengiriman, Menu Operasional Administrasi untuk pendataan, dan Menu Operasional Produksi untuk mengelola proses pembuatan obat
+
 <details>
   <summary>Menu Operasional Administrasi</summary>
   <img width="2265" height="1337" alt="Flowchart CAPSTONE-Menu Operasional Administrasi drawio" src="https://github.com/user-attachments/assets/ec979379-ef4b-4e2d-958b-e5b06669dd6c" />
 </details>
+
+Alur Kerja Menu Operasional Administrasi dimulai dengan menampilkan beberapa pilihan menu yang dapat digunakan pengguna, seperti Menu Karyawan, Menu Bahan Baku, dan Menu Obat untuk mengelola data masing-masing. Pengguna juga dapat melihat daftar pesanan beserta opsi untuk mencetak dokumen pesanan, serta melihat data pengiriman dan mencetak dokumen pengirimannya. Selain itu, tersedia menu untuk melihat daftar instansi kesehatan yang telah terdaftar. Setelah selesai melakukan suatu aksi, sistem akan mengarahkan pengguna kembali ke menu utama. Jika pengguna memilih untuk keluar, sistem akan kembali ke halaman login
 
 <details>
   <summary>Administrasi - Menu Karyawan</summary>
   <img width="1643" height="1605" alt="Flowchart CAPSTONE-Administrasi - Menu Karyawan drawio" src="https://github.com/user-attachments/assets/25318de7-95aa-46f7-acf4-c26d4d50cc47" />
 </details>
 
+Alur Kerja Menu Karyawan dimulai dengan menampilkan pilihan pengelolaan data, yaitu melihat daftar karyawan, menambah, meng-update status, dan menghapus data karyawan. Saat menambahkan data, pengguna mengisi formulir yang tersedia, kemudian sistem akan membuat ID karyawan serta mengisi tanggal masuk dan status aktif secara otomatis sebelum menyimpan data ke database. Untuk proses update dan hapus, sistem akan memeriksa terlebih dahulu apakah ID karyawan yang dimasukkan tersedia di database. Jika ID tidak ditemukan, sistem akan menampilkan pesan kesalahan dan meminta pengguna memasukkan ID kembali. Setelah setiap proses selesai, pengguna akan diarahkan kembali ke menu utama. Jika tidak memilih aksi apa pun, sistem akan kembali ke Menu Operasional Administrasi
+
 <details>
   <summary>Administrasi - Menu Bahan Baku</summary>
   <img width="1741" height="1694" alt="Flowchart CAPSTONE-Administrasi  - Menu Bahan Baku drawio" src="https://github.com/user-attachments/assets/eaa87c17-74a6-438c-81db-6a507ed16c8e" />
 </details>
+
+Alur Kerja Menu Bahan Baku dimulai dengan menampilkan pilihan pengelolaan data, yaitu melihat stok, menambah, meng-update, dan menghapus data bahan baku. Saat menambahkan data, sistem akan memeriksa terlebih dahulu apakah data sudah terdaftar agar tidak terjadi duplikasi. Jika data belum ada, sistem akan membuat ID secara otomatis dan menyimpan data ke database. Pada proses update dan hapus, sistem akan memeriksa ID bahan baku terlebih dahulu sebelum melanjutkan proses. Jika ID tidak ditemukan atau data yang dimasukkan tidak sesuai, sistem akan menampilkan pesan kesalahan dan meminta pengguna menginputkan kembali data. Setelah proses selesai, pengguna akan diarahkan kembali ke menu utama. Jika tidak ada aksi yang dipilih, sistem akan kembali ke Menu Operasional Administrasi
 
 <details>
   <summary>Administrasi - Menu Obat</summary>
   <img width="1683" height="1640" alt="Flowchart CAPSTONE-Administrasi - Menu Obat drawio" src="https://github.com/user-attachments/assets/92eb156e-43c5-46c3-b18a-4686e429e5d0" />
 </details>
 
+Alur Kerja Menu Obat dimulai dengan menampilkan pilihan pengelolaan data, yaitu melihat daftar obat, menambah, meng-update, dan menghapus data obat. Saat menambahkan obat, pengguna mengisi nama, jenis, dan status ketersediaan obat. Sistem akan memeriksa terlebih dahulu apakah nama obat sudah terdaftar. Jika belum, data akan disimpan ke database. Untuk proses update dan hapus, sistem akan memeriksa ID obat terlebih dahulu sebelum melanjutkan proses. Jika nama obat sudah terdaftar atau ID tidak ditemukan, sistem akan menampilkan pesan kesalahan dan meminta pengguna menginputkan kembali data. Setelah proses berhasil, pengguna akan diarahkan kembali ke halaman menu utama. Jika tidak ada aksi yang dipilih, sistem akan kembali ke Menu Operasional Administrasi
+
 <details>
   <summary>Menu Operasional Produksi</summary>
   <img width="857" height="736" alt="Flowchart CAPSTONE-Menu Operasional Produksi · drawio" src="https://github.com/user-attachments/assets/62a6d1b9-7378-4750-bf25-9946997518b3" />
 </details>
+
+Alur kerja Menu Operasional Produksi dimulai dengan menampilkan tiga pilihan menu, yaitu Menu Data Produksi, Menu Detail Penggunaan Bahan, dan Keluar. Jika pengguna memilih Menu Data Produksi, sistem akan mengarahkan ke halaman pengelolaan data produksi. Jika memilih Menu Detail Penggunaan Bahan, sistem akan masuk ke halaman pengelolaan detail penggunaan bahan. Sementara itu, jika pengguna memilih Keluar, sistem akan mengarahkan kembali ke Halaman Login
 
 <details>
   <summary>Produksi - Data Produksi</summary>
   <img width="1785" height="2415" alt="Flowchart CAPSTONE-Produksi - Data Produksi drawio" src="https://github.com/user-attachments/assets/f2e2a395-68b7-4546-a49e-11144701c520" />
 </details>
 
+Alur kerja Menu Data Produksi dimulai dengan menampilkan pilihan untuk melihat, menambah, meng-update, dan menghapus data produksi obat. Jika pengguna memilih melihat data, sistem akan menampilkan daftar produksi beserta nomor batch dan jumlah stoknya. Untuk menambah data produksi, pengguna memasukkan ID obat dan jumlah obat yang ingin diproduksi. Sistem akan memeriksa ketersediaan obat dan resep, kemudian membuat nomor batch secara otomatis, menghitung kebutuhan bahan baku, serta mengecek kecukupan stok di gudang. Jika stok mencukupi, sistem akan memperbarui stok bahan baku dan menyimpan data produksi ke database. Sementara itu, pada proses update dan hapus, pengguna harus memasukkan nomor batch yang akan diperiksa terlebih dahulu oleh sistem sebelum data diperbarui atau dihapus. Setelah setiap proses selesai, pengguna akan diarahkan kembali ke halaman menu utama. Jika tidak ada aksi yang dipilih, sistem akan kembali ke Menu Operasional Produksi
+
 <details>
   <summary>Produksi - Detail Penggunaan Bahan</summary>
   <img width="1759" height="2122" alt="Flowchart CAPSTONE-Produksi - Detail Penggunaan Bahan drawio" src="https://github.com/user-attachments/assets/3b1d3b43-1081-480f-8573-542c1edcf36f" />
 </details>
+
+Alur kerja Menu Detail Penggunaan Bahan dimulai dengan menampilkan pilihan untuk melihat, menambah, meng-update, dan menghapus data detail penggunaan bahan. Jika pengguna memilih tambah, pengguna perlu memasukkan ID obat dan jumlah bahan yang digunakan per batch. Sistem akan memeriksa ID obat serta memastikan stok bahan baku mencukupi. Jika persyaratan terpenuhi, sistem akan membuat ID detail secara otomatis, mengisi satuan bahan, dan menyimpan data ke database. Pada proses update dan hapus, pengguna harus memasukkan ID detail terlebih dahulu untuk diperiksa keberadaannya di database. Saat melakukan update, sistem juga akan mengecek kecukupan stok bahan baku sebelum menyimpan perubahan. Sementara itu, proses hapus akan menghilangkan data detail penggunaan bahan dari database. Setelah setiap proses selesai, pengguna akan diarahkan kembali ke halaman menu utama atau Menu Operasional Produksi
 
 <details>
   <summary>Menu Petugas Fulfillment</summary>
   <img width="1154" height="726" alt="Flowchart CAPSTONE-Menu Petugas Fulfilment drawio" src="https://github.com/user-attachments/assets/3610cac4-fab6-4e52-b8ca-bb451cbdd903" />
 </details>
 
+Alur kerja Menu Petugas Fulfillment dimulai dengan menampilkan beberapa pilihan menu, yaitu Menu Pesanan, Menu Detail Pesanan, Menu Pengiriman, Menu Instansi Kesehatan, Lihat Stok Obat per Batch, dan Keluar. Jika pengguna memilih Menu Pesanan, sistem akan mengarahkan ke halaman pengelolaan pesanan. Jika memilih Menu Detail Pesanan atau Menu Pengiriman, sistem akan masuk ke halaman pengelolaan pengiriman. Selanjutnya, pengguna juga dapat memilih Menu Instansi Kesehatan untuk melihat data instansi yang terdaftar atau Lihat Stok Obat per Batch untuk memeriksa stok obat berdasarkan nomor batch. Jika pengguna memilih Keluar, sistem akan mengarahkan kembali ke Halaman Login
+
 <details>
   <summary>Petugas Fulfillment - Pesanan</summary>
   <img width="1706" height="2036" alt="Flowchart CAPSTONE-Petugas Fulfilment - Pesanan drawio" src="https://github.com/user-attachments/assets/c38ae4a3-ec36-446c-b70d-927d97bb28b0" />
 </details>
+
+Alur kerja Menu Pesanan dimulai dengan menampilkan pilihan untuk melihat, menambah, meng-update, dan menghapus data pesanan. Saat menambahkan pesanan, pengguna diminta memilih instansi kesehatan dan nomor batch obat yang akan dipesan. Sistem akan memeriksa ketersediaan obat terlebih dahulu. Jika tersedia, sistem akan membuat ID pesanan, mengisi tanggal dan status awal "Menunggu", kemudian menyimpan data ke database. Untuk proses update dan hapus, pengguna perlu memasukkan ID pesanan yang akan diperiksa oleh sistem. Jika ID ditemukan, pengguna dapat mengubah status pesanan menjadi Menunggu, Selesai, atau Batal, maupun menghapus data pesanan dari database. Setelah setiap proses selesai, pengguna akan diarahkan kembali ke halaman menu utama atau Menu Petugas Fulfillment
 
 <details>
   <summary>Petugas Fulfillment - Pengiriman</summary>
   <img width="1290" height="1637" alt="Flowchart CAPSTONE-Petugas Fulfilment - Pengiriman drawio" src="https://github.com/user-attachments/assets/a72056aa-44eb-4a2c-85bf-4d51b7b566f6" />
 </details>
 
+Alur kerja Menu Pengiriman dimulai saat sistem menampilkan opsi menu utama untuk melihat, memperbarui, atau menghapus data pengiriman. Jika pengguna memilih opsi lihat data, sistem akan menampilkan daftar pengiriman lengkap dengan nomor resi, pesanan, tanggal, status, dan keterangannya. Sementara itu, untuk proses pembaruan atau penghapusan data, pengguna diminta memasukkan nomor resi untuk divalidasi ke dalam database, di mana proses pembaruan akan mengubah status pengiriman (seperti Diproses, Selesai, atau Batal) beserta keterangannya, sedangkan proses penghapusan akan menghapus data pengiriman secara permanen. Seluruh rangkaian aktivitas tersebut, baik peninjauan daftar, pembaruan, maupun penghapusan data, pada akhirnya akan mengarahkan pengguna kembali ke halaman menu utama atau Menu Petugas Fulfillment
+
 <details>
   <summary>Petugas Fulfillment - Instansi Kesehatan</summary>
   <img width="1687" height="1636" alt="Flowchart CAPSTONE-Petugas Fulfilment - Instansi Kesehatan drawio" src="https://github.com/user-attachments/assets/3bd205ab-1dbf-4ed0-9b8d-90d8803ccb3d" />
 </details>
+
+Alur kerja Menu Instansi Kesehatan dimulai dengan menampilkan pilihan untuk melihat, menambah, meng-update, dan menghapus data instansi kesehatan. Saat menambahkan data, pengguna mengisi nama instansi, jenis instansi seperti Apotek atau Rumah Sakit, alamat, dan kontak. Setelah itu, sistem akan membuat ID instansi secara otomatis dan menyimpan data ke database. Untuk proses update dan hapus, pengguna perlu memasukkan ID instansi terlebih dahulu agar sistem dapat memeriksa keberadaannya. Jika ID ditemukan, pengguna dapat memperbarui detail instansi. Sementara itu, sebelum menghapus data, sistem akan memeriksa apakah instansi tersebut masih digunakan pada data lain. Jika masih digunakan, sistem akan menolak penghapusan dan menampilkan pesan pemberitahuan. Setelah setiap proses selesai, pengguna akan diarahkan kembali ke halaman menu utama atau Menu Petugas Fulfillment.
 
 ### 5.2 Use Case Diagram
 <details>
