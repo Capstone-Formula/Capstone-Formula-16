@@ -287,6 +287,10 @@
 <details>
   <summary>Use Case Formula </summary>
   <img width="2488" height="1968" alt="Salinan Use Fixx drawio (2)" src="https://github.com/user-attachments/assets/54786729-3a0c-4b00-98b2-31570d8934f5" />
+
+Use case diagram tersebut menggambarkan interaksi antara pengguna dan Sistem Informasi Manajemen Produksi, Persediaan, dan Distribusi Obat pada Perusahaan Farmasi. Diagram ini menunjukkan tiga aktor utama, yaitu Petugas Operasional Divisi Administrasi, Petugas Operasional Divisi Produksi, dan Petugas Fulfillment, yang memiliki hak akses sesuai dengan tugas masing-masing.
+Petugas Operasional Divisi Administrasi dapat mengelola data obat, bahan baku, karyawan, pesanan, pengiriman, serta melihat data instansi kesehatan. Petugas Divisi Produksi bertanggung jawab mengelola data produksi dan detail penggunaan bahan baku. Sementara itu, Petugas Fulfillment berfokus pada pengelolaan pesanan, data pengiriman, serta melihat data instansi kesehatan. Setiap aktor perlu melakukan login sebelum menggunakan sistem dan dapat keluar dari program setelah selesai. Dengan pembagian hak akses tersebut, sistem diharapkan dapat membantu proses pengelolaan data produksi, persediaan, dan distribusi obat agar lebih terstruktur dan efisien.
+
 </details>
 
 
