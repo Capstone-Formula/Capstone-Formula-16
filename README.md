@@ -53,15 +53,15 @@
 </tr>
 <tr>
 <td align="center"><strong>Kelola data karyawan</strong></td>
-<td align="center">Administrasi mendaftarkan karyawan lengkap dengan data identitas, kontak, shift, dan role. Sistem membuat ID karyawan; pada data yang sudah tersimpan, tombol Update khusus mengubah status Aktif/Nonaktif, sedangkan Hapus mengikuti aturan relasi database.</td>
+<td align="center"> Petugas Operasional Divisi Administrasi dapat mendaftarkan karyawan dengan memasukkan identitas lengkap. Selain itu, petugas dapat memperbarui status keaktifan karyawan serta melakukan penghapusan data karyawan yang sudah tidak aktif bekerja di perusahaan Formula. </td>
 </tr>
 <tr>
 <td align="center"><strong>Kelola obat</strong></td>
-<td align="center">Administrasi mencatat nama obat, kategori obat, dan status Tersedia/Tidak Tersedia. Obat tersimpan menjadi pilihan pada proses produksi; data dapat dicari, diperbarui, atau dihapus selama tidak terikat transaksi yang melarang penghapusan.</td>
+<td align="center"> Petugas Operasional Divisi Administrasi dapat mencatat berbagai macam jenis obat yang akan di produksi, termasuk kategori obat dan status ketersediaan obat tersebut. Data-data obat kemudian dapat dicari untuk keperluan produksi, diperbarui status ketersediaannya, serta dihapus apabila sudah tidak memproduksi obat tersebut lagi.</td>
 </tr>
 <tr>
 <td align="center"><strong>Kelola bahan baku</strong></td>
-<td align="center">Administrasi mencatat nama bahan, stok awal, dan satuan gram, ml, Kg, atau Liter. Jumlah stok bisa diperbarui untuk penyesuaian persediaan dan otomatis berkurang ketika petugas Produksi menyimpan penggunaan bahan.</td>
+<td align="center"> Petugas Operasional Divisi Administrasi dapat mencatat bahan baku yang digunakan untuk memproduksi obat. Data yang dicatat mencakup nama bahan, stok awal, dan satuan gram, ml, Kg, atau Liter. Jumlah stok bisa diperbarui untuk penyesuaian persediaan dan otomatis berkurang ketika petugas Produksi menyimpan penggunaan bahan.</td>
 </tr>
 <tr>
 <td align="center"><strong>Produksi per batch</strong></td>
@@ -505,7 +505,7 @@ Bagian ini berisi `pom.xml` sebagai file konfigurasi Maven untuk mengatur versi 
 
 <a id="7-1-encapsulation-enkapsulasi"></a>
 
-### 7.1 Encapsulation (Enkapsulasi)
+### 7.1 Encapsulation 
 
 <p align="justify">Encapsulation merupakan konsep OOP yang membatasi akses langsung terhadap atribut dalam suatu class. Pada project FORMULA, konsep ini diterapkan pada entity <code>Obat</code> dan <code>InstansiKesehatan</code> dengan menggunakan modifier <code>private</code>. Akses terhadap atribut dilakukan melalui method <em>getter</em> dan <em>setter</em> agar pengelolaan data lebih terkontrol.</p>
 
@@ -536,7 +536,7 @@ public void setNama(String nama) {
 
 <a id="7-2-inheritance-pewarisan"></a>
 
-### 7.2 Inheritance (Pewarisan)
+### 7.2 Inheritance 
 
 <p align="justify">Inheritance merupakan konsep pewarisan yang memungkinkan suatu class memperoleh atribut dan method dari class lain. Pada project FORMULA, <code>AdministrasiRole</code>, <code>ProduksiRole</code>, dan <code>FulfillmentRole</code> mewarisi struktur umum dari abstract class <code>MenuRole</code>. Setiap class turunan kemudian menentukan daftar menu sesuai dengan hak akses masing-masing role.</p>
 
@@ -572,7 +572,7 @@ public final class ProduksiRole extends MenuRole {
 
 <a id="7-3-polymorphism-polimorfisme"></a>
 
-### 7.3 Polymorphism (Polimorfisme)
+### 7.3 Polymorphism 
 
 <p align="justify">Pada FORMULA, polymorphism diterapkan untuk <strong>menyesuaikan menu dashboard dengan role pengguna</strong> dan <strong>mendukung proses penyimpanan obat</strong> melalui beberapa bentuk pemanggilan method. Implementasinya terdapat pada package <code>app.model.role</code>, <code>FormDashboard</code>, dan <code>MasterDAO</code>.</p>
 
@@ -618,7 +618,7 @@ res = m.simpanObat(d[1].trim(), d[2].trim(), d[3].trim(), idLogin);
 
 <a id="7-4-abstraction-abstraksi"></a>
 
-### 7.4 Abstraction (Abstraksi)
+### 7.4 Abstraction 
 
 <p align="justify">Abstraction merupakan konsep OOP yang menyederhanakan penggunaan objek dengan menampilkan bagian penting dan menyembunyikan detail implementasinya. Pada project FORMULA, konsep ini diterapkan melalui abstract class <code>MenuRole</code> yang menyediakan struktur umum serta method <code>getMenu()</code>. Implementasi method tersebut diserahkan kepada masing-masing class turunan.</p>
 
