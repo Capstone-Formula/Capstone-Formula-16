@@ -909,7 +909,7 @@ Administrasi tidak mengubah status pengiriman melalui menu ini; proses pengirima
 
 #### 8.2.7 Instansi Kesehatan
 
-Pada role Administrasi, menu Instansi Kesehatan bersifat lihat saja (read-only). Tabel berisi **ID Instansi, Nama Instansi, Jenis, Alamat, dan Kontak.
+Pada role Administrasi, menu Instansi Kesehatan bersifat lihat saja (read-only). Tabel berisi ID Instansi, Nama Instansi, Jenis, Alamat, dan Kontak.
 
 <p align="center">
 <img width="1299" height="924" alt="image" src="https://github.com/user-attachments/assets/435eba19-2352-458d-9a8b-a5e6fb1d4987" />
