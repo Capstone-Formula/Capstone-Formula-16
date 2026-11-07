@@ -87,10 +87,6 @@
 <td align="center"><strong>Pengiriman dan status</strong></td>
 <td align="center">Fulfillment membuat pengiriman untuk pesanan yang sudah memiliki detail batch; sistem menghasilkan nomor resi. Petugas memperbarui status dan keterangan pengiriman, sedangkan Administrasi memantau perkembangan distribusinya.</td>
 </tr>
-<tr>
-<td align="center"><strong>Cetak tabel</strong></td>
-<td align="center">Pada menu yang menyediakan tombol Cetak PDF, pengguna dapat menyimpan tabel yang sedang ditampilkan sebagai dokumen PDF untuk rekap administrasi, produksi, pesanan, atau distribusi sesuai akses menu.</td>
-</tr>
 </tbody></table>
 </div>
 
