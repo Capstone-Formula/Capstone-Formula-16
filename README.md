@@ -788,22 +788,9 @@ public boolean tambahInstansi(String n, String j, String a, String k) {
 
 <h2 align="left">💻 8. Cara Penggunaan Program</h2>
 
-Bagian ini menjelaskan penggunaan seluruh menu FORMULA secara berurutan berdasarkan tiga hak akses: Administrasi → Produksi → Fulfillment. Alurnya dimulai dari menyiapkan data master, membuat batch obat dan mencatat penggunaan bahan, sampai menerima pesanan serta mengatur pengiriman. Tiap role menggunakan dashboard dan pilihan menu yang berbeda.
+Bagian ini menjelaskan penggunaan seluruh menu FORMULA secara berurutan berdasarkan tiga hak akses: Administrasi → Produksi → Fulfillment. Alurnya dimulai dari menyiapkan data, membuat batch obat dan mencatat penggunaan bahan, sampai menerima pesanan serta mengatur pengiriman. Tiap role menggunakan dashboard dan pilihan menu yang berbeda.
 
-### 8.1 Persiapan dan Menjalankan Aplikasi
-
-1. Pastikan komputer memiliki JDK 17 atau lebih baru, MySQL 8, serta Apache NetBeans/Maven.
-2. Siapkan database MySQL. Untuk database baru yang masih kosong, jalankan sql/FORMULA_SETUP_MYSQL8.sql. Jangan mengimpor ulang file setup ke database operasional yang sudah berisi data tanpa backup.
-3. Sesuaikan koneksi database di formula.properties, terutama db.url, db.user, dan db.password. Jangan mengunggah password asli ke repository publik.
-4. Buka folder project Maven di NetBeans dan jalankan class app.MainApp. Program juga dapat dijalankan dari file Formula.jar atau Jalankan.bat, jika konfigurasi dan database sudah sesuai.
-5. Gunakan akun karyawan aktif dengan ID dan password yang tersimpan di database. Akun yang tidak aktif tidak dapat login.
-
-```bash
-mvn clean verify
-mvn exec:java
-```
-
-### 8.2 Halaman Login
+### 8.1 Halaman Login
 
 Halaman Login menjadi pintu masuk FORMULA untuk seluruh pengguna. Pengguna memasukkan ID Karyawan dan Password yang sudah terdaftar, lalu sistem mengidentifikasi akun beserta role-nya. Pengguna tidak memilih role secara manual saat login.
 
@@ -823,11 +810,11 @@ Halaman Login menjadi pintu masuk FORMULA untuk seluruh pengguna. Pengguna memas
 
 Hasil: hanya akun yang valid dan aktif dapat mengakses menu sesuai kewenangannya.
 
-### 8.3 Role Administrasi — Penyiapan dan Monitoring Data
+### 8.2 Role Administrasi — Penyiapan dan Monitoring Data
 
 Role Administrasi bertugas menyiapkan data master obat dan bahan baku, mengelola akun karyawan, serta memantau proses pesanan, batch, dan pengiriman. Pada dashboard tersedia delapan menu.
 
-#### 8.3.1 Dashboard Administrasi
+#### 8.2.1 Dashboard Administrasi
 
 Dashboard Administrasi ditampilkan setelah login menggunakan akun dengan role Administrasi. Bagian atas menampilkan identitas pengguna, sementara delapan tombol menu memberikan akses ke pengelolaan data master dan pemantauan proses operasional.
 
@@ -839,7 +826,7 @@ Menu yang tersedia: Kelola Obat, Kelola Bahan Baku, Kelola Karyawan, Data Pesana
 
 Cara menggunakan dashboard: klik tombol menu untuk membuka form terkait. Setelah selesai, tekan Kembali untuk menuju dashboard. Tombol Keluar digunakan untuk logout setelah konfirmasi. Menu monitoring tidak mengizinkan perubahan data yang memang menjadi wewenang role lain.
 
-#### 8.3.2 Kelola Obat
+#### 8.2.2 Kelola Obat
 
 Menu Kelola Obat digunakan untuk membuat dan memelihara katalog obat yang nantinya dipilih pada proses produksi. Form menampilkan ID Obat, Nama Obat, Jenis Obat, dan Status Ketersediaan.
 
@@ -856,7 +843,7 @@ Menu Kelola Obat digunakan untuk membuat dan memelihara katalog obat yang nantin
 
 Hasil: obat yang tersimpan menjadi pilihan pada formulir Proses Produksi. Status ketersediaan obat juga dapat diubah dari menu khusus milik Fulfillment.
 
-#### 8.3.3 Kelola Bahan Baku
+#### 8.2.3 Kelola Bahan Baku
 
 Menu ini mencatat bahan yang akan digunakan oleh petugas Produksi. Kolom yang ditampilkan adalah ID Bahan, Nama Bahan, Stok, dan Satuan.
 
@@ -873,7 +860,7 @@ Menu ini mencatat bahan yang akan digunakan oleh petugas Produksi. Kolom yang di
 
 Catatan: nama bahan tidak boleh duplikat. Stok bahan akan berkurang saat penggunaan bahan dicatat, bukan saat batch produksi baru dibuat.
 
-#### 8.3.4 Kelola Karyawan
+#### 8.2.4 Kelola Karyawan
 
 Menu ini digunakan untuk mendaftarkan akun dan menentukan hak akses pengguna. Form menampilkan ID Karyawan, Nama, Password, Telepon, Jenis Kelamin, Tanggal Lahir, Alamat Domisili, Area, Shift, Peran, dan Status.
 
@@ -891,7 +878,7 @@ Menu ini digunakan untuk mendaftarkan akun dan menentukan hak akses pengguna. Fo
 
 Hasil: karyawan aktif dapat login menggunakan ID dan password sesuai role. Menonaktifkan akun mencegah akun tersebut digunakan untuk login.
 
-#### 8.3.5 Data Pesanan
+#### 8.2.5 Data Pesanan
 
 Menu Data Pesanan pada role Administrasi digunakan untuk melihat dan memantau, bukan membuat atau mengubah pesanan. Tabel memuat ID Pesanan, Tanggal, Status, Catatan, Instansi, dan Petugas.
 
@@ -906,7 +893,7 @@ Menu Data Pesanan pada role Administrasi digunakan untuk melihat dan memantau, b
 
 Pada mode ini tombol tambah, ubah, dan hapus tidak tersedia. Pembuatan serta perubahan pesanan dilakukan melalui role Fulfillment.
 
-#### 8.3.6 Data Pengiriman
+#### 8.2.6 Data Pengiriman
 
 Menu Data Pengiriman juga berfungsi sebagai halaman monitoring Administrasi. Tabel menampilkan Nomor Resi, Tanggal, Status, Keterangan, ID Pesanan, dan Petugas.
 
@@ -921,7 +908,7 @@ Menu Data Pengiriman juga berfungsi sebagai halaman monitoring Administrasi. Tab
 
 Administrasi tidak mengubah status pengiriman melalui menu ini; proses pengiriman dikelola oleh Fulfillment.
 
-#### 8.3.7 Instansi Kesehatan
+#### 8.2.7 Instansi Kesehatan
 
 Pada role Administrasi, menu Instansi Kesehatan bersifat lihat saja (read-only). Tabel berisi **ID Instansi, Nama Instansi, Jenis, Alamat, dan Kontak.
 
@@ -935,7 +922,7 @@ Pada role Administrasi, menu Instansi Kesehatan bersifat lihat saja (read-only).
 
 Penambahan, pengubahan, dan penghapusan instansi dilakukan melalui menu Instansi Kesehatan pada role Fulfillment.
 
-#### 8.3.8 Stok per Batch
+#### 8.2.8 Stok per Batch
 
 Menu Stok per Batch dipakai untuk melihat batch yang masih memiliki stok positif, belum kedaluwarsa, dan belum dialokasikan ke detail pesanan. Informasi yang ditampilkan meliputi Nomor Batch, Nama Obat, Stok, Satuan, dan Tanggal Kedaluwarsa.
 
@@ -950,7 +937,7 @@ Menu Stok per Batch dipakai untuk melihat batch yang masih memiliki stok positif
 
 Menu ini hanya untuk monitoring; tidak dipakai untuk menambah atau mengedit batch. Batch yang sudah dialokasikan atau kedaluwarsa tidak muncul dalam daftar batch tersedia, meskipun catatan produksinya masih tersimpan di menu Data Produksi.
 
-#### 8.3.9 Detail Pesanan
+#### 8.2.9 Detail Pesanan
 
 Pada Administrasi, menu Detail Pesanan digunakan untuk melihat hubungan antara pesanan dan batch yang dipilih oleh Fulfillment. Tabel menampilkan ID Detail, ID Pesanan, Nomor Batch, dan Jumlah Obat.
 
@@ -965,11 +952,11 @@ Pada Administrasi, menu Detail Pesanan digunakan untuk melihat hubungan antara p
 
 Role Administrasi tidak dapat menambah, mengubah, atau menghapus detail pesanan melalui halaman ini.
 
-### 8.4 Role Produksi — Pembuatan dan Pengelolaan Batch
+### 8.3 Role Produksi — Pembuatan dan Pengelolaan Batch
 
 Petugas Produksi melanjutkan proses setelah data obat dan bahan baku disiapkan oleh Administrasi. Role ini memiliki tiga menu untuk membuat hasil produksi, memeriksa data batch, serta mencatat pemakaian bahan baku.
 
-#### 8.4.1 Dashboard Produksi
+#### 8.3.1 Dashboard Produksi
 
 Dashboard Produksi merupakan halaman utama bagi akun ber-role Produksi. Dashboard menyediakan tiga menu, yaitu Proses Produksi, Data Produksi, dan Penggunaan Bahan. Setiap menu berhubungan dengan tahapan produksi yang berbeda.
 
@@ -981,7 +968,7 @@ Cara menggunakan dashboard: mulai dari Proses Produksi untuk membuat batch, kemu
 
 Alur: membuat batch tidak otomatis mengurangi stok bahan baku; stok bahan baru disesuaikan saat penggunaan bahan berhasil dicatat.
 
-#### 8.4.2 Proses Produksi
+#### 8.3.2 Proses Produksi
 
 Menu Proses Produksi digunakan untuk membuat batch baru dari obat yang sudah tercatat pada master obat.
 
@@ -999,7 +986,7 @@ Menu Proses Produksi digunakan untuk membuat batch baru dari obat yang sudah ter
 
 Catatan: pembuatan batch tidak langsung mengurangi stok bahan baku. Pengurangan baru dilakukan melalui menu Penggunaan Bahan setelah data pemakaian bahan disimpan.
 
-#### 8.4.3 Data Produksi
+#### 8.3.3 Data Produksi
 
 Menu Data Produksi menampilkan hasil produksi yang telah disimpan. Tabel berisi Nomor Batch, Nama Obat, Stok, Satuan, Tanggal Produksi, Tanggal Kedaluwarsa, Bahan Baku Digunakan, Petugas, dan Kelayakan (Layak Edar/Kedaluwarsa).
 
@@ -1017,7 +1004,7 @@ Menu Data Produksi menampilkan hasil produksi yang telah disimpan. Tabel berisi 
 
 Penambahan batch baru tidak dilakukan pada menu ini; gunakan Proses Produksi.
 
-#### 8.4.4 Penggunaan Bahan
+#### 8.3.4 Penggunaan Bahan
 
 Menu ini mencatat bahan baku yang dipakai untuk suatu nomor batch. Data meliputi ID Detail, Nama Bahan, Jumlah Bahan, Satuan, dan Nomor Batch.
 
@@ -1036,11 +1023,11 @@ Menu ini mencatat bahan baku yang dipakai untuk suatu nomor batch. Data meliputi
 
 Validasi: bahan yang sama tidak boleh dicatat dua kali untuk batch yang sama; ubah catatan yang sudah ada agar stok tidak dipotong ganda. Penggunaan bahan yang sudah tersimpan dapat dilihat juga dari tombol Lihat Bahan Baku pada menu Data Produksi.
 
-### 8.5 Role Fulfillment — Pemesanan hingga Distribusi
+### 8.4 Role Fulfillment — Pemesanan hingga Distribusi
 
 Role Fulfillment menangani pendataan instansi kesehatan, pembuatan pesanan, alokasi batch obat, pengiriman, dan perubahan status katalog obat. Dashboard menampilkan enam menu yang mendukung proses tersebut.
 
-#### 8.5.1 Dashboard Fulfillment
+#### 8.4.1 Dashboard Fulfillment
 
 Dashboard Fulfillment ditampilkan setelah pengguna masuk menggunakan akun ber-role Fulfillment. Enam tombol yang tersedia adalah Kelola Pesanan, Detail Pesanan, Kelola Pengiriman, Instansi Kesehatan, Stok per Batch, dan Ubah Status Obat.
 
@@ -1052,7 +1039,7 @@ Cara menggunakan dashboard: pastikan instansi tujuan sudah terdaftar, buat pesan
 
 Alur: Fulfillment mengalokasikan batch produksi yang memenuhi ketentuan ketersediaan dan kedaluwarsa, kemudian mencatat status pengiriman hingga selesai.
 
-#### 8.5.2 Kelola Pesanan
+#### 8.4.2 Kelola Pesanan
 
 Menu Kelola Pesanan digunakan untuk mencatat permintaan obat dari instansi kesehatan. Form menampilkan ID Pesanan, Tanggal, Status, Catatan, Instansi, dan Petugas.
 
@@ -1070,7 +1057,7 @@ Menu Kelola Pesanan digunakan untuk mencatat permintaan obat dari instansi keseh
 
 Alur selanjutnya: setelah pesanan berhasil dibuat, buka Detail Pesanan untuk menentukan batch obat yang akan memenuhi pesanan tersebut.
 
-#### 8.5.3 Detail Pesanan
+#### 8.4.3 Detail Pesanan
 
 Menu Detail Pesanan menghubungkan satu pesanan dengan satu batch obat hasil produksi. Tabel menampilkan ID Detail, ID Pesanan, Nomor Batch, dan Jumlah Obat.
 
@@ -1089,7 +1076,7 @@ Menu Detail Pesanan menghubungkan satu pesanan dengan satu batch obat hasil prod
 
 Catatan stok: angka stok pada tabel produksi menunjukkan isi batch, bukan saldo yang otomatis menjadi nol saat dipesan. Batch yang sudah dialokasikan dikeluarkan dari daftar batch tersedia supaya tidak digunakan ulang.
 
-#### 8.5.4 Kelola Pengiriman
+#### 8.4.4 Kelola Pengiriman
 
 Menu Kelola Pengiriman digunakan setelah pesanan memiliki detail batch. Form menampilkan Nomor Resi, Tanggal, Status, Keterangan, Pesanan, dan Petugas.
 
@@ -1108,7 +1095,7 @@ Menu Kelola Pengiriman digunakan setelah pesanan memiliki detail batch. Form men
 
 Urutan: `Menunggu → Diproses → Selesai`. Pembatalan hanya dapat dilakukan selama masih memenuhi aturan status pada sistem.
 
-#### 8.5.5 Instansi Kesehatan
+#### 8.4.5 Instansi Kesehatan
 
 Berbeda dengan role Administrasi yang hanya melihat data, pada role Fulfillment menu Instansi Kesehatan menyediakan operasi CRUD. Field yang tersedia adalah ID Instansi, Nama Instansi, Jenis, Alamat, dan Kontak.
 
@@ -1123,7 +1110,7 @@ Berbeda dengan role Administrasi yang hanya melihat data, pada role Fulfillment 
 5. Untuk menghapus, pilih baris dan tekan Hapus, lalu konfirmasi. Penghapusan dapat ditolak jika instansi sudah dipakai oleh pesanan.
 6. Gunakan Cari untuk menelusuri data instansi.
 
-#### 8.5.6 Stok per Batch
+#### 8.4.6 Stok per Batch
 
 Menu ini menampilkan daftar batch yang dapat dipilih pada proses pemenuhan pesanan, yaitu batch dengan stok lebih dari nol, belum kedaluwarsa, serta belum dialokasikan.
 
@@ -1138,7 +1125,7 @@ Menu ini menampilkan daftar batch yang dapat dipilih pada proses pemenuhan pesan
 
 Halaman ini bersifat read-only. Penambahan dan perubahan data produksi dilakukan oleh role Produksi.
 
-#### 8.5.7 Ubah Status Obat
+#### 8.4.7 Ubah Status Obat
 
 Menu Ubah Status Obat digunakan untuk mengatur penanda ketersediaan pada katalog obat. Tabel menampilkan daftar obat beserta statusnya.
 
@@ -1153,7 +1140,7 @@ Menu Ubah Status Obat digunakan untuk mengatur penanda ketersediaan pada katalog
 
 Pengguna harus memilih baris terlebih dahulu. Perubahan menu ini mengatur status katalog obat, bukan membuat batch baru atau mengubah jumlah stok batch.
 
-### 8.7 Fungsi Tombol Umum dan Pencarian
+### 8.5 Fungsi Tombol Umum dan Pencarian
 
 <div align="center">
 <table align="center">
