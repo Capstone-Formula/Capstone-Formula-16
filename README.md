@@ -31,7 +31,7 @@
 <a id="2-deskripsi-singkat"></a>
 
 ## 📋 2. Deskripsi Singkat
-<p align="justify">Sistem Informasi Manajemen Produksi, Persediaan, dan Distribusi Obat (FORMULA) adalah program berbasis java yang dirancang untuk mengintegrasikan seluruh operasional pada Perusahaan Farmasi. Program ini memudahkan pengelolaan data obat, pemantauan stok per batch dan tanggal kedaluwarsa, hingga pencatatan pesanan dan pengiriman secara terstruktur.Selain itu, pengembangan sistem ini mendukung pencapaian beberapa tujuan *Sustainable Development Goals* (SDGs):</p>
+<p align="justify">Sistem Informasi Manajemen Produksi, Persediaan, dan Distribusi Obat (FORMULA) adalah program berbasis java yang dirancang untuk mengintegrasikan seluruh operasional pada Perusahaan Farmasi. Program ini memudahkan pengelolaan data obat, pemantauan stok per batch dan tanggal kedaluwarsa, hingga pencatatan pesanan dan pengiriman secara terstruktur.Selain itu, pengembangan sistem ini mendukung pencapaian beberapa tujuan Sustainable Development Goals (SDGs):</p>
 
 - **SDG 3:** Mendukung ketersediaan dan distribusi obat yang sehat dan aman.
 - **SDG 9:** Mengintegrasikan operasional industri melalui teknologi informasi.
@@ -572,16 +572,29 @@ public final class ProduksiRole extends MenuRole {
 
 <a id="7-3-polymorphism-polimorfisme"></a>
 
-### 7.3 Polymorphism 
+### 7.3 Polymorphism
 
-<p align="justify">Pada FORMULA, polymorphism diterapkan untuk <strong>menyesuaikan menu dashboard dengan role pengguna</strong> dan <strong>mendukung proses penyimpanan obat</strong> melalui beberapa bentuk pemanggilan method. Implementasinya terdapat pada package <code>app.model.role</code>, <code>FormDashboard</code>, dan <code>MasterDAO</code>.</p>
+<p align="justify">Pada FORMULA, polymorphism diterapkan melalui dua konsep, yaitu <strong>Method Overriding</strong> dan <strong>Method Overloading</strong>. Method Overriding digunakan untuk menyesuaikan tampilan menu dashboard berdasarkan role pengguna, sedangkan Method Overloading diterapkan dengan menyediakan beberapa bentuk method <code>simpanObat()</code> yang memiliki nama sama tetapi jumlah parameter berbeda. Implementasinya terdapat pada package <code>app.model.role</code> serta class <code>FormDashboard</code> dan <code>MasterDAO</code>.</p>
 
 <details>
-<summary><b>💡 Lihat penerapan kode pada program</b></summary>
+<summary><b>💡 A. Method Overriding — Menampilkan Menu Berdasarkan Role</b></summary>
 
-**A. Menampilkan menu berdasarkan role — `getMenu()`**
+**Implementasi pada class role**
 
 ```java
+// app.model.role.MenuRole
+public abstract String[] getMenu();
+
+// app.model.role.AdministrasiRole
+@Override
+public String[] getMenu() {
+    return new String[]{
+        "Kelola Obat", "Kelola Bahan Baku", "Kelola Karyawan",
+        "Data Pesanan", "Data Pengiriman", "Instansi Kesehatan",
+        "Stok per Batch", "Detail Pesanan"
+    };
+}
+
 // app.model.role.ProduksiRole
 @Override
 public String[] getMenu() {
@@ -590,33 +603,59 @@ public String[] getMenu() {
     };
 }
 
-// app.view.FormDashboard
+// app.model.role.FulfillmentRole
+@Override
+public String[] getMenu() {
+    return new String[]{
+        "Kelola Pesanan", "Detail Pesanan", "Kelola Pengiriman",
+        "Instansi Kesehatan", "Stok per Batch", "Ubah Status Obat"
+    };
+}
+```
+
+**Pemanggilan pada `FormDashboard`**
+
+```java
 String[] labels = app.model.role.MenuRole.untuk(role).getMenu();
 ```
 
-<p align="justify">Setelah login, sistem membaca role karyawan dan <code>FormDashboard</code> memanggil <code>MenuRole.untuk(role).getMenu()</code>. Setiap class role, yaitu <code>AdministrasiRole</code>, <code>ProduksiRole</code>, dan <code>FulfillmentRole</code>, memiliki implementasi <code>getMenu()</code> sendiri yang ditandai dengan <code>@Override</code>. Hasilnya, tombol dashboard otomatis menampilkan menu sesuai kewenangan akun tanpa memerlukan kode pembuatan menu yang terpisah untuk setiap role. Contoh di atas menghasilkan tiga menu ketika pengguna login sebagai Produksi.</p>
+<p align="justify">Method Overriding ditunjukkan melalui implementasi ulang method <code>getMenu()</code> pada class <code>AdministrasiRole</code>, <code>ProduksiRole</code>, dan <code>FulfillmentRole</code> yang mewarisi <code>MenuRole</code>. Ketiganya menggunakan method dengan nama dan parameter yang sama, tetapi menghasilkan daftar menu berbeda. Pada <code>FormDashboard</code>, pemanggilan <code>getMenu()</code> akan menyesuaikan objek role yang digunakan. Dengan demikian, setiap pengguna memperoleh tampilan menu sesuai hak aksesnya.</p>
 
-**B. Menyimpan obat dengan parameter sesuai kebutuhan — `simpanObat()`**
+</details>
+
+<details>
+<summary><b>💡 B. Method Overloading — Penyediaan Variasi Parameter Penyimpanan Obat</b></summary>
+
+**Implementasi pada `MasterDAO`**
 
 ```java
 // app.model.MasterDAO
+
+// Method dengan tiga parameter
 public boolean simpanObat(String n, String j, String s) {
     return orm.tambahObat(n, j, s, -1);
 }
 
+// Method dengan empat parameter
 public boolean simpanObat(String n, String j, String s, int idLogin) {
     return orm.tambahObat(n, j, s, idLogin);
 }
-
-// app.controller.MasterController, saat menambah data Obat
-res = m.simpanObat(d[1].trim(), d[2].trim(), d[3].trim(), idLogin);
 ```
 
-<p align="justify">Pada menu <strong>Kelola Obat</strong>, <code>MasterController</code> menggunakan <code>simpanObat()</code> dengan empat parameter: nama, jenis, status, dan <code>idLogin</code> karyawan yang sedang masuk. Data kemudian diteruskan ke <code>OrmMasterDAO</code> untuk disimpan melalui Hibernate/JPA. <code>MasterDAO</code> juga menyediakan pemanggilan tiga parameter yang meneruskan nilai <code>-1</code> sebagai ID petugas. Kedua bentuk method ini memungkinkan proses penyimpanan obat menerima kebutuhan parameter yang berbeda.</p>
+**Pemanggilan pada `MasterController`**
+
+```java
+res = m.simpanObat(
+    d[1].trim(),
+    d[2].trim(),
+    d[3].trim(),
+    idLogin
+);
+```
+
+<p align="justify">Method Overloading ditunjukkan melalui dua method <code>simpanObat()</code> pada class <code>MasterDAO</code> yang memiliki nama sama, tetapi jumlah parameternya berbeda. Pada proses penambahan obat melalui <code>MasterController</code>, sistem menggunakan method dengan empat parameter agar ID karyawan yang sedang login ikut diteruskan ke proses penyimpanan melalui <code>OrmMasterDAO</code>. Variasi tiga parameter juga tersedia dalam kode, tetapi saat ini meneruskan nilai <code>-1</code> sehingga tidak dapat melewati validasi ID karyawan pada proses ORM. Oleh karena itu, alur penyimpanan yang digunakan aplikasi adalah method dengan empat parameter.</p>
 
 </details>
-
-<a id="7-4-abstraction-abstraksi"></a>
 
 ### 7.4 Abstraction 
 
