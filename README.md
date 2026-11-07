@@ -28,13 +28,11 @@
 
 ### <p align="center"><strong> PROGRAM SISTEM INFORMASI MANAJEMEN PRODUKSI, PERSEDIAAN, DAN DISTRIBUSI OBAT PADA PERUSAHAAN FARMASI</strong></p>
 
-<h2 align="left">📋 2. Deskripsi Singkat</h2>
-
-<p align="justify">Sistem ini dirancang untuk mengintegrasikan proses produksi, persediaan, dan distribusi obat pada Perusahaan Farmasi Formula. Melalui sistem ini, pengelolaan data dan pencatatan operasional menjadi lebih terstruktur, pemantauan stok obat per batch dan tanggal kedaluwarsa lebih mudah dilakukan, serta proses pesanan dan pengiriman dapat dikelola dengan lebih baik. Pengembangan sistem ini juga mendukung beberapa tujuan Sustainable Development Goals (SDGs), yaitu: 
-
-- **SDG 3 – Kehidupan Sehat dan Sejahtera:** Mendukung pemantauan ketersediaan dan distribusi obat.
-- **SDG 9 – Industri, Inovasi, dan Infrastruktur:** Mengintegrasikan proses operasional melalui teknologi informasi.
-- **SDG 12 – Konsumsi dan Produksi yang Bertanggung Jawab:** Mendukung pencatatan penggunaan bahan baku serta pemantauan stok dan kedaluwarsa obat.
+## 📋 2. Deskripsi Singkat
+Sistem Informasi Manajemen Produksi, Persediaan, dan Distribusi Obat (FORMULA) adalah program berbasis java yang dirancang untuk mengintegrasikan seluruh operasional pada Perusahaan Farmasi. Aplikasi ini memudahkan pengelolaan data obat, pemantauan stok per batch dan tanggal kedaluwarsa, hingga pencatatan pesanan dan pengiriman secara terstruktur.Selain itu, pengembangan sistem ini mendukung pencapaian beberapa tujuan *Sustainable Development Goals* (SDGs):
+- **SDG 3:** Mendukung ketersediaan dan distribusi obat yang sehat dan aman.
+- **SDG 9:** Mengintegrasikan operasional industri melalui teknologi informasi.
+- **SDG 12:** Memantau penggunaan bahan baku serta pencegahan obat kedaluwarsa.
 
 <h2 align="left">⚙️ 3. Fitur Utama Program</h2>
 
@@ -151,70 +149,131 @@
 
 <div align="center">
 <table align="center">
-<thead><tr>
+<thead>
+<tr>
 <th align="center">Komponen</th>
 <th align="center">Teknologi</th>
 <th align="center">Kegunaan</th>
-</tr></thead><tbody>
+</tr>
+</thead>
+<tbody>
 <tr>
-<td align="center">Bahasa pemrograman</td>
+<td align="center">Bahasa Pemrograman</td>
 <td align="center"><strong>Java 17</strong></td>
-<td align="center">Logika aplikasi dan OOP.</td>
+<td align="center">Mengembangkan logika aplikasi dengan konsep OOP.</td>
 </tr>
 <tr>
 <td align="center">GUI</td>
 <td align="center"><strong>Java Swing</strong></td>
-<td align="center">Antarmuka aplikasi desktop dan komponen form/tabel/dialog.</td>
+<td align="center">Membangun antarmuka aplikasi desktop, seperti form, tabel, dan dialog.</td>
 </tr>
 <tr>
 <td align="center">Database</td>
-<td align="center"><strong>MySQL 8</strong></td>
-<td align="center">Penyimpanan data relasional.</td>
+<td align="center"><strong>MySQL</strong></td>
+<td align="center">Menyimpan dan mengelola data aplikasi secara relasional.</td>
 </tr>
 <tr>
-<td align="center">Build tool</td>
+<td align="center">Build Tool</td>
 <td align="center"><strong>Apache Maven</strong></td>
-<td align="center">Mengelola dependency, build, dan pengujian.</td>
+<td align="center">Mengelola dependency, proses kompilasi, dan build aplikasi.</td>
 </tr>
 <tr>
 <td align="center">Arsitektur</td>
 <td align="center"><strong>MVC dan DAO</strong></td>
-<td align="center">Pemisahan tampilan, kontrol, dan akses data.</td>
+<td align="center">Memisahkan pengelolaan data, tampilan, dan logika aplikasi.</td>
 </tr>
 <tr>
-<td align="center">Database driver</td>
-<td align="center"><strong>MySQL Connector/J 8.4.0</strong></td>
-<td align="center">Koneksi JDBC ke MySQL.</td>
-</tr>
-<tr>
-<td align="center">Connection pooling</td>
-<td align="center"><strong>HikariCP 5.1.0</strong></td>
-<td align="center">Pengelolaan pool koneksi database.</td>
+<td align="center">Database Access</td>
+<td align="center"><strong>JDBC</strong></td>
+<td align="center">Menghubungkan aplikasi Java dengan database MySQL.</td>
 </tr>
 <tr>
 <td align="center">ORM</td>
 <td align="center"><strong>Hibernate ORM 6.6.4.Final / JPA</strong></td>
-<td align="center">Pemetaan entitas dan CRUD sebagian data master.</td>
+<td align="center">Memetakan objek Java ke tabel database dan mendukung operasi data master.</td>
 </tr>
 <tr>
-<td align="center">Logging</td>
-<td align="center"><strong>SLF4J 2.0.16</strong></td>
-<td align="center">Fasilitas pencatatan log aplikasi.</td>
+<td align="center">Connection Pooling</td>
+<td align="center"><strong>HikariCP 5.1.0</strong></td>
+<td align="center">Mengelola dan mengoptimalkan penggunaan koneksi database.</td>
 </tr>
-<tr>
-<td align="center">Testing</td>
-<td align="center"><strong>JUnit Jupiter 5.11.4</strong></td>
-<td align="center">Pengujian otomatis.</td>
-</tr>
-<tr>
-<td align="center">Packaging</td>
-<td align="center"><strong>Maven Shade Plugin</strong></td>
-<td align="center">Pembuatan executable JAR berikut dependency.</td>
-</tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 
-<p align="justify"><strong>Catatan:</strong> aplikasi juga memakai kelas bawaan Java untuk pemilihan tanggal melalui <code>DatePickerDialog</code> dan untuk ekspor PDF melalui <code>PdfExporter</code>. Berdasarkan <code>pom.xml</code>, tidak ada dependency eksternal JCalendar atau iText pada versi project ini.</p>
+### 📚 Library Tambahan
+
+<div align="center">
+<table align="center">
+<thead>
+<tr>
+<th align="center">Library</th>
+<th align="center">Versi</th>
+<th align="center">Kegunaan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">MySQL Connector/J</td>
+<td align="center">8.4.0</td>
+<td align="center">Driver JDBC untuk menghubungkan Java dengan MySQL.</td>
+</tr>
+<tr>
+<td align="center">SLF4J API</td>
+<td align="center">2.0.16</td>
+<td align="center">Menyediakan antarmuka untuk pencatatan log aplikasi.</td>
+</tr>
+<tr>
+<td align="center">SLF4J Simple</td>
+<td align="center">2.0.16</td>
+<td align="center">Menyediakan implementasi sederhana untuk menampilkan log.</td>
+</tr>
+<tr>
+<td align="center">JUnit Jupiter</td>
+<td align="center">5.11.4</td>
+<td align="center">Mendukung pengujian otomatis pada aplikasi.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### ⚙️ Maven Plugins
+
+<div align="center">
+<table align="center">
+<thead>
+<tr>
+<th align="center">Plugin</th>
+<th align="center">Versi</th>
+<th align="center">Kegunaan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Maven Compiler Plugin</td>
+<td align="center">3.13.0</td>
+<td align="center">Mengatur proses kompilasi kode Java.</td>
+</tr>
+<tr>
+<td align="center">Maven Surefire Plugin</td>
+<td align="center">3.5.2</td>
+<td align="center">Menjalankan pengujian otomatis.</td>
+</tr>
+<tr>
+<td align="center">Exec Maven Plugin</td>
+<td align="center">3.1.0</td>
+<td align="center">Menjalankan aplikasi melalui Maven.</td>
+</tr>
+<tr>
+<td align="center">Maven Shade Plugin</td>
+<td align="center">3.6.0</td>
+<td align="center">Menggabungkan aplikasi dan dependency ke dalam executable JAR.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+**Catatan:** DatePickerDialog dan PdfExporter merupakan kelas yang dibuat langsung di dalam project, bukan library eksternal. Pemilihan tanggal memanfaatkan komponen Java Swing dan API tanggal bawaan Java, sedangkan ekspor PDF menggunakan implementasi PDF yang dibuat sendiri tanpa dependency iText.
 
 <h2 align="left">🧭 5. Perancangan Sistem</h2>
 
