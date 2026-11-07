@@ -29,7 +29,7 @@
 ### <p align="center"><strong> PROGRAM SISTEM INFORMASI MANAJEMEN PRODUKSI, PERSEDIAAN, DAN DISTRIBUSI OBAT PADA PERUSAHAAN FARMASI</strong></p>
 
 ## 📋 2. Deskripsi Singkat
-Sistem Informasi Manajemen Produksi, Persediaan, dan Distribusi Obat (FORMULA) adalah program berbasis java yang dirancang untuk mengintegrasikan seluruh operasional pada Perusahaan Farmasi. Aplikasi ini memudahkan pengelolaan data obat, pemantauan stok per batch dan tanggal kedaluwarsa, hingga pencatatan pesanan dan pengiriman secara terstruktur.Selain itu, pengembangan sistem ini mendukung pencapaian beberapa tujuan *Sustainable Development Goals* (SDGs):
+Sistem Informasi Manajemen Produksi, Persediaan, dan Distribusi Obat (FORMULA) adalah program berbasis java yang dirancang untuk mengintegrasikan seluruh operasional pada Perusahaan Farmasi. Program ini memudahkan pengelolaan data obat, pemantauan stok per batch dan tanggal kedaluwarsa, hingga pencatatan pesanan dan pengiriman secara terstruktur.Selain itu, pengembangan sistem ini mendukung pencapaian beberapa tujuan *Sustainable Development Goals* (SDGs):
 - **SDG 3:** Mendukung ketersediaan dan distribusi obat yang sehat dan aman.
 - **SDG 9:** Mengintegrasikan operasional industri melalui teknologi informasi.
 - **SDG 12:** Memantau penggunaan bahan baku serta pencegahan obat kedaluwarsa.
