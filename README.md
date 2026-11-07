@@ -8,6 +8,32 @@
 
 </div>
 
+<h2 align="left">👥 Kontributor</h2>
+
+<div align="center">
+<table align="center">
+<thead><tr>
+<th align="center">Nama</th>
+<th align="center">NIM</th>
+</tr></thead><tbody>
+<tr>
+<td align="center"><strong>Rizki Adrianur Saputra</strong></td>
+<td align="center"><strong>2509116049</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>Putri Anggita Melasari</strong></td>
+<td align="center"><strong>2509116010</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>Zahra Syifa Salsabila</strong></td>
+<td align="center"><strong>2509116057</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>Awang Rifky Muhadzib</strong></td>
+<td align="center"><strong>2509116059</strong></td>
+</tbody></table>
+</div>
+
 ---
 
 ## 📑 Daftar Isi
@@ -1155,32 +1181,6 @@ Pengguna harus memilih baris terlebih dahulu. Perubahan menu ini mengatur status
 <tr><td align="center"><strong>Cetak PDF</strong></td><td align="center">Mengekspor data tabel pada menu yang mendukung pencetakan.</td></tr>
 <tr><td align="center"><strong>Kembali</strong></td><td align="center">Menutup form dan kembali ke dashboard.</td></tr>
 <tr><td align="center"><strong>Keluar</strong></td><td align="center">Menampilkan konfirmasi logout dan kembali ke halaman login.</td></tr>
-</tbody></table>
-</div>
-
-<h2 align="left">👥 9. Kontributor</h2>
-
-<div align="center">
-<table align="center">
-<thead><tr>
-<th align="center">Nama</th>
-<th align="center">NIM</th>
-</tr></thead><tbody>
-<tr>
-<td align="center"><strong>Rizki Adrianur Saputra</strong></td>
-<td align="center"><strong>2509116049</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>Putri Anggita Melasari</strong></td>
-<td align="center"><strong>2509116010</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>Zahra Syifa Salsabila</strong></td>
-<td align="center"><strong>2509116057</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>Awang Rifky Muhadzib</strong></td>
-<td align="center"><strong>2509116059</strong></td>
 </tbody></table>
 </div>
 
