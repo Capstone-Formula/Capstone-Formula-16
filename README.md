@@ -1179,20 +1179,20 @@ Pengguna harus memilih baris terlebih dahulu. Perubahan menu ini mengatur status
 <th align="center">NIM</th>
 </tr></thead><tbody>
 <tr>
-<td align="center"><strong>[Rizki Adrianur Saputra]</strong></td>
-<td align="center"><strong>[2509116049]</strong></td>
+<td align="center"><strong>Rizki Adrianur Saputra</strong></td>
+<td align="center"><strong>2509116049</strong></td>
 </tr>
 <tr>
-<td align="center"><strong>[Putri Anggita Melasari]</strong></td>
-<td align="center"><strong>[2509116010]</strong></td>
+<td align="center"><strong>Putri Anggita Melasari</strong></td>
+<td align="center"><strong>2509116010</strong></td>
 </tr>
 <tr>
-<td align="center"><strong>[Zahra Syifa Salsabila]</strong></td>
-<td align="center"><strong>[2509116057]</strong></td>
+<td align="center"><strong>Zahra Syifa Salsabila</strong></td>
+<td align="center"><strong>2509116057</strong></td>
 </tr>
 <tr>
-<td align="center"><strong>[Awang Rifky Muhadzib]</strong></td>
-<td align="center"><strong>[2509116059]</strong></td>
+<td align="center"><strong>Awang Rifky Muhadzib</strong></td>
+<td align="center"><strong>2509116059</strong></td>
 </tbody></table>
 </div>
 
