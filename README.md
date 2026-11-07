@@ -13,71 +13,12 @@
 1. [Nama Program](#1-nama-program)
 2. [Deskripsi Singkat](#2-deskripsi-singkat)
 3. [Fitur Utama Program](#3-fitur-utama-program)
-   - [Pembagian Menu Berdasarkan Role](#pembagian-menu-berdasarkan-role)
 4. [Tech Stack](#4-tech-stack)
-   - [Library Tambahan](#library-tambahan)
-   - [Maven Plugins](#maven-plugins)
 5. [Perancangan Sistem](#5-perancangan-sistem)
-   - [5.1 Flowchart Alur Utama](#5-1-flowchart-alur-utama)
-   - [5.2 Use Case Diagram](#5-2-use-case-diagram)
-   - [5.3 Entity Relationship Diagram](#5-3-entity-relationship-diagram-erd)
 6. [Struktur Folder/Package](#6-struktur-folderpackage)
-   - [6.1 Tampilan Struktur](#6-1-tampilan-struktur)
-   - [6.2 Penjelasan Struktur Project](#6-2-penjelasan-struktur-project)
 7. [Penerapan 4 Pilar OOP dan Implementasi Lanjutan](#7-penerapan-4-pilar-oop-dan-implementasi-lanjutan)
-   - [7.1 Encapsulation](#7-1-encapsulation-enkapsulasi)
-   - [7.2 Inheritance](#7-2-inheritance-pewarisan)
-   - [7.3 Polymorphism](#7-3-polymorphism-polimorfisme)
-   - [7.4 Abstraction](#7-4-abstraction-abstraksi)
-   - [7.5 Singleton dan Connection Pooling](#7-5-manajemen-koneksi-tingkat-lanjut-singleton-dan-connection-pooling)
-   - [7.6 Hibernate/JPA](#7-6-implementasi-framework-orm-hibernatejpa)
 8. [Cara Penggunaan Program](#8-cara-penggunaan-program)
-   - [8.1 Halaman Login](#8-1-halaman-login)
-   - [8.2 Role Administrasi](#8-2-role-administrasi-penyiapan-dan-monitoring-data)
-   - [8.3 Role Produksi](#8-3-role-produksi-pembuatan-dan-pengelolaan-batch)
-   - [8.4 Role Fulfillment](#8-4-role-fulfillment-pemesanan-hingga-distribusi)
-   - [8.5 Fungsi Tombol Umum](#8-5-fungsi-tombol-umum-dan-pencarian)
 9. [Kontributor](#9-kontributor)
-
-<details>
-<summary><b>📂 Klik untuk melihat tautan langsung ke setiap menu Administrasi (8.2)</b></summary>
-
-- [8.2.1 Dashboard Administrasi](#8-2-1-dashboard-administrasi)
-- [8.2.2 Kelola Obat](#8-2-2-kelola-obat)
-- [8.2.3 Kelola Bahan Baku](#8-2-3-kelola-bahan-baku)
-- [8.2.4 Kelola Karyawan](#8-2-4-kelola-karyawan)
-- [8.2.5 Data Pesanan](#8-2-5-data-pesanan)
-- [8.2.6 Data Pengiriman](#8-2-6-data-pengiriman)
-- [8.2.7 Instansi Kesehatan](#8-2-7-instansi-kesehatan)
-- [8.2.8 Stok per Batch](#8-2-8-stok-per-batch)
-- [8.2.9 Detail Pesanan](#8-2-9-detail-pesanan)
-
-</details>
-
-<details>
-<summary><b>🏭 Klik untuk melihat tautan langsung ke setiap menu Produksi (8.3)</b></summary>
-
-- [8.3.1 Dashboard Produksi](#8-3-1-dashboard-produksi)
-- [8.3.2 Proses Produksi](#8-3-2-proses-produksi)
-- [8.3.3 Data Produksi](#8-3-3-data-produksi)
-- [8.3.4 Penggunaan Bahan](#8-3-4-penggunaan-bahan)
-
-</details>
-
-<details>
-<summary><b>🚚 Klik untuk melihat tautan langsung ke setiap menu Fulfillment (8.4)</b></summary>
-
-- [8.4.1 Dashboard Fulfillment](#8-4-1-dashboard-fulfillment)
-- [8.4.2 Kelola Pesanan](#8-4-2-kelola-pesanan)
-- [8.4.3 Detail Pesanan](#8-4-3-detail-pesanan)
-- [8.4.4 Kelola Pengiriman](#8-4-4-kelola-pengiriman)
-- [8.4.5 Instansi Kesehatan](#8-4-5-instansi-kesehatan)
-- [8.4.6 Stok per Batch](#8-4-6-stok-per-batch)
-- [8.4.7 Ubah Status Obat](#8-4-7-ubah-status-obat)
-
-</details>
-
-_Catatan: untuk membaca menu pada bagian 8, buka dropdown role yang bersangkutan. Tautan subbab di atas mengarah ke masing-masing menu._
 
 ---
 
@@ -637,35 +578,14 @@ public final class ProduksiRole extends MenuRole {
 
 ### 7.3 Polymorphism (Polimorfisme)
 
-<p align="justify">Polymorphism memungkinkan satu pemanggilan method menghasilkan perilaku yang berbeda sesuai jenis objeknya. Dalam FORMULA, bentuk yang paling terlihat adalah <strong>method overriding</strong> pada <code>getMenu()</code>: seluruh role memakai nama method yang sama, tetapi menyediakan daftar menu yang berbeda. Project juga memiliki contoh <strong>method overloading</strong> pada <code>simpanObat()</code>.</p>
+<p align="justify">Pada FORMULA, polymorphism diterapkan untuk <strong>menyesuaikan menu dashboard dengan role pengguna</strong> dan <strong>mendukung proses penyimpanan obat</strong> melalui beberapa bentuk pemanggilan method. Implementasinya terdapat pada package <code>app.model.role</code>, <code>FormDashboard</code>, dan <code>MasterDAO</code>.</p>
 
 <details>
-<summary><b>💡 Lihat contoh kode, overriding, @Override, dan overloading</b></summary>
+<summary><b>💡 Lihat penerapan kode pada program</b></summary>
 
-<a id="7-3-1-method-overriding-getmenu-pada-setiap-role"></a>
-
-#### 7.3.1 Method Overriding: `getMenu()` pada setiap role
-
-Pada class induk <code>MenuRole.java</code>, method <code>getMenu()</code> dibuat abstrak sehingga belum memiliki isi:
+**A. Menampilkan menu berdasarkan role — `getMenu()`**
 
 ```java
-// app.model.role.MenuRole
-public abstract String[] getMenu();
-```
-
-Masing-masing subclass mengimplementasikan method tersebut dengan nama dan tipe kembalian yang sama, namun memberikan hasil berbeda:
-
-```java
-// app.model.role.AdministrasiRole
-@Override
-public String[] getMenu() {
-    return new String[]{
-        "Kelola Obat", "Kelola Bahan Baku", "Kelola Karyawan",
-        "Data Pesanan", "Data Pengiriman", "Instansi Kesehatan",
-        "Stok per Batch", "Detail Pesanan"
-    };
-}
-
 // app.model.role.ProduksiRole
 @Override
 public String[] getMenu() {
@@ -674,45 +594,13 @@ public String[] getMenu() {
     };
 }
 
-// app.model.role.FulfillmentRole
-@Override
-public String[] getMenu() {
-    return new String[]{
-        "Kelola Pesanan", "Detail Pesanan", "Kelola Pengiriman",
-        "Instansi Kesehatan", "Stok per Batch", "Ubah Status Obat"
-    };
-}
-```
-
-**Perbedaan overriding dan `@Override`:**
-
-- **Overriding** adalah proses ketika subclass memberikan implementasi baru untuk method dari superclass. Contohnya, <code>ProduksiRole</code> menentukan sendiri isi <code>getMenu()</code>.
-- **`@Override`** adalah anotasi Java yang menandai method tersebut sebagai hasil overriding. Anotasi ini membantu compiler memeriksa bahwa method benar-benar cocok dengan method milik superclass; anotasi tersebut **bukan** jenis polymorphism yang berbeda.
-- Keyword <code>extends MenuRole</code> pada subclass membentuk hubungan pewarisan yang memungkinkan overriding dilakukan.
-
-<a id="7-3-2-runtime-polymorphism-pada-formdashboard"></a>
-
-#### 7.3.2 Runtime Polymorphism pada `FormDashboard`
-
-Pemanggilan <code>getMenu()</code> tidak perlu dibuat terpisah untuk setiap role. Dalam <code>FormDashboard.java</code>, aplikasi menggunakan baris berikut:
-
-```java
 // app.view.FormDashboard
 String[] labels = app.model.role.MenuRole.untuk(role).getMenu();
 ```
 
-**Alur eksekusi:**
+<p align="justify">Setelah login, sistem membaca role karyawan dan <code>FormDashboard</code> memanggil <code>MenuRole.untuk(role).getMenu()</code>. Setiap class role, yaitu <code>AdministrasiRole</code>, <code>ProduksiRole</code>, dan <code>FulfillmentRole</code>, memiliki implementasi <code>getMenu()</code> sendiri yang ditandai dengan <code>@Override</code>. Hasilnya, tombol dashboard otomatis menampilkan menu sesuai kewenangan akun tanpa memerlukan kode pembuatan menu yang terpisah untuk setiap role. Contoh di atas menghasilkan tiga menu ketika pengguna login sebagai Produksi.</p>
 
-1. Variabel <code>role</code> berisi nama peran pengguna yang berhasil login, misalnya <code>"Produksi"</code>.
-2. Method <code>MenuRole.untuk(role)</code> memilih objek subclass yang sesuai. Untuk nilai <code>"Produksi"</code>, objek yang dihasilkan adalah <code>ProduksiRole</code>.
-3. Ketika <code>getMenu()</code> dipanggil, Java menjalankan method milik objek yang dipilih, bukan method dari role lain.
-4. Nilai <code>labels</code> berisi tiga menu Produksi dan digunakan untuk menyusun tombol pada dashboard. Jika pengguna Administrasi atau Fulfillment login, baris pemanggilannya tetap sama, tetapi hasilnya mengikuti role tersebut.
-
-<a id="7-3-3-method-overloading-simpanobat-pada-masterdao"></a>
-
-#### 7.3.3 Method Overloading: `simpanObat()` pada `MasterDAO`
-
-Selain overriding, pada <code>MasterDAO.java</code> terdapat dua method bernama sama tetapi memiliki jumlah parameter berbeda:
+**B. Menyimpan obat dengan parameter sesuai kebutuhan — `simpanObat()`**
 
 ```java
 // app.model.MasterDAO
@@ -723,9 +611,12 @@ public boolean simpanObat(String n, String j, String s) {
 public boolean simpanObat(String n, String j, String s, int idLogin) {
     return orm.tambahObat(n, j, s, idLogin);
 }
+
+// app.controller.MasterController, saat menambah data Obat
+res = m.simpanObat(d[1].trim(), d[2].trim(), d[3].trim(), idLogin);
 ```
 
-**Penjelasan:** Kedua method bernama <code>simpanObat()</code>, tetapi versi pertama menerima tiga parameter dan versi kedua menerima empat parameter. Java memilih method berdasarkan argumen yang diberikan saat dipanggil. Inilah yang disebut <strong>overloading</strong>, berbeda dari overriding yang melibatkan method pada hubungan superclass–subclass. Pada alur penyimpanan obat yang memerlukan pencatatan petugas, sistem menggunakan versi dengan parameter <code>idLogin</code> yang valid.
+<p align="justify">Pada menu <strong>Kelola Obat</strong>, <code>MasterController</code> menggunakan <code>simpanObat()</code> dengan empat parameter: nama, jenis, status, dan <code>idLogin</code> karyawan yang sedang masuk. Data kemudian diteruskan ke <code>OrmMasterDAO</code> untuk disimpan melalui Hibernate/JPA. <code>MasterDAO</code> juga menyediakan pemanggilan tiga parameter yang meneruskan nilai <code>-1</code> sebagai ID petugas. Kedua bentuk method ini memungkinkan proses penyimpanan obat menerima kebutuhan parameter yang berbeda.</p>
 
 </details>
 
@@ -990,7 +881,7 @@ Hasil: hanya akun yang valid dan aktif dapat mengakses menu sesuai kewenangannya
 <a id="8-2-role-administrasi-penyiapan-dan-monitoring-data"></a>
 
 <details>
-<summary><strong>📂 8.2 Role Administrasi — Penyiapan dan Monitoring Data</strong> — klik untuk membuka semua menu</summary>
+<summary><strong>📂 8.2 Role Administrasi — Penyiapan dan Monitoring Data</strong></summary>
 
 Role Administrasi bertugas menyiapkan data master obat dan bahan baku, mengelola akun karyawan, serta memantau proses pesanan, batch, dan pengiriman. Pada dashboard tersedia delapan menu.
 
@@ -1155,7 +1046,7 @@ Role Administrasi tidak dapat menambah, mengubah, atau menghapus detail pesanan 
 <a id="8-3-role-produksi-pembuatan-dan-pengelolaan-batch"></a>
 
 <details>
-<summary><strong>📂 8.3 Role Produksi — Pembuatan dan Pengelolaan Batch</strong> — klik untuk membuka semua menu</summary>
+<summary><strong>📂 8.3 Role Produksi — Pembuatan dan Pengelolaan Batch</strong></summary>
 
 Petugas Produksi melanjutkan proses setelah data obat dan bahan baku disiapkan oleh Administrasi. Role ini memiliki tiga menu untuk membuat hasil produksi, memeriksa data batch, serta mencatat pemakaian bahan baku.
 
@@ -1239,7 +1130,7 @@ Validasi: bahan yang sama tidak boleh dicatat dua kali untuk batch yang sama; ub
 <a id="8-4-role-fulfillment-pemesanan-hingga-distribusi"></a>
 
 <details>
-<summary><strong>📂 8.4 Role Fulfillment — Pemesanan hingga Distribusi</strong> — klik untuk membuka semua menu</summary>
+<summary><strong>📂 8.4 Role Fulfillment — Pemesanan hingga Distribusi</strong></summary>
 
 Role Fulfillment menangani pendataan instansi kesehatan, pembuatan pesanan, alokasi batch obat, pengiriman, dan perubahan status katalog obat. Dashboard menampilkan enam menu yang mendukung proses tersebut.
 
