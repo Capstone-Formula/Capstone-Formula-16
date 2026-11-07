@@ -16,22 +16,28 @@
 4. [Tech Stack](#4-tech-stack)
 5. [Perancangan Sistem](#5-perancangan-sistem)
 6. [Struktur Folder/Package](#6-struktur-folderpackage)
-7. [Penerapan 4 Pilar OOP](#7-penerapan-4-pilar-oop)
-8. [Cara Penggunaan Program dan Screenshot GUI](#8-cara-penggunaan-program-dan-screenshot-gui)
+7. [Penerapan 4 Pilar OOP dan Implementasi Lanjutan](#7-penerapan-4-pilar-oop-dan-implementasi-lanjutan)
+8. [Cara Penggunaan Program](#8-cara-penggunaan-program)
 9. [Kontributor](#9-kontributor)
 
 ---
 
+<a id="1-nama-program"></a>
+
 <h2 align="left">🧾 1. Nama Program</h2>
 
-### <p align="center"><strong> PROGRAM SISTEM INFORMASI MANAJEMEN PRODUKSI, PERSEDIAAN, DAN DISTRIBUSI OBAT PADA PERUSAHAAN FARMASI</strong></p>
+<p align="center"><strong>PROGRAM SISTEM INFORMASI MANAJEMEN PRODUKSI, PERSEDIAAN, DAN DISTRIBUSI OBAT PADA PERUSAHAAN FARMASI</strong></p>
+
+<a id="2-deskripsi-singkat"></a>
 
 ## 📋 2. Deskripsi Singkat
-<p align="justify">Sistem Informasi Manajemen Produksi, Persediaan, dan Distribusi Obat (FORMULA) adalah program berbasis java yang dirancang untuk mengintegrasikan seluruh operasional pada Perusahaan Farmasi. Program ini memudahkan pengelolaan data obat, pemantauan stok per batch dan tanggal kedaluwarsa, hingga pencatatan pesanan dan pengiriman secara terstruktur.Selain itu, pengembangan sistem ini mendukung pencapaian beberapa tujuan Sustainable Development Goals (SDGs):</p>
+<p align="justify">Sistem Informasi Manajemen Produksi, Persediaan, dan Distribusi Obat (FORMULA) adalah program berbasis java yang dirancang untuk mengintegrasikan seluruh operasional pada Perusahaan Farmasi. Program ini memudahkan pengelolaan data obat, pemantauan stok per batch dan tanggal kedaluwarsa, hingga pencatatan pesanan dan pengiriman secara terstruktur.Selain itu, pengembangan sistem ini mendukung pencapaian beberapa tujuan *Sustainable Development Goals* (SDGs):</p>
 
 - **SDG 3:** Mendukung ketersediaan dan distribusi obat yang sehat dan aman.
 - **SDG 9:** Mengintegrasikan operasional industri melalui teknologi informasi.
 - **SDG 12:** Memantau penggunaan bahan baku serta pencegahan obat kedaluwarsa.
+
+<a id="3-fitur-utama-program"></a>
 
 <h2 align="left">⚙️ 3. Fitur Utama Program</h2>
 
@@ -43,54 +49,48 @@
 </tr></thead><tbody>
 <tr>
 <td align="center"><strong>Login dan pembagian hak akses</strong></td>
-<td align="center">Autentikasi dengan ID karyawan dan password; menu mengikuti role Administrasi, Produksi, atau Fulfillment.</td>
+<td align="center">Pengguna masuk memakai ID karyawan dan password. Sistem memeriksa akun aktif lalu membuka dashboard dan pilihan menu sesuai divisi Administrasi, Produksi, atau Fulfillment.</td>
 </tr>
 <tr>
 <td align="center"><strong>Kelola data karyawan</strong></td>
-<td align="center">Menambah, melihat, memperbarui, dan menghapus data karyawan sesuai aturan aplikasi.</td>
+<td align="center"> Petugas Operasional Divisi Administrasi dapat mendaftarkan karyawan dengan memasukkan identitas lengkap. Selain itu, petugas dapat memperbarui status keaktifan karyawan serta melakukan penghapusan data karyawan yang sudah tidak aktif bekerja di perusahaan Formula. </td>
 </tr>
 <tr>
 <td align="center"><strong>Kelola obat</strong></td>
-<td align="center">CRUD data obat, jenis obat, dan status ketersediaannya.</td>
+<td align="center"> Petugas Operasional Divisi Administrasi dapat mencatat berbagai macam jenis obat yang akan di produksi, termasuk kategori obat dan status ketersediaan obat tersebut. Data-data obat kemudian dapat dicari untuk keperluan produksi, diperbarui status ketersediaannya, serta dihapus apabila sudah tidak memproduksi obat tersebut lagi.</td>
 </tr>
 <tr>
 <td align="center"><strong>Kelola bahan baku</strong></td>
-<td align="center">CRUD bahan baku beserta stok dan satuannya.</td>
+<td align="center"> Petugas Operasional Divisi Administrasi dapat mencatat bahan baku yang digunakan untuk memproduksi obat. Data yang dicatat mencakup nama bahan, stok awal, dan satuan gram, ml, Kg, atau Liter. Jumlah stok bisa diperbarui untuk penyesuaian persediaan dan otomatis berkurang ketika petugas Produksi menyimpan penggunaan bahan.</td>
 </tr>
 <tr>
 <td align="center"><strong>Produksi per batch</strong></td>
-<td align="center">Mencatat batch obat, tanggal produksi, kedaluwarsa, jumlah stok hasil, dan satuan stok.</td>
+<td align="center">Petugas Produksi memilih obat dan jumlah hasil 25, 50, atau 100 unit. Sistem membuat nomor batch, mengisi tanggal produksi dan tanggal kedaluwarsa, lalu mencatat stok hasil dalam satuan Strip atau Botol.</td>
 </tr>
 <tr>
 <td align="center"><strong>Penggunaan bahan produksi</strong></td>
-<td align="center">Mencatat bahan yang digunakan pada batch, disertai validasi dan penyesuaian stok bahan.</td>
+<td align="center">Petugas mengaitkan bahan baku dengan nomor batch, mengisi jumlah dan satuannya, kemudian menyimpan pemakaian. Sistem menghitung penyesuaian stok bahan; perubahan penggunaan memperhitungkan selisih, dan penghapusan mengembalikan stok yang telah dipotong.</td>
 </tr>
 <tr>
 <td align="center"><strong>Pengelolaan instansi kesehatan</strong></td>
-<td align="center">CRUD data instansi tujuan distribusi seperti klinik, apotek, dan rumah sakit.</td>
+<td align="center">Fulfillment mengelola identitas instansi tujuan, meliputi nama, jenis (misalnya rumah sakit, klinik, atau apotek), alamat, dan kontak. Administrasi dapat melihat daftar instansi untuk monitoring.</td>
 </tr>
 <tr>
 <td align="center"><strong>Kelola pesanan dan detail pesanan</strong></td>
-<td align="center">Membuat pesanan, memilih batch, serta mengatur kuantitas sesuai stok yang tersedia.</td>
+<td align="center">Fulfillment membuat pesanan untuk instansi dengan ID dan tanggal otomatis serta status awal Menunggu. Pada Detail Pesanan, petugas memilih satu batch obat yang masih layak dan tersedia; jumlah mengikuti seluruh isi batch, bukan diinput bebas.</td>
 </tr>
 <tr>
 <td align="center"><strong>Monitoring stok per batch</strong></td>
-<td align="center">Melihat stok hasil produksi berdasarkan nomor batch.</td>
+<td align="center">Menampilkan nomor batch, nama obat, jumlah stok, satuan, dan tanggal kedaluwarsa. Daftar batch siap dialokasikan dibatasi pada stok positif, belum kedaluwarsa, dan belum digunakan oleh pesanan lain.</td>
 </tr>
 <tr>
 <td align="center"><strong>Pengiriman dan status</strong></td>
-<td align="center">Membuat serta mengelola pengiriman, nomor resi, status pesanan, dan status pengiriman.</td>
-</tr>
-<tr>
-<td align="center"><strong>Cetak tabel</strong></td>
-<td align="center">Mengekspor tampilan data tabel melalui fitur PDF pada bagian aplikasi yang mendukung pencetakan.</td>
-</tr>
-<tr>
-<td align="center"><strong>Validasi input dan relasi</strong></td>
-<td align="center">Memeriksa isian, ketersediaan stok, status, dan keterkaitan data sebelum operasi disimpan.</td>
+<td align="center">Fulfillment membuat pengiriman untuk pesanan yang sudah memiliki detail batch; sistem menghasilkan nomor resi. Petugas memperbarui status dan keterangan pengiriman, sedangkan Administrasi memantau perkembangan distribusinya.</td>
 </tr>
 </tbody></table>
 </div>
+
+<a id="pembagian-menu-berdasarkan-role"></a>
 
 ### Pembagian Menu Berdasarkan Role
 
@@ -143,6 +143,8 @@
 </tr>
 </tbody></table>
 </div>
+
+<a id="4-tech-stack"></a>
 
 <h2 align="left">🛠️ 4. Tech Stack</h2>
 
@@ -200,6 +202,8 @@
 </table>
 </div>
 
+<a id="library-tambahan"></a>
+
 ### 📚 Library Tambahan
 
 <div align="center">
@@ -235,6 +239,8 @@
 </tbody>
 </table>
 </div>
+
+<a id="maven-plugins"></a>
 
 ### ⚙️ Maven Plugins
 
@@ -274,8 +280,12 @@
 
 **Catatan:** DatePickerDialog dan PdfExporter merupakan kelas yang dibuat langsung di dalam project, bukan library eksternal. Pemilihan tanggal memanfaatkan komponen Java Swing dan API tanggal bawaan Java, sedangkan ekspor PDF menggunakan implementasi PDF yang dibuat sendiri tanpa dependency iText.
 
+<a id="5-perancangan-sistem"></a>
+
 <h2 align="left">🧭 5. Perancangan Sistem</h2>
 
+
+<a id="5-1-flowchart-alur-utama"></a>
 
 ### 5.1 Flowchart Alur Utama
 
@@ -363,6 +373,8 @@
   <p align="justify">Menu Instansi Kesehatan berfungsi untuk melihat, menambah, memperbarui, dan menghapus data instansi. Penambahan mencakup nama, jenis instansi, alamat, dan kontak, dengan ID yang dibuat secara otomatis. Sebelum pembaruan atau penghapusan, sistem memvalidasi ID instansi. Penghapusan ditolak jika data instansi masih digunakan pada data lain.</p>
 </details>
 
+<a id="5-2-use-case-diagram"></a>
+
 ### 5.2 Use Case Diagram
 
 <details>
@@ -371,6 +383,8 @@
 
   <p align="justify">Use case diagram menggambarkan interaksi tiga aktor dengan sistem, yaitu Petugas Operasional Divisi Administrasi, Petugas Operasional Divisi Produksi, dan Petugas Fulfillment. Divisi Administrasi mengelola data obat, bahan baku, karyawan, pesanan, dan pengiriman serta melihat data instansi kesehatan. Divisi Produksi mengelola data produksi dan detail penggunaan bahan baku. Sementara itu, Petugas Fulfillment mengelola pesanan dan pengiriman serta melihat data instansi kesehatan. Seluruh aktor harus login sebelum menggunakan sistem dan dapat keluar setelah selesai.</p>
 </details>
+
+<a id="5-3-entity-relationship-diagram-erd"></a>
 
 ### 5.3 Entity Relationship Diagram (ERD)
 
@@ -389,7 +403,11 @@
 </details>
 
 
+<a id="6-struktur-folderpackage"></a>
+
 <h2 align="left">🗂️ 6. Struktur Folder/Package</h2>
+
+<a id="6-1-tampilan-struktur"></a>
 
 ### 6.1 Tampilan Struktur
 
@@ -417,11 +435,15 @@ formula [master 11]
     └── pom.xml
 ```
 
+<a id="6-2-penjelasan-struktur-project"></a>
+
 ### 6.2 Penjelasan Struktur Project
 
 <div align="justify">
 
 Project FORMULA menggunakan struktur Maven dengan pendekatan MVC (Model-View-Controller) untuk memisahkan pengelolaan data, alur program, tampilan aplikasi, dan pengujian.
+
+<a id="1-source-packages"></a>
 
 #### 1. Source Packages
 
@@ -445,9 +467,13 @@ Bagian ini berisi kode utama aplikasi yang dibagi berdasarkan fungsi masing-masi
 - **app.view**  
   Berisi 9 class yang mengelola antarmuka Java Swing, seperti form login, dashboard, produksi, dan komponen pendukung GUI.
 
+<a id="2-test-packages"></a>
+
 #### 2. Test Packages
 
 Bagian ini berisi 3 class pengujian, yaitu `DatabaseWorkflowTest.java`, `JumlahObatDisplayTest.java`, dan `SwingWorkflowTest.java`, untuk menguji proses database, tampilan jumlah obat, serta alur kerja GUI.
+
+<a id="3-dependencies"></a>
 
 #### 3. Dependencies
 
@@ -462,6 +488,8 @@ Bagian ini berisi library dan komponen pendukung aplikasi, antara lain:
 
 Pada NetBeans, dependency dikelompokkan menjadi Dependencies, Runtime Dependencies, Test Dependencies, dan Java Dependencies.
 
+<a id="4-project-files"></a>
+
 #### 4. Project Files
 
 Bagian ini berisi `pom.xml` sebagai file konfigurasi Maven untuk mengatur versi Java, library, dan plugin yang dibutuhkan dalam proses build aplikasi.
@@ -469,11 +497,15 @@ Bagian ini berisi `pom.xml` sebagai file konfigurasi Maven untuk mengatur versi 
 </div>
 
 
+<a id="7-penerapan-4-pilar-oop-dan-implementasi-lanjutan"></a>
+
 <h2 align="left">🧩 7. Penerapan 4 Pilar OOP dan Implementasi Lanjutan</h2>
 
 ## A. Empat Pilar OOP
 
-### 7.1 Encapsulation (Enkapsulasi)
+<a id="7-1-encapsulation-enkapsulasi"></a>
+
+### 7.1 Encapsulation 
 
 <p align="justify">Encapsulation merupakan konsep OOP yang membatasi akses langsung terhadap atribut dalam suatu class. Pada project FORMULA, konsep ini diterapkan pada entity <code>Obat</code> dan <code>InstansiKesehatan</code> dengan menggunakan modifier <code>private</code>. Akses terhadap atribut dilakukan melalui method <em>getter</em> dan <em>setter</em> agar pengelolaan data lebih terkontrol.</p>
 
@@ -502,7 +534,9 @@ public void setNama(String nama) {
 
 </details>
 
-### 7.2 Inheritance (Pewarisan)
+<a id="7-2-inheritance-pewarisan"></a>
+
+### 7.2 Inheritance 
 
 <p align="justify">Inheritance merupakan konsep pewarisan yang memungkinkan suatu class memperoleh atribut dan method dari class lain. Pada project FORMULA, <code>AdministrasiRole</code>, <code>ProduksiRole</code>, dan <code>FulfillmentRole</code> mewarisi struktur umum dari abstract class <code>MenuRole</code>. Setiap class turunan kemudian menentukan daftar menu sesuai dengan hak akses masing-masing role.</p>
 
@@ -536,32 +570,55 @@ public final class ProduksiRole extends MenuRole {
 
 </details>
 
-### 7.3 Polymorphism (Polimorfisme)
+<a id="7-3-polymorphism-polimorfisme"></a>
 
-<p align="justify">Polymorphism merupakan konsep OOP yang memungkinkan satu method memiliki perilaku berbeda sesuai dengan objek yang menggunakannya. Pada project FORMULA, konsep ini diterapkan melalui method <code>getMenu()</code> yang dimiliki oleh <code>MenuRole</code> dan diimplementasikan oleh setiap class turunannya. Dengan demikian, daftar menu yang ditampilkan dapat menyesuaikan role pengguna.</p>
+### 7.3 Polymorphism 
+
+<p align="justify">Pada FORMULA, polymorphism diterapkan untuk <strong>menyesuaikan menu dashboard dengan role pengguna</strong> dan <strong>mendukung proses penyimpanan obat</strong> melalui beberapa bentuk pemanggilan method. Implementasinya terdapat pada package <code>app.model.role</code>, <code>FormDashboard</code>, dan <code>MasterDAO</code>.</p>
 
 <details>
-<summary><b>💡 Lihat kode dan penjelasan</b></summary>
+<summary><b>💡 Lihat penerapan kode pada program</b></summary>
 
-**Contoh kode:**
-
-```java
-MenuRole role = MenuRole.untuk("Produksi");
-String[] menu = role.getMenu();
-```
+**A. Menampilkan menu berdasarkan role — `getMenu()`**
 
 ```java
+// app.model.role.ProduksiRole
+@Override
+public String[] getMenu() {
+    return new String[]{
+        "Proses Produksi", "Data Produksi", "Penggunaan Bahan"
+    };
+}
+
 // app.view.FormDashboard
 String[] labels = app.model.role.MenuRole.untuk(role).getMenu();
 ```
 
-**Penjelasan kode:**
+<p align="justify">Setelah login, sistem membaca role karyawan dan <code>FormDashboard</code> memanggil <code>MenuRole.untuk(role).getMenu()</code>. Setiap class role, yaitu <code>AdministrasiRole</code>, <code>ProduksiRole</code>, dan <code>FulfillmentRole</code>, memiliki implementasi <code>getMenu()</code> sendiri yang ditandai dengan <code>@Override</code>. Hasilnya, tombol dashboard otomatis menampilkan menu sesuai kewenangan akun tanpa memerlukan kode pembuatan menu yang terpisah untuk setiap role. Contoh di atas menghasilkan tiga menu ketika pengguna login sebagai Produksi.</p>
 
-<p align="justify">Variabel <code>role</code> menggunakan tipe <code>MenuRole</code>, tetapi objek yang dihasilkan merupakan <code>ProduksiRole</code>. Ketika method <code>getMenu()</code> dipanggil, Java menjalankan implementasi sesuai dengan objek sebenarnya. Oleh karena itu, setiap role dapat menghasilkan daftar menu yang berbeda. Pada <code>FormDashboard</code>, mekanisme ini digunakan untuk membangun menu secara dinamis berdasarkan hak akses pengguna.</p>
+**B. Menyimpan obat dengan parameter sesuai kebutuhan — `simpanObat()`**
+
+```java
+// app.model.MasterDAO
+public boolean simpanObat(String n, String j, String s) {
+    return orm.tambahObat(n, j, s, -1);
+}
+
+public boolean simpanObat(String n, String j, String s, int idLogin) {
+    return orm.tambahObat(n, j, s, idLogin);
+}
+
+// app.controller.MasterController, saat menambah data Obat
+res = m.simpanObat(d[1].trim(), d[2].trim(), d[3].trim(), idLogin);
+```
+
+<p align="justify">Pada menu <strong>Kelola Obat</strong>, <code>MasterController</code> menggunakan <code>simpanObat()</code> dengan empat parameter: nama, jenis, status, dan <code>idLogin</code> karyawan yang sedang masuk. Data kemudian diteruskan ke <code>OrmMasterDAO</code> untuk disimpan melalui Hibernate/JPA. <code>MasterDAO</code> juga menyediakan pemanggilan tiga parameter yang meneruskan nilai <code>-1</code> sebagai ID petugas. Kedua bentuk method ini memungkinkan proses penyimpanan obat menerima kebutuhan parameter yang berbeda.</p>
 
 </details>
 
-### 7.4 Abstraction (Abstraksi)
+<a id="7-4-abstraction-abstraksi"></a>
+
+### 7.4 Abstraction 
 
 <p align="justify">Abstraction merupakan konsep OOP yang menyederhanakan penggunaan objek dengan menampilkan bagian penting dan menyembunyikan detail implementasinya. Pada project FORMULA, konsep ini diterapkan melalui abstract class <code>MenuRole</code> yang menyediakan struktur umum serta method <code>getMenu()</code>. Implementasi method tersebut diserahkan kepada masing-masing class turunan.</p>
 
@@ -609,6 +666,8 @@ public abstract class MenuRole {
 </details>
 
 ## B. Implementasi Lanjutan
+
+<a id="7-5-manajemen-koneksi-tingkat-lanjut-singleton-dan-connection-pooling"></a>
 
 ### 7.5 Manajemen Koneksi Tingkat Lanjut (Singleton dan Connection Pooling)
 
@@ -670,6 +729,8 @@ public static synchronized void close() {
 <p align="justify">Konstruktor <code>private</code> dan atribut <code>static</code> membuat connection pool dikelola secara terpusat. Method <code>getDataSource()</code> membuat pool saat pertama kali dibutuhkan atau ketika pool sebelumnya sudah tertutup, sedangkan <code>synchronized</code> mencegah pembuatan pool secara bersamaan oleh beberapa thread. HikariCP dikonfigurasi dengan kapasitas maksimal 10 koneksi dan minimal 1 koneksi idle, kemudian koneksi diuji sebelum digunakan. Method <code>getConnection()</code> menyediakan koneksi bagi DAO, sedangkan <code>close()</code> digunakan untuk menutup pool ketika aplikasi berhenti.</p>
 
 </details>
+
+<a id="7-6-implementasi-framework-orm-hibernatejpa"></a>
 
 ### 7.6 Implementasi Framework ORM (Hibernate/JPA)
 
@@ -785,9 +846,13 @@ public boolean tambahInstansi(String n, String j, String a, String k) {
 </details>
 
 
+<a id="8-cara-penggunaan-program"></a>
+
 <h2 align="left">💻 8. Cara Penggunaan Program</h2>
 
 Bagian ini menjelaskan penggunaan seluruh menu FORMULA secara berurutan berdasarkan tiga hak akses: Administrasi → Produksi → Fulfillment. Alurnya dimulai dari menyiapkan data, membuat batch obat dan mencatat penggunaan bahan, sampai menerima pesanan serta mengatur pengiriman. Tiap role menggunakan dashboard dan pilihan menu yang berbeda.
+
+<a id="8-1-halaman-login"></a>
 
 ### 8.1 Halaman Login
 
@@ -809,9 +874,14 @@ Halaman Login menjadi pintu masuk FORMULA untuk seluruh pengguna. Pengguna memas
 
 Hasil: hanya akun yang valid dan aktif dapat mengakses menu sesuai kewenangannya.
 
-### 8.2 Role Administrasi — Penyiapan dan Monitoring Data
+<a id="8-2-role-administrasi-penyiapan-dan-monitoring-data"></a>
+
+<details>
+<summary><strong>📂 8.2 Role Administrasi — Penyiapan dan Monitoring Data</strong></summary>
 
 Role Administrasi bertugas menyiapkan data master obat dan bahan baku, mengelola akun karyawan, serta memantau proses pesanan, batch, dan pengiriman. Pada dashboard tersedia delapan menu.
+
+<a id="8-2-1-dashboard-administrasi"></a>
 
 #### 8.2.1 Dashboard Administrasi
 
@@ -824,6 +894,8 @@ Dashboard Administrasi ditampilkan setelah login menggunakan akun dengan role Ad
 Menu yang tersedia: Kelola Obat, Kelola Bahan Baku, Kelola Karyawan, Data Pesanan, Data Pengiriman, Instansi Kesehatan, Stok per Batch, dan Detail Pesanan.
 
 Cara menggunakan dashboard: klik tombol menu untuk membuka form terkait. Setelah selesai, tekan Kembali untuk menuju dashboard. Tombol Keluar digunakan untuk logout setelah konfirmasi. Menu monitoring tidak mengizinkan perubahan data yang memang menjadi wewenang role lain.
+
+<a id="8-2-2-kelola-obat"></a>
 
 #### 8.2.2 Kelola Obat
 
@@ -842,6 +914,8 @@ Menu Kelola Obat digunakan untuk membuat dan memelihara katalog obat yang nantin
 
 Hasil: obat yang tersimpan menjadi pilihan pada formulir Proses Produksi. Status ketersediaan obat juga dapat diubah dari menu khusus milik Fulfillment.
 
+<a id="8-2-3-kelola-bahan-baku"></a>
+
 #### 8.2.3 Kelola Bahan Baku
 
 Menu ini mencatat bahan yang akan digunakan oleh petugas Produksi. Kolom yang ditampilkan adalah ID Bahan, Nama Bahan, Stok, dan Satuan.
@@ -858,6 +932,8 @@ Menu ini mencatat bahan yang akan digunakan oleh petugas Produksi. Kolom yang di
 6. Gunakan Hapus untuk menghapus bahan yang tidak lagi diperlukan, sepanjang belum terikat relasi yang melarang penghapusan. Gunakan Cari dan Cetak PDF untuk penelusuran serta pelaporan.
 
 Catatan: nama bahan tidak boleh duplikat. Stok bahan akan berkurang saat penggunaan bahan dicatat, bukan saat batch produksi baru dibuat.
+
+<a id="8-2-4-kelola-karyawan"></a>
 
 #### 8.2.4 Kelola Karyawan
 
@@ -877,6 +953,8 @@ Menu ini digunakan untuk mendaftarkan akun dan menentukan hak akses pengguna. Fo
 
 Hasil: karyawan aktif dapat login menggunakan ID dan password sesuai role. Menonaktifkan akun mencegah akun tersebut digunakan untuk login.
 
+<a id="8-2-5-data-pesanan"></a>
+
 #### 8.2.5 Data Pesanan
 
 Menu Data Pesanan pada role Administrasi digunakan untuk melihat dan memantau, bukan membuat atau mengubah pesanan. Tabel memuat ID Pesanan, Tanggal, Status, Catatan, Instansi, dan Petugas.
@@ -891,6 +969,8 @@ Menu Data Pesanan pada role Administrasi digunakan untuk melihat dan memantau, b
 4. Gunakan Cetak PDF jika membutuhkan rekap pesanan.
 
 Pada mode ini tombol tambah, ubah, dan hapus tidak tersedia. Pembuatan serta perubahan pesanan dilakukan melalui role Fulfillment.
+
+<a id="8-2-6-data-pengiriman"></a>
 
 #### 8.2.6 Data Pengiriman
 
@@ -907,6 +987,8 @@ Menu Data Pengiriman juga berfungsi sebagai halaman monitoring Administrasi. Tab
 
 Administrasi tidak mengubah status pengiriman melalui menu ini; proses pengiriman dikelola oleh Fulfillment.
 
+<a id="8-2-7-instansi-kesehatan"></a>
+
 #### 8.2.7 Instansi Kesehatan
 
 Pada role Administrasi, menu Instansi Kesehatan bersifat lihat saja (read-only). Tabel berisi ID Instansi, Nama Instansi, Jenis, Alamat, dan Kontak.
@@ -920,6 +1002,8 @@ Pada role Administrasi, menu Instansi Kesehatan bersifat lihat saja (read-only).
 3. Gunakan Cari untuk menemukan instansi tertentu.
 
 Penambahan, pengubahan, dan penghapusan instansi dilakukan melalui menu Instansi Kesehatan pada role Fulfillment.
+
+<a id="8-2-8-stok-per-batch"></a>
 
 #### 8.2.8 Stok per Batch
 
@@ -936,6 +1020,8 @@ Menu Stok per Batch dipakai untuk melihat batch yang masih memiliki stok positif
 
 Menu ini hanya untuk monitoring; tidak dipakai untuk menambah atau mengedit batch. Batch yang sudah dialokasikan atau kedaluwarsa tidak muncul dalam daftar batch tersedia, meskipun catatan produksinya masih tersimpan di menu Data Produksi.
 
+<a id="8-2-9-detail-pesanan"></a>
+
 #### 8.2.9 Detail Pesanan
 
 Pada Administrasi, menu Detail Pesanan digunakan untuk melihat hubungan antara pesanan dan batch yang dipilih oleh Fulfillment. Tabel menampilkan ID Detail, ID Pesanan, Nomor Batch, dan Jumlah Obat.
@@ -951,9 +1037,16 @@ Pada Administrasi, menu Detail Pesanan digunakan untuk melihat hubungan antara p
 
 Role Administrasi tidak dapat menambah, mengubah, atau menghapus detail pesanan melalui halaman ini.
 
-### 8.3 Role Produksi — Pembuatan dan Pengelolaan Batch
+</details>
+
+<a id="8-3-role-produksi-pembuatan-dan-pengelolaan-batch"></a>
+
+<details>
+<summary><strong>📂 8.3 Role Produksi — Pembuatan dan Pengelolaan Batch</strong></summary>
 
 Petugas Produksi melanjutkan proses setelah data obat dan bahan baku disiapkan oleh Administrasi. Role ini memiliki tiga menu untuk membuat hasil produksi, memeriksa data batch, serta mencatat pemakaian bahan baku.
+
+<a id="8-3-1-dashboard-produksi"></a>
 
 #### 8.3.1 Dashboard Produksi
 
@@ -966,6 +1059,8 @@ Dashboard Produksi merupakan halaman utama bagi akun ber-role Produksi. Dashboar
 Cara menggunakan dashboard: mulai dari Proses Produksi untuk membuat batch, kemudian buka Penggunaan Bahan untuk mencatat bahan yang dipakai. Setelah itu, periksa hasil dan rincian batch pada Data Produksi. Gunakan Kembali dari masing-masing form dan Keluar ketika pekerjaan selesai.
 
 Alur: membuat batch tidak otomatis mengurangi stok bahan baku; stok bahan baru disesuaikan saat penggunaan bahan berhasil dicatat.
+
+<a id="8-3-2-proses-produksi"></a>
 
 #### 8.3.2 Proses Produksi
 
@@ -985,6 +1080,8 @@ Menu Proses Produksi digunakan untuk membuat batch baru dari obat yang sudah ter
 
 Catatan: pembuatan batch tidak langsung mengurangi stok bahan baku. Pengurangan baru dilakukan melalui menu Penggunaan Bahan setelah data pemakaian bahan disimpan.
 
+<a id="8-3-3-data-produksi"></a>
+
 #### 8.3.3 Data Produksi
 
 Menu Data Produksi menampilkan hasil produksi yang telah disimpan. Tabel berisi Nomor Batch, Nama Obat, Stok, Satuan, Tanggal Produksi, Tanggal Kedaluwarsa, Bahan Baku Digunakan, Petugas, dan Kelayakan (Layak Edar/Kedaluwarsa).
@@ -1002,6 +1099,8 @@ Menu Data Produksi menampilkan hasil produksi yang telah disimpan. Tabel berisi 
 7. Gunakan Cari untuk pencarian dan Cetak PDF untuk mengekspor tabel produksi.
 
 Penambahan batch baru tidak dilakukan pada menu ini; gunakan Proses Produksi.
+
+<a id="8-3-4-penggunaan-bahan"></a>
 
 #### 8.3.4 Penggunaan Bahan
 
@@ -1022,9 +1121,16 @@ Menu ini mencatat bahan baku yang dipakai untuk suatu nomor batch. Data meliputi
 
 Validasi: bahan yang sama tidak boleh dicatat dua kali untuk batch yang sama; ubah catatan yang sudah ada agar stok tidak dipotong ganda. Penggunaan bahan yang sudah tersimpan dapat dilihat juga dari tombol Lihat Bahan Baku pada menu Data Produksi.
 
-### 8.4 Role Fulfillment — Pemesanan hingga Distribusi
+</details>
+
+<a id="8-4-role-fulfillment-pemesanan-hingga-distribusi"></a>
+
+<details>
+<summary><strong>📂 8.4 Role Fulfillment — Pemesanan hingga Distribusi</strong></summary>
 
 Role Fulfillment menangani pendataan instansi kesehatan, pembuatan pesanan, alokasi batch obat, pengiriman, dan perubahan status katalog obat. Dashboard menampilkan enam menu yang mendukung proses tersebut.
+
+<a id="8-4-1-dashboard-fulfillment"></a>
 
 #### 8.4.1 Dashboard Fulfillment
 
@@ -1037,6 +1143,8 @@ Dashboard Fulfillment ditampilkan setelah pengguna masuk menggunakan akun ber-ro
 Cara menggunakan dashboard: pastikan instansi tujuan sudah terdaftar, buat pesanan, periksa Stok per Batch, pilih batch melalui Detail Pesanan, dan lanjutkan dengan Kelola Pengiriman. Gunakan Ubah Status Obat apabila status katalog perlu disesuaikan. Tombol Kembali dan Keluar tersedia untuk navigasi.
 
 Alur: Fulfillment mengalokasikan batch produksi yang memenuhi ketentuan ketersediaan dan kedaluwarsa, kemudian mencatat status pengiriman hingga selesai.
+
+<a id="8-4-2-kelola-pesanan"></a>
 
 #### 8.4.2 Kelola Pesanan
 
@@ -1055,6 +1163,8 @@ Menu Kelola Pesanan digunakan untuk mencatat permintaan obat dari instansi keseh
 7. Gunakan Hapus untuk menghapus pesanan yang diizinkan sistem, yaitu sebelum pesanan selesai atau memiliki nomor resi. Gunakan Cari dan Cetak PDF untuk penelusuran dan pelaporan.
 
 Alur selanjutnya: setelah pesanan berhasil dibuat, buka Detail Pesanan untuk menentukan batch obat yang akan memenuhi pesanan tersebut.
+
+<a id="8-4-3-detail-pesanan"></a>
 
 #### 8.4.3 Detail Pesanan
 
@@ -1075,6 +1185,8 @@ Menu Detail Pesanan menghubungkan satu pesanan dengan satu batch obat hasil prod
 
 Catatan stok: angka stok pada tabel produksi menunjukkan isi batch, bukan saldo yang otomatis menjadi nol saat dipesan. Batch yang sudah dialokasikan dikeluarkan dari daftar batch tersedia supaya tidak digunakan ulang.
 
+<a id="8-4-4-kelola-pengiriman"></a>
+
 #### 8.4.4 Kelola Pengiriman
 
 Menu Kelola Pengiriman digunakan setelah pesanan memiliki detail batch. Form menampilkan Nomor Resi, Tanggal, Status, Keterangan, Pesanan, dan Petugas.
@@ -1094,6 +1206,8 @@ Menu Kelola Pengiriman digunakan setelah pesanan memiliki detail batch. Form men
 
 Urutan: `Menunggu → Diproses → Selesai`. Pembatalan hanya dapat dilakukan selama masih memenuhi aturan status pada sistem.
 
+<a id="8-4-5-instansi-kesehatan"></a>
+
 #### 8.4.5 Instansi Kesehatan
 
 Berbeda dengan role Administrasi yang hanya melihat data, pada role Fulfillment menu Instansi Kesehatan menyediakan operasi CRUD. Field yang tersedia adalah ID Instansi, Nama Instansi, Jenis, Alamat, dan Kontak.
@@ -1108,6 +1222,8 @@ Berbeda dengan role Administrasi yang hanya melihat data, pada role Fulfillment 
 4. Untuk memperbarui informasi, pilih baris pada tabel, ubah data yang diperlukan, kemudian klik Ubah Data.
 5. Untuk menghapus, pilih baris dan tekan Hapus, lalu konfirmasi. Penghapusan dapat ditolak jika instansi sudah dipakai oleh pesanan.
 6. Gunakan Cari untuk menelusuri data instansi.
+
+<a id="8-4-6-stok-per-batch"></a>
 
 #### 8.4.6 Stok per Batch
 
@@ -1124,6 +1240,8 @@ Menu ini menampilkan daftar batch yang dapat dipilih pada proses pemenuhan pesan
 
 Halaman ini bersifat read-only. Penambahan dan perubahan data produksi dilakukan oleh role Produksi.
 
+<a id="8-4-7-ubah-status-obat"></a>
+
 #### 8.4.7 Ubah Status Obat
 
 Menu Ubah Status Obat digunakan untuk mengatur penanda ketersediaan pada katalog obat. Tabel menampilkan daftar obat beserta statusnya.
@@ -1139,22 +1257,9 @@ Menu Ubah Status Obat digunakan untuk mengatur penanda ketersediaan pada katalog
 
 Pengguna harus memilih baris terlebih dahulu. Perubahan menu ini mengatur status katalog obat, bukan membuat batch baru atau mengubah jumlah stok batch.
 
-### 8.5 Fungsi Tombol Umum dan Pencarian
+</details>
 
-<div align="center">
-<table align="center">
-<thead><tr><th align="center">Tombol/Komponen</th><th align="center">Cara Penggunaan</th></tr></thead>
-<tbody>
-<tr><td align="center"><strong>Tambah</strong></td><td align="center">Menyimpan data baru setelah kolom wajib terisi dan lolos validasi.</td></tr>
-<tr><td align="center"><strong>Ubah Data / Update</strong></td><td align="center">Memperbarui data terpilih sesuai batasan menu. Pada form Karyawan, Update hanya mengubah status.</td></tr>
-<tr><td align="center"><strong>Hapus</strong></td><td align="center">Menghapus data terpilih setelah konfirmasi, selama aturan relasi/transaksi mengizinkan.</td></tr>
-<tr><td align="center"><strong>Kosongkan</strong></td><td align="center">Mereset isian dan membatalkan pemilihan baris.</td></tr>
-<tr><td align="center"><strong>Cari</strong></td><td align="center">Menyaring data pada tabel tanpa mengubah database.</td></tr>
-<tr><td align="center"><strong>Cetak PDF</strong></td><td align="center">Mengekspor data tabel pada menu yang mendukung pencetakan.</td></tr>
-<tr><td align="center"><strong>Kembali</strong></td><td align="center">Menutup form dan kembali ke dashboard.</td></tr>
-<tr><td align="center"><strong>Keluar</strong></td><td align="center">Menampilkan konfirmasi logout dan kembali ke halaman login.</td></tr>
-</tbody></table>
-</div>
+<a id="9-kontributor"></a>
 
 <h2 align="left">9. 👥 Kontributor</h2>
 
