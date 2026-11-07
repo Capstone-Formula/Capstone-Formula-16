@@ -1259,25 +1259,6 @@ Pengguna harus memilih baris terlebih dahulu. Perubahan menu ini mengatur status
 
 </details>
 
-<a id="8-5-fungsi-tombol-umum-dan-pencarian"></a>
-
-### 8.5 Fungsi Tombol Umum dan Pencarian
-
-<div align="center">
-<table align="center">
-<thead><tr><th align="center">Tombol/Komponen</th><th align="center">Cara Penggunaan</th></tr></thead>
-<tbody>
-<tr><td align="center"><strong>Tambah</strong></td><td align="center">Menyimpan data baru setelah kolom wajib terisi dan lolos validasi.</td></tr>
-<tr><td align="center"><strong>Ubah Data / Update</strong></td><td align="center">Memperbarui data terpilih sesuai batasan menu. Pada form Karyawan, Update hanya mengubah status.</td></tr>
-<tr><td align="center"><strong>Hapus</strong></td><td align="center">Menghapus data terpilih setelah konfirmasi, selama aturan relasi/transaksi mengizinkan.</td></tr>
-<tr><td align="center"><strong>Kosongkan</strong></td><td align="center">Mereset isian dan membatalkan pemilihan baris.</td></tr>
-<tr><td align="center"><strong>Cari</strong></td><td align="center">Menyaring data pada tabel tanpa mengubah database.</td></tr>
-<tr><td align="center"><strong>Cetak PDF</strong></td><td align="center">Mengekspor data tabel pada menu yang mendukung pencetakan.</td></tr>
-<tr><td align="center"><strong>Kembali</strong></td><td align="center">Menutup form dan kembali ke dashboard.</td></tr>
-<tr><td align="center"><strong>Keluar</strong></td><td align="center">Menampilkan konfirmasi logout dan kembali ke halaman login.</td></tr>
-</tbody></table>
-</div>
-
 <a id="9-kontributor"></a>
 
 <h2 align="left">9. 👥 Kontributor</h2>
